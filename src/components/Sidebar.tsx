@@ -89,7 +89,7 @@ export default function Sidebar({
       <div className="p-4">
         <button 
           onClick={() => {
-            setView('docs');
+            window.location.href = '/hub';
             setSelectedAlgoId('');
           }}
           className="w-full flex items-center gap-3 p-3 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400 rounded-xl border border-indigo-100 dark:border-indigo-900/30 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 transition-all mb-2"

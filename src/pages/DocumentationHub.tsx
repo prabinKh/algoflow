@@ -133,81 +133,121 @@ export default function DocumentationHub({ algorithms }: DocumentationHubProps) 
       </header>
 
       <main className="relative z-10 max-w-7xl mx-auto px-6 py-12">
-        <div className="mb-12 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Clock size={20} className="text-indigo-400" />
-            <h2 className="text-xl font-black tracking-tight text-white uppercase tracking-widest">Recently Initialized</h2>
+        {/* Stats Overview */}
+        <div className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="bg-slate-900/40 border border-slate-800/50 rounded-2xl p-6">
+            <div className="text-3xl font-black text-indigo-400">{filteredAlgorithms.length}</div>
+            <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">Total Algorithms</div>
           </div>
-          <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest">
-            {filteredAlgorithms.length} Nodes Found
+          <div className="bg-slate-900/40 border border-slate-800/50 rounded-2xl p-6">
+            <div className="text-3xl font-black text-emerald-400">
+              {new Set(filteredAlgorithms.map(a => a.category)).size}
+            </div>
+            <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">Categories</div>
+          </div>
+          <div className="bg-slate-900/40 border border-slate-800/50 rounded-2xl p-6">
+            <div className="text-3xl font-black text-amber-400">
+              {filteredAlgorithms.filter(a => a.complexity?.time?.includes('log')).length}
+            </div>
+            <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">Logarithmic</div>
+          </div>
+          <div className="bg-slate-900/40 border border-slate-800/50 rounded-2xl p-6">
+            <div className="text-3xl font-black text-rose-400">
+              {filteredAlgorithms.filter(a => a.complexity?.time?.includes('²') || a.complexity?.time?.includes('^')).length}
+            </div>
+            <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mt-1">Quadratic</div>
           </div>
         </div>
 
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className={cn(
-            "grid gap-6",
-            viewMode === 'grid' ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
-          )}
-        >
-          {filteredAlgorithms.map((algo, index) => {
-            const Icon = iconMap[algo.icon || 'Sparkles'] || Sparkles;
-            return (
-              <motion.div
-                key={algo.id}
-                variants={itemVariants}
-                onClick={() => navigate(`/algo/${algo.id}`)}
-                className={cn(
-                  "group relative bg-slate-900/40 border border-slate-800/50 rounded-[2rem] overflow-hidden cursor-pointer hover:border-indigo-500/50 transition-all duration-500",
-                  viewMode === 'list' ? "flex items-center p-6 gap-8" : "p-8"
-                )}
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                
-                <div className={cn(
-                  "relative z-10 flex items-center justify-center bg-slate-950 border border-slate-800 rounded-2xl text-slate-400 group-hover:text-indigo-400 group-hover:border-indigo-500/30 transition-all duration-500",
-                  viewMode === 'list' ? "w-16 h-16 shrink-0" : "w-14 h-14 mb-6"
-                )}>
-                  <Icon size={viewMode === 'list' ? 28 : 24} />
-                  {index === 0 && !searchQuery && (
-                    <div className="absolute -top-2 -right-2 w-4 h-4 bg-indigo-500 rounded-full animate-ping" />
-                  )}
-                </div>
+        {/* Group by Category */}
+        {Object.entries(
+          filteredAlgorithms.reduce((acc, algo) => {
+            const cat = algo.category || 'Uncategorized';
+            if (!acc[cat]) acc[cat] = [];
+            acc[cat].push(algo);
+            return acc;
+          }, {} as Record<string, typeof filteredAlgorithms>)
+        ).map(([category, algos]) => (
+          <div key={category} className="mb-16">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 bg-indigo-600/20 rounded-2xl flex items-center justify-center text-indigo-400 border border-indigo-500/30">
+                <Layers size={24} />
+              </div>
+              <div>
+                <h2 className="text-2xl font-black tracking-tight text-white">{category}</h2>
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">
+                  {algos.length} Algorithm{algos.length !== 1 ? 's' : ''}
+                </p>
+              </div>
+              <div className="flex-1 h-px bg-slate-800 ml-4" />
+            </div>
 
-                <div className="relative z-10 flex-1">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-indigo-400/70 group-hover:text-indigo-400 transition-colors">
-                      {algo.category}
-                    </span>
-                    <span className="w-1 h-1 rounded-full bg-slate-800" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-emerald-400/70">
-                      {algo.complexity.time}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-black tracking-tight text-white group-hover:translate-x-1 transition-transform duration-300 flex items-center gap-2">
-                    {algo.name}
-                    <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-all -translate-y-1 translate-x-1" />
-                  </h3>
-                  <p className="text-sm text-slate-500 mt-3 line-clamp-2 leading-relaxed group-hover:text-slate-400 transition-colors">
-                    {algo.description}
-                  </p>
-                </div>
-
-                {viewMode === 'grid' && (
-                  <div className="mt-8 pt-6 border-t border-slate-800/50 flex items-center justify-between relative z-10">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-emerald-500/50" />
-                      <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Verified Implementation</span>
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              className={cn(
+                "grid gap-6",
+                viewMode === 'grid' ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
+              )}
+            >
+              {algos.map((algo, index) => {
+                const Icon = iconMap[algo.icon || 'Sparkles'] || Sparkles;
+                return (
+                  <motion.div
+                    key={algo.id}
+                    variants={itemVariants}
+                    onClick={() => navigate(`/algo/${algo.id}`)}
+                    className={cn(
+                      "group relative bg-slate-900/40 border border-slate-800/50 rounded-[2rem] overflow-hidden cursor-pointer hover:border-indigo-500/50 transition-all duration-500",
+                      viewMode === 'list' ? "flex items-center p-6 gap-8" : "p-8"
+                    )}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-emerald-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    
+                    <div className={cn(
+                      "relative z-10 flex items-center justify-center bg-slate-950 border border-slate-800 rounded-2xl text-slate-400 group-hover:text-indigo-400 group-hover:border-indigo-500/30 transition-all duration-500",
+                      viewMode === 'list' ? "w-16 h-16 shrink-0" : "w-14 h-14 mb-6"
+                    )}>
+                      <Icon size={viewMode === 'list' ? 28 : 24} />
+                      {index === 0 && !searchQuery && (
+                        <div className="absolute -top-2 -right-2 w-4 h-4 bg-indigo-500 rounded-full animate-ping" />
+                      )}
                     </div>
-                    <ChevronRight size={16} className="text-slate-700 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all" />
-                  </div>
-                )}
-              </motion.div>
-            );
-          })}
-        </motion.div>
+
+                    <div className="relative z-10 flex-1">
+                      <div className="flex items-center gap-2 mb-2 flex-wrap">
+                        <span className="px-2 py-1 bg-indigo-500/10 text-indigo-400 rounded-lg text-[10px] font-black uppercase tracking-widest">
+                          {algo.complexity?.time || 'O(?)'}
+                        </span>
+                        <span className="px-2 py-1 bg-emerald-500/10 text-emerald-400 rounded-lg text-[10px] font-black uppercase tracking-widest">
+                          {algo.complexity?.space || 'O(?)'} space
+                        </span>
+                      </div>
+                      <h3 className="text-xl font-black tracking-tight text-white group-hover:translate-x-1 transition-transform duration-300 flex items-center gap-2">
+                        {algo.name}
+                        <ArrowUpRight size={16} className="opacity-0 group-hover:opacity-100 transition-all -translate-y-1 translate-x-1" />
+                      </h3>
+                      <p className="text-sm text-slate-500 mt-3 line-clamp-2 leading-relaxed group-hover:text-slate-400 transition-colors">
+                        {algo.description}
+                      </p>
+                    </div>
+
+                    {viewMode === 'grid' && (
+                      <div className="mt-8 pt-6 border-t border-slate-800/50 flex items-center justify-between relative z-10">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 rounded-full bg-emerald-500/50" />
+                          <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Click to View</span>
+                        </div>
+                        <ChevronRight size={16} className="text-slate-700 group-hover:text-indigo-500 group-hover:translate-x-1 transition-all" />
+                      </div>
+                    )}
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </div>
+        ))}
 
         {filteredAlgorithms.length === 0 && (
           <motion.div 

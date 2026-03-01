@@ -55,6 +55,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Dashboard from './pages/Dashboard';
 import AddNewAlgo from './pages/AddNewAlgo';
 import Login from './pages/Login';
+import DocumentationHub from './pages/DocumentationHub';
+import AlgorithmDetail from './pages/AlgorithmDetail';
 
 function AppContent() {
   const navigate = useNavigate();
@@ -499,6 +501,15 @@ function AppContent() {
                   onDelete={handleDeleteAlgorithm}
                 />
               } />
+              <Route path="/algo/:id" element={
+                <AlgorithmDetailRoute 
+                  algorithms={algorithmsState} 
+                  navigate={navigate}
+                />
+              } />
+              <Route path="/hub" element={
+                <DocumentationHub algorithms={algorithmsState} />
+              } />
             </Routes>
           </div>
         </main>
@@ -560,6 +571,41 @@ function AlgorithmRoute({ algorithms, navigate, onUpdate, onDelete }: {
       onClose={() => navigate('/')}
       onUpdate={onUpdate}
       onDelete={onDelete}
+    />
+  );
+}
+
+function DocumentationHubRoute({ algorithms, navigate }: { 
+  algorithms: Algorithm[], 
+  navigate: any
+}) {
+  return (
+    <DocumentationHub algorithms={algorithms} />
+  );
+}
+
+function AlgorithmDetailRoute({ algorithms, navigate }: { 
+  algorithms: Algorithm[], 
+  navigate: any
+}) {
+  const { id } = useParams<{ id: string }>();
+  const algo = algorithms.find(a => a.id === id);
+
+  if (!algo) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[60vh] text-center bg-[#050505]">
+        <h2 className="text-3xl font-black mb-4 text-white">Algorithm Not Found</h2>
+        <button onClick={() => navigate('/hub')} className="text-indigo-400 font-bold hover:underline">
+          Return to Documentation Hub
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <AlgorithmDetail 
+      algorithm={algo} 
+      onBack={() => navigate('/hub')}
     />
   );
 }

@@ -1,0 +1,1101 @@
+INFO 2026-03-08 14:39:00,055 autoreload 14482 8710251008 Watching for file changes with StatReloader
+WARNING 2026-03-08 14:39:46,361 log 14482 6190985216 Not Found: /
+WARNING 2026-03-08 14:39:46,363 basehttp 14482 6190985216 "GET / HTTP/1.1" 404 2465
+WARNING 2026-03-08 14:39:48,467 log 14482 6207811584 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2026-03-08 14:39:48,470 basehttp 14482 6207811584 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2579
+WARNING 2026-03-08 14:39:48,673 log 14482 6207811584 Not Found: /apple-touch-icon.png
+WARNING 2026-03-08 14:39:48,674 basehttp 14482 6207811584 "GET /apple-touch-icon.png HTTP/1.1" 404 2543
+INFO 2026-03-08 14:39:55,406 basehttp 14482 6258290688 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 14:39:55,408 basehttp 14482 6275117056 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 14:39:55,408 basehttp 14482 6241464320 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 14:39:55,409 basehttp 14482 6224637952 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 14:40:17,313 basehttp 14482 6224637952 "POST /api/auth/login/ HTTP/1.1" 200 527
+INFO 2026-03-08 14:40:17,322 basehttp 14482 6190985216 "GET /api/auth/profile/ HTTP/1.1" 200 61
+INFO 2026-03-08 14:48:06,632 autoreload 14482 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/permissions.py changed, reloading.
+INFO 2026-03-08 15:45:40,932 autoreload 39780 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 15:45:56,897 basehttp 39780 6190854144 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:45:56,897 basehttp 39780 6207680512 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:45:56,927 basehttp 39780 6190854144 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:45:56,927 basehttp 39780 6207680512 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:46:52,115 basehttp 39780 6190854144 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:46:52,115 basehttp 39780 6207680512 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:46:52,116 basehttp 39780 6224506880 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:46:52,125 basehttp 39780 6241333248 "GET /api/categories HTTP/1.1" 200 2
+ERROR 2026-03-08 15:47:13,813 log 39780 6190854144 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: account_myuser.role
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/views.py", line 151, in post
+    user = authenticate(email=email, password=password)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 631, in get
+    num = len(clone)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: account_myuser.role
+ERROR 2026-03-08 15:47:13,823 basehttp 39780 6190854144 "POST /api/auth/login/ HTTP/1.1" 500 185313
+INFO 2026-03-08 15:47:55,589 basehttp 39780 6207680512 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:47:55,590 basehttp 39780 6258159616 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:47:55,590 basehttp 39780 6224506880 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:47:55,592 basehttp 39780 6241333248 "GET /api/algorithms HTTP/1.1" 200 2
+ERROR 2026-03-08 15:48:22,331 log 39780 6207680512 Internal Server Error: /api/auth/login/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: account_myuser.role
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/views.py", line 151, in post
+    user = authenticate(email=email, password=password)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 631, in get
+    num = len(clone)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: account_myuser.role
+ERROR 2026-03-08 15:48:22,337 basehttp 39780 6207680512 "POST /api/auth/login/ HTTP/1.1" 500 185313
+INFO 2026-03-08 15:49:27,211 basehttp 39780 6258159616 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:49:27,211 basehttp 39780 6241333248 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:49:27,211 basehttp 39780 6224506880 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:49:27,212 basehttp 39780 6274985984 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:49:37,212 basehttp 39780 6224506880 "POST /api/auth/login/ HTTP/1.1" 200 527
+WARNING 2026-03-08 15:49:37,222 log 39780 6224506880 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 15:49:37,222 basehttp 39780 6224506880 "GET /api/auth/profile/ HTTP/1.1" 401 71
+ERROR 2026-03-08 15:50:01,160 log 39780 6224506880 Internal Server Error: /api/auth/register/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/views.py", line 83, in post
+    Util.send_email(
+    ~~~~~~~~~~~~~~~^
+        {
+        ^
+    ...<3 lines>...
+        }
+        ^
+    )
+    ^
+  File "/Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/utils.py", line 16, in send_email
+    email.send(fail_silently=False)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/mail/message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/mail/backends/smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/mail/backends/smtp.py", line 93, in open
+    self.connection.starttls(context=self.ssl_context)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/smtplib.py", line 779, in starttls
+    self.sock = context.wrap_socket(self.sock,
+                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+                                    server_hostname=self._host)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
+ERROR 2026-03-08 15:50:01,163 basehttp 39780 6224506880 "POST /api/auth/register/ HTTP/1.1" 500 132068
+INFO 2026-03-08 15:50:25,114 autoreload 40113 8710251008 Watching for file changes with StatReloader
+WARNING 2026-03-08 15:50:34,404 log 40113 6194671616 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 15:50:34,406 log 40113 6245150720 Unauthorized: /api/auth/profile/
+INFO 2026-03-08 15:50:34,407 basehttp 40113 6177845248 "GET /api/categories HTTP/1.1" 200 2
+WARNING 2026-03-08 15:50:34,407 basehttp 40113 6194671616 "GET /api/auth/profile/ HTTP/1.1" 401 71
+WARNING 2026-03-08 15:50:34,408 basehttp 40113 6245150720 "GET /api/auth/profile/ HTTP/1.1" 401 71
+INFO 2026-03-08 15:50:34,408 basehttp 40113 6211497984 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:50:34,409 basehttp 40113 6228324352 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:50:34,411 basehttp 40113 6161018880 "GET /api/algorithms HTTP/1.1" 200 2
+ERROR 2026-03-08 15:50:50,980 log 40113 6161018880 Internal Server Error: /api/auth/register/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/views.py", line 83, in post
+    Util.send_email(
+    ~~~~~~~~~~~~~~~^
+        {
+        ^
+    ...<3 lines>...
+        }
+        ^
+    )
+    ^
+  File "/Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/utils.py", line 16, in send_email
+    email.send(fail_silently=False)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/mail/message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/mail/backends/smtp.py", line 128, in send_messages
+    new_conn_created = self.open()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/mail/backends/smtp.py", line 93, in open
+    self.connection.starttls(context=self.ssl_context)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/smtplib.py", line 779, in starttls
+    self.sock = context.wrap_socket(self.sock,
+                ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+                                    server_hostname=self._host)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
+ERROR 2026-03-08 15:50:50,984 basehttp 40113 6161018880 "POST /api/auth/register/ HTTP/1.1" 500 132068
+INFO 2026-03-08 15:52:21,517 autoreload 40113 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-08 15:52:23,013 autoreload 40205 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 15:52:24,883 basehttp 40205 6146338816 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:24,884 basehttp 40205 6129512448 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:24,884 basehttp 40205 6163165184 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:24,884 basehttp 40205 6179991552 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:32,659 autoreload 40205 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-08 15:52:33,252 autoreload 40228 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 15:52:34,300 basehttp 40228 6156595200 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:34,302 basehttp 40228 6173421568 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:34,311 basehttp 40228 6156595200 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:34,312 basehttp 40228 6173421568 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:43,158 basehttp 40228 6173421568 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:43,158 basehttp 40228 6156595200 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:44,121 basehttp 40228 6156595200 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:52:44,121 basehttp 40228 6173421568 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:53:16,107 autoreload 40228 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-08 15:57:05,154 autoreload 40551 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 15:57:23,480 basehttp 40551 6133919744 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:57:23,480 basehttp 40551 6184398848 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:57:23,483 basehttp 40551 6167572480 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:57:23,483 basehttp 40551 6150746112 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:57:53,316 basehttp 40551 6167572480 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:57:53,317 basehttp 40551 6150746112 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:57:53,318 basehttp 40551 6184398848 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 15:57:53,320 basehttp 40551 6133919744 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 15:58:16,877 basehttp 40551 6133919744 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:05:02,769 autoreload 40551 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-08 16:09:22,141 autoreload 41168 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:09:52,043 autoreload 41168 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-08 16:09:52,896 autoreload 41197 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:09:53,228 basehttp 41197 6160723968 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:53,228 basehttp 41197 6177550336 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:53,265 basehttp 41197 6160723968 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:53,283 basehttp 41197 6177550336 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:54,828 basehttp 41197 6160723968 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:54,835 basehttp 41197 6177550336 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:54,850 basehttp 41197 6211203072 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:54,851 basehttp 41197 6194376704 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:55,892 basehttp 41197 6160723968 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:55,893 basehttp 41197 6177550336 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:55,905 basehttp 41197 6160723968 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:09:55,905 basehttp 41197 6177550336 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:10:12,671 basehttp 41197 6177550336 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:10:12,672 basehttp 41197 6211203072 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:10:12,672 basehttp 41197 6160723968 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:10:12,673 basehttp 41197 6194376704 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:10:29,137 basehttp 41197 6160723968 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-08 16:10:29,188 basehttp 41197 6160723968 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 5284
+INFO 2026-03-08 16:10:29,901 basehttp 41197 6160723968 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-08 16:10:29,903 basehttp 41197 6194376704 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-08 16:10:29,903 basehttp 41197 6177550336 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:10:29,904 basehttp 41197 6211203072 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-08 16:10:29,905 basehttp 41197 6160723968 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-08 16:10:29,905 basehttp 41197 6228029440 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:10:29,905 basehttp 41197 6244855808 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-03-08 16:10:29,950 basehttp 41197 6194376704 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:16,389 basehttp 41197 6160723968 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-08 16:11:16,407 basehttp 41197 6160723968 "GET /admin/ HTTP/1.1" 200 10565
+INFO 2026-03-08 16:11:16,418 basehttp 41197 6160723968 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:16,434 basehttp 41197 6160723968 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:16,435 basehttp 41197 6177550336 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,181 basehttp 41197 6177550336 "GET /admin/account/myuser/ HTTP/1.1" 200 15261
+INFO 2026-03-08 16:11:20,211 basehttp 41197 6177550336 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,222 basehttp 41197 6194376704 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,223 basehttp 41197 6177550336 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,227 basehttp 41197 6211203072 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,227 basehttp 41197 6228029440 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,228 basehttp 41197 6177550336 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,228 basehttp 41197 6160723968 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:11:20,229 basehttp 41197 6194376704 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,232 basehttp 41197 6177550336 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,233 basehttp 41197 6244855808 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,233 basehttp 41197 6228029440 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,250 basehttp 41197 6211203072 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,257 basehttp 41197 6160723968 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,325 basehttp 41197 6244855808 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,325 basehttp 41197 6194376704 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:20,328 basehttp 41197 6177550336 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-03-08 16:11:53,306 basehttp 41197 6160723968 "POST /api/auth/register/ HTTP/1.1" 201 153
+INFO 2026-03-08 16:13:54,015 autoreload 41197 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-08 16:13:54,529 autoreload 41431 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:13:57,393 basehttp 41431 6180581376 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:13:57,393 basehttp 41431 6163755008 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:13:57,400 basehttp 41431 6163755008 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:13:57,400 basehttp 41431 6180581376 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:14:03,783 basehttp 41431 6163755008 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:14:03,784 basehttp 41431 6197407744 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:14:03,785 basehttp 41431 6214234112 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:14:03,786 basehttp 41431 6180581376 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:14:15,880 basehttp 41431 6163755008 "GET /admin/account/myuser/ HTTP/1.1" 200 15261
+INFO 2026-03-08 16:14:15,910 basehttp 41431 6163755008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:14:17,012 basehttp 41431 6163755008 "GET /admin/account/myuser/ HTTP/1.1" 200 15261
+INFO 2026-03-08 16:14:17,022 basehttp 41431 6163755008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:14:17,283 basehttp 41431 6163755008 "GET /admin/account/myuser/ HTTP/1.1" 200 15261
+INFO 2026-03-08 16:14:17,295 basehttp 41431 6163755008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:14:43,092 basehttp 41431 6180581376 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:21:16,952 autoreload 41431 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/utils.py changed, reloading.
+INFO 2026-03-08 16:21:18,777 autoreload 41734 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:21:20,921 basehttp 41734 6153170944 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:20,921 basehttp 41734 6136344576 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:20,943 basehttp 41734 6136344576 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:20,946 basehttp 41734 6153170944 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:31,916 autoreload 41734 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-08 16:21:33,155 autoreload 41775 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:21:33,372 basehttp 41775 6183153664 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:33,373 basehttp 41775 6166327296 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:33,380 basehttp 41775 6166327296 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:33,382 basehttp 41775 6183153664 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:49,889 autoreload 41775 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-08 16:21:50,622 autoreload 41800 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:21:51,008 basehttp 41800 6122942464 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:51,008 basehttp 41800 6139768832 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:51,022 basehttp 41800 6139768832 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:21:51,025 basehttp 41800 6122942464 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:22:24,918 autoreload 41863 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:23:48,709 basehttp 41863 6138605568 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:23:48,709 basehttp 41863 6172258304 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:23:48,709 basehttp 41863 6121779200 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:23:48,710 basehttp 41863 6155431936 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:24:02,096 basehttp 41863 6121779200 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:24:28,526 basehttp 41863 6138605568 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:24:28,528 basehttp 41863 6155431936 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:24:28,536 basehttp 41863 6138605568 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:24:28,537 basehttp 41863 6155431936 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:24:28,932 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 200 536
+WARNING 2026-03-08 16:24:28,935 log 41863 6121779200 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:24:28,937 log 41863 6138605568 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 16:24:28,937 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+WARNING 2026-03-08 16:24:28,937 basehttp 41863 6138605568 "GET /api/auth/profile/ HTTP/1.1" 401 71
+WARNING 2026-03-08 16:24:28,941 log 41863 6121779200 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:24:28,941 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+INFO 2026-03-08 16:24:50,067 basehttp 41863 6121779200 "GET /admin/account/myuser/ HTTP/1.1" 200 15819
+INFO 2026-03-08 16:24:50,124 basehttp 41863 6121779200 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:24:52,688 basehttp 41863 6121779200 "GET /admin/account/myuser/3/change/ HTTP/1.1" 200 15772
+INFO 2026-03-08 16:24:52,703 basehttp 41863 6138605568 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-03-08 16:24:52,703 basehttp 41863 6155431936 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:24:52,704 basehttp 41863 6172258304 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:24:52,704 basehttp 41863 6121779200 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:24:52,707 basehttp 41863 6138605568 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+WARNING 2026-03-08 16:25:37,216 log 41863 6121779200 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:25:37,228 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+WARNING 2026-03-08 16:25:37,233 log 41863 6121779200 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+INFO 2026-03-08 16:25:37,233 basehttp 41863 6138605568 "GET /api/algorithms HTTP/1.1" 200 2
+WARNING 2026-03-08 16:25:37,234 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+INFO 2026-03-08 16:25:37,235 basehttp 41863 6155431936 "GET /api/categories HTTP/1.1" 200 2
+WARNING 2026-03-08 16:25:37,254 log 41863 6155431936 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+INFO 2026-03-08 16:25:37,255 basehttp 41863 6138605568 "GET /api/categories HTTP/1.1" 200 2
+WARNING 2026-03-08 16:25:37,258 basehttp 41863 6155431936 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+INFO 2026-03-08 16:25:37,258 basehttp 41863 6121779200 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:25:54,406 basehttp 41863 6121779200 "GET /admin/account/myuser/ HTTP/1.1" 200 15819
+INFO 2026-03-08 16:25:54,465 basehttp 41863 6121779200 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:26:01,412 basehttp 41863 6121779200 "POST /admin/account/myuser/ HTTP/1.1" 200 11410
+INFO 2026-03-08 16:26:01,430 basehttp 41863 6121779200 "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2026-03-08 16:26:03,794 basehttp 41863 6121779200 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-08 16:26:03,814 basehttp 41863 6121779200 "GET /admin/account/myuser/ HTTP/1.1" 200 15345
+INFO 2026-03-08 16:26:03,827 basehttp 41863 6121779200 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:26:34,692 basehttp 41863 6138605568 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:26:34,692 basehttp 41863 6121779200 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:26:34,704 basehttp 41863 6121779200 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:26:34,704 basehttp 41863 6155431936 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:26:48,635 basehttp 41863 6121779200 "POST /api/auth/register/ HTTP/1.1" 201 154
+WARNING 2026-03-08 16:26:58,790 log 41863 6121779200 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:26:58,802 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+WARNING 2026-03-08 16:26:58,812 log 41863 6121779200 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+INFO 2026-03-08 16:26:58,814 basehttp 41863 6138605568 "GET /api/algorithms HTTP/1.1" 200 2
+WARNING 2026-03-08 16:26:58,816 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+INFO 2026-03-08 16:26:58,818 basehttp 41863 6155431936 "GET /api/categories HTTP/1.1" 200 2
+WARNING 2026-03-08 16:26:58,821 log 41863 6138605568 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:26:58,822 basehttp 41863 6138605568 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+INFO 2026-03-08 16:26:58,824 basehttp 41863 6121779200 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:26:58,825 basehttp 41863 6172258304 "GET /api/categories HTTP/1.1" 200 2
+WARNING 2026-03-08 16:29:26,980 log 41863 6121779200 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:29:26,983 log 41863 6138605568 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:29:26,985 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+WARNING 2026-03-08 16:29:26,985 basehttp 41863 6138605568 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+WARNING 2026-03-08 16:29:34,958 log 41863 6121779200 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:29:34,959 log 41863 6138605568 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:29:34,960 basehttp 41863 6138605568 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+WARNING 2026-03-08 16:29:34,960 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+WARNING 2026-03-08 16:29:36,958 log 41863 6121779200 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:29:36,959 log 41863 6138605568 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:29:36,960 basehttp 41863 6121779200 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+WARNING 2026-03-08 16:29:36,960 basehttp 41863 6138605568 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 47
+INFO 2026-03-08 16:29:47,960 autoreload 41863 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/views.py changed, reloading.
+INFO 2026-03-08 16:29:53,224 autoreload 42279 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:31:58,573 basehttp 42279 6205124608 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:31:58,573 basehttp 42279 6221950976 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:31:58,582 basehttp 42279 6221950976 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:31:58,582 basehttp 42279 6205124608 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:32:02,546 basehttp 42279 6205124608 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:32:02,549 basehttp 42279 6221950976 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:32:02,566 basehttp 42279 6205124608 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:32:02,566 basehttp 42279 6221950976 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:32:14,949 basehttp 42279 6205124608 "GET /admin/account/myuser/ HTTP/1.1" 200 15345
+INFO 2026-03-08 16:32:15,071 basehttp 42279 6205124608 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:32:18,774 basehttp 42279 6205124608 "GET /admin/account/myuser/ HTTP/1.1" 200 15345
+INFO 2026-03-08 16:32:18,789 basehttp 42279 6205124608 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:32:38,183 basehttp 42279 6221950976 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:32:47,142 basehttp 42279 6255603712 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:32:47,142 basehttp 42279 6238777344 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:32:47,151 basehttp 42279 6255603712 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:32:47,152 basehttp 42279 6238777344 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:32:47,539 basehttp 42279 6221950976 "GET /api/auth/verify-email/467513d9-5db5-4d49-a287-da13bfc6a4d1/ HTTP/1.1" 200 536
+WARNING 2026-03-08 16:32:47,550 log 42279 6221950976 Bad Request: /api/auth/verify-email/467513d9-5db5-4d49-a287-da13bfc6a4d1/
+WARNING 2026-03-08 16:32:47,550 log 42279 6238777344 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 16:32:47,551 basehttp 42279 6221950976 "GET /api/auth/verify-email/467513d9-5db5-4d49-a287-da13bfc6a4d1/ HTTP/1.1" 400 70
+WARNING 2026-03-08 16:32:47,551 basehttp 42279 6238777344 "GET /api/auth/profile/ HTTP/1.1" 401 71
+WARNING 2026-03-08 16:32:47,556 log 42279 6221950976 Bad Request: /api/auth/verify-email/467513d9-5db5-4d49-a287-da13bfc6a4d1/
+WARNING 2026-03-08 16:32:47,557 basehttp 42279 6221950976 "GET /api/auth/verify-email/467513d9-5db5-4d49-a287-da13bfc6a4d1/ HTTP/1.1" 400 70
+INFO 2026-03-08 16:33:34,174 autoreload 42279 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/models.py changed, reloading.
+INFO 2026-03-08 16:33:34,698 autoreload 42491 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:33:40,557 basehttp 42491 6151434240 "GET /api/categories HTTP/1.1" 200 2
+WARNING 2026-03-08 16:33:40,668 log 42491 6168260608 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+INFO 2026-03-08 16:33:40,725 basehttp 42491 6185086976 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:33:40,843 basehttp 42491 6201913344 "GET /api/categories HTTP/1.1" 200 2
+WARNING 2026-03-08 16:33:40,844 basehttp 42491 6168260608 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 70
+INFO 2026-03-08 16:33:40,863 basehttp 42491 6134607872 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:33:41,718 autoreload 42491 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/models.py changed, reloading.
+INFO 2026-03-08 16:33:51,220 autoreload 42536 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:33:57,019 autoreload 42536 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/views.py changed, reloading.
+INFO 2026-03-08 16:34:04,127 autoreload 42601 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:34:22,860 autoreload 42601 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/views.py changed, reloading.
+INFO 2026-03-08 16:34:29,762 autoreload 42632 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:34:40,550 autoreload 42632 8710251008 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/views.py changed, reloading.
+INFO 2026-03-08 16:34:46,226 autoreload 42701 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:35:27,968 autoreload 42787 8710251008 Watching for file changes with StatReloader
+INFO 2026-03-08 16:35:36,470 basehttp 42787 6127120384 "GET /admin/account/myuser/ HTTP/1.1" 200 15903
+INFO 2026-03-08 16:35:36,644 basehttp 42787 6127120384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:35:49,348 basehttp 42787 6127120384 "POST /admin/account/myuser/ HTTP/1.1" 200 11494
+INFO 2026-03-08 16:35:52,110 basehttp 42787 6127120384 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-08 16:35:52,130 basehttp 42787 6127120384 "GET /admin/account/myuser/ HTTP/1.1" 200 15429
+INFO 2026-03-08 16:35:52,146 basehttp 42787 6127120384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:35:54,823 basehttp 42787 6127120384 "GET /admin/account/myuser/ HTTP/1.1" 200 15429
+INFO 2026-03-08 16:35:54,836 basehttp 42787 6127120384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:36:31,277 basehttp 42787 6143946752 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:36:36,967 basehttp 42787 6160773120 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:36:36,971 basehttp 42787 6143946752 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:36:36,977 basehttp 42787 6177599488 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:36:36,978 basehttp 42787 6160773120 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:36:37,385 basehttp 42787 6127120384 "GET /api/auth/verify-email/2ae26569-e519-4068-8cde-6a9ab0a7c7bc/ HTTP/1.1" 200 536
+WARNING 2026-03-08 16:36:37,391 log 42787 6127120384 Bad Request: /api/auth/verify-email/2ae26569-e519-4068-8cde-6a9ab0a7c7bc/
+WARNING 2026-03-08 16:36:37,391 basehttp 42787 6127120384 "GET /api/auth/verify-email/2ae26569-e519-4068-8cde-6a9ab0a7c7bc/ HTTP/1.1" 400 61
+WARNING 2026-03-08 16:36:37,394 log 42787 6127120384 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 16:36:37,395 basehttp 42787 6127120384 "GET /api/auth/profile/ HTTP/1.1" 401 71
+WARNING 2026-03-08 16:36:37,397 log 42787 6143946752 Bad Request: /api/auth/verify-email/2ae26569-e519-4068-8cde-6a9ab0a7c7bc/
+WARNING 2026-03-08 16:36:37,397 basehttp 42787 6143946752 "GET /api/auth/verify-email/2ae26569-e519-4068-8cde-6a9ab0a7c7bc/ HTTP/1.1" 400 61
+INFO 2026-03-08 16:37:31,360 basehttp 42787 6127120384 "GET /admin/account/myuser/ HTTP/1.1" 200 15987
+INFO 2026-03-08 16:37:31,537 basehttp 42787 6127120384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:37:40,144 basehttp 42787 6127120384 "POST /admin/account/myuser/ HTTP/1.1" 200 11578
+INFO 2026-03-08 16:37:42,239 basehttp 42787 6127120384 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-08 16:37:42,268 basehttp 42787 6127120384 "GET /admin/account/myuser/ HTTP/1.1" 200 15513
+INFO 2026-03-08 16:37:42,284 basehttp 42787 6127120384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-03-08 16:38:12,964 log 42787 6143946752 Not Found: /api/algorithms/
+WARNING 2026-03-08 16:38:12,964 basehttp 42787 6143946752 "GET /api/algorithms/ HTTP/1.1" 404 3778
+WARNING 2026-03-08 16:38:12,971 log 42787 6160773120 Bad Request: /api/auth/register/
+WARNING 2026-03-08 16:38:12,971 basehttp 42787 6160773120 "POST /api/auth/register/ HTTP/1.1" 400 41
+WARNING 2026-03-08 16:38:13,980 log 42787 6127120384 Bad Request: /api/auth/register/
+WARNING 2026-03-08 16:38:13,981 basehttp 42787 6127120384 "POST /api/auth/register/ HTTP/1.1" 400 41
+WARNING 2026-03-08 16:38:45,446 log 42787 6127120384 Not Found: /api/algorithms/
+WARNING 2026-03-08 16:38:45,447 basehttp 42787 6127120384 "GET /api/algorithms/ HTTP/1.1" 404 3778
+INFO 2026-03-08 16:38:45,466 basehttp 42787 6143946752 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:38:47,864 basehttp 42787 6160773120 "GET /api/auth/verify-email/c968d378-abba-4328-a207-610610d6dbe7/ HTTP/1.1" 200 536
+WARNING 2026-03-08 16:38:47,867 log 42787 6177599488 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 16:38:47,867 basehttp 42787 6177599488 "GET /api/auth/profile/ HTTP/1.1" 401 71
+INFO 2026-03-08 16:38:48,887 basehttp 42787 6143946752 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:38:49,266 basehttp 42787 6160773120 "GET /api/auth/verify-email/bb67a105-8e5a-4b1e-8cb0-eda861ff7d22/ HTTP/1.1" 200 536
+WARNING 2026-03-08 16:38:49,268 log 42787 6177599488 Bad Request: /api/auth/verify-email/bb67a105-8e5a-4b1e-8cb0-eda861ff7d22/
+WARNING 2026-03-08 16:38:49,269 basehttp 42787 6177599488 "GET /api/auth/verify-email/bb67a105-8e5a-4b1e-8cb0-eda861ff7d22/ HTTP/1.1" 400 61
+INFO 2026-03-08 16:39:22,935 basehttp 42787 6127120384 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:39:30,600 basehttp 42787 6160773120 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:39:30,602 basehttp 42787 6143946752 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:39:30,619 basehttp 42787 6177599488 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:39:30,619 basehttp 42787 6143946752 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:39:30,992 basehttp 42787 6127120384 "GET /api/auth/verify-email/8d083519-87b3-4ff1-8716-442ff7f1d513/ HTTP/1.1" 200 536
+WARNING 2026-03-08 16:39:30,996 log 42787 6127120384 Bad Request: /api/auth/verify-email/8d083519-87b3-4ff1-8716-442ff7f1d513/
+WARNING 2026-03-08 16:39:30,996 basehttp 42787 6127120384 "GET /api/auth/verify-email/8d083519-87b3-4ff1-8716-442ff7f1d513/ HTTP/1.1" 400 61
+WARNING 2026-03-08 16:39:31,001 log 42787 6143946752 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 16:39:31,001 basehttp 42787 6143946752 "GET /api/auth/profile/ HTTP/1.1" 401 71
+WARNING 2026-03-08 16:39:31,003 log 42787 6127120384 Bad Request: /api/auth/verify-email/8d083519-87b3-4ff1-8716-442ff7f1d513/
+WARNING 2026-03-08 16:39:31,004 basehttp 42787 6127120384 "GET /api/auth/verify-email/8d083519-87b3-4ff1-8716-442ff7f1d513/ HTTP/1.1" 400 61
+WARNING 2026-03-08 16:42:17,955 log 42787 6143946752 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:42:17,956 log 42787 6127120384 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:42:17,957 basehttp 42787 6143946752 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 70
+WARNING 2026-03-08 16:42:17,958 basehttp 42787 6127120384 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 70
+WARNING 2026-03-08 16:42:35,937 log 42787 6127120384 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:42:35,938 log 42787 6143946752 Bad Request: /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/
+WARNING 2026-03-08 16:42:35,938 basehttp 42787 6127120384 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 70
+WARNING 2026-03-08 16:42:35,938 basehttp 42787 6143946752 "GET /api/auth/verify-email/372256cb-f117-4dd7-a845-a9fd50a5aa0d/ HTTP/1.1" 400 70
+WARNING 2026-03-08 16:42:42,546 log 42787 6127120384 Not Found: /api/algorithms/
+WARNING 2026-03-08 16:42:42,546 basehttp 42787 6127120384 "GET /api/algorithms/ HTTP/1.1" 404 3778
+INFO 2026-03-08 16:42:42,559 basehttp 42787 6143946752 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:42:44,956 basehttp 42787 6160773120 "GET /api/auth/verify-email/55b92531-8708-4c3c-b331-755edfdd440b/ HTTP/1.1" 200 536
+WARNING 2026-03-08 16:42:45,969 log 42787 6177599488 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 16:42:45,970 basehttp 42787 6177599488 "GET /api/auth/profile/ HTTP/1.1" 401 71
+INFO 2026-03-08 16:42:46,983 basehttp 42787 6143946752 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:42:47,352 basehttp 42787 6160773120 "GET /api/auth/verify-email/8ac190ba-d015-4adc-b74b-4013778ad153/ HTTP/1.1" 200 538
+WARNING 2026-03-08 16:42:47,355 log 42787 6177599488 Bad Request: /api/auth/verify-email/8ac190ba-d015-4adc-b74b-4013778ad153/
+WARNING 2026-03-08 16:42:47,355 basehttp 42787 6177599488 "GET /api/auth/verify-email/8ac190ba-d015-4adc-b74b-4013778ad153/ HTTP/1.1" 400 61
+INFO 2026-03-08 16:43:17,667 basehttp 42787 6127120384 "GET /admin/account/myuser/ HTTP/1.1" 200 18199
+INFO 2026-03-08 16:43:17,784 basehttp 42787 6127120384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:43:26,253 basehttp 42787 6127120384 "POST /admin/account/myuser/ HTTP/1.1" 200 11662
+INFO 2026-03-08 16:43:28,650 basehttp 42787 6127120384 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-08 16:43:28,674 basehttp 42787 6127120384 "GET /admin/account/myuser/ HTTP/1.1" 200 17725
+INFO 2026-03-08 16:43:28,687 basehttp 42787 6127120384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-08 16:44:05,954 basehttp 42787 6143946752 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:44:11,046 basehttp 42787 6177599488 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:44:11,059 basehttp 42787 6160773120 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:44:11,064 basehttp 42787 6194425856 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:44:11,069 basehttp 42787 6177599488 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:44:11,440 basehttp 42787 6143946752 "GET /api/auth/verify-email/372c2a28-b17b-45c3-9164-db8faa97ab65/ HTTP/1.1" 200 538
+WARNING 2026-03-08 16:44:11,444 log 42787 6127120384 Bad Request: /api/auth/verify-email/372c2a28-b17b-45c3-9164-db8faa97ab65/
+WARNING 2026-03-08 16:44:11,444 basehttp 42787 6127120384 "GET /api/auth/verify-email/372c2a28-b17b-45c3-9164-db8faa97ab65/ HTTP/1.1" 400 61
+WARNING 2026-03-08 16:44:11,451 log 42787 6127120384 Bad Request: /api/auth/verify-email/372c2a28-b17b-45c3-9164-db8faa97ab65/
+WARNING 2026-03-08 16:44:11,451 basehttp 42787 6127120384 "GET /api/auth/verify-email/372c2a28-b17b-45c3-9164-db8faa97ab65/ HTTP/1.1" 400 61
+WARNING 2026-03-08 16:44:11,950 log 42787 6127120384 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 16:44:11,950 basehttp 42787 6127120384 "GET /api/auth/profile/ HTTP/1.1" 401 71
+INFO 2026-03-08 16:44:32,671 basehttp 42787 6127120384 "POST /api/auth/register/ HTTP/1.1" 201 154
+INFO 2026-03-08 16:44:39,437 basehttp 42787 6160773120 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:44:39,442 basehttp 42787 6143946752 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:44:39,450 basehttp 42787 6160773120 "GET /api/categories HTTP/1.1" 200 2
+INFO 2026-03-08 16:44:39,450 basehttp 42787 6143946752 "GET /api/algorithms HTTP/1.1" 200 2
+INFO 2026-03-08 16:44:39,815 basehttp 42787 6127120384 "GET /api/auth/verify-email/2dcbae2a-1c9d-4877-87e2-6fc4884483ed/ HTTP/1.1" 200 538
+WARNING 2026-03-08 16:44:39,819 log 42787 6127120384 Bad Request: /api/auth/verify-email/2dcbae2a-1c9d-4877-87e2-6fc4884483ed/
+WARNING 2026-03-08 16:44:39,819 basehttp 42787 6127120384 "GET /api/auth/verify-email/2dcbae2a-1c9d-4877-87e2-6fc4884483ed/ HTTP/1.1" 400 61
+WARNING 2026-03-08 16:44:39,824 log 42787 6127120384 Bad Request: /api/auth/verify-email/2dcbae2a-1c9d-4877-87e2-6fc4884483ed/
+WARNING 2026-03-08 16:44:39,825 basehttp 42787 6127120384 "GET /api/auth/verify-email/2dcbae2a-1c9d-4877-87e2-6fc4884483ed/ HTTP/1.1" 400 61
+WARNING 2026-03-08 16:44:40,326 log 42787 6127120384 Unauthorized: /api/auth/profile/
+WARNING 2026-03-08 16:44:40,327 basehttp 42787 6127120384 "GET /api/auth/profile/ HTTP/1.1" 401 71
+INFO 2026-03-10 16:27:01,932 autoreload 3606 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 16:29:22,347 autoreload 3735 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 16:31:34,339 autoreload 3888 8613388800 Watching for file changes with StatReloader
+WARNING 2026-03-10 16:31:36,784 log 3888 6203322368 Not Found: /
+WARNING 2026-03-10 16:31:36,785 basehttp 3888 6203322368 "GET / HTTP/1.1" 404 2465
+WARNING 2026-03-10 16:31:37,003 log 3888 6203322368 Not Found: /favicon.ico
+WARNING 2026-03-10 16:31:37,004 basehttp 3888 6203322368 "GET /favicon.ico HTTP/1.1" 404 2516
+INFO 2026-03-10 16:31:41,468 basehttp 3888 6203322368 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:31:41,492 basehttp 3888 6203322368 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-10 16:31:41,512 basehttp 3888 6203322368 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:31:41,515 basehttp 3888 6203322368 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:31:41,518 basehttp 3888 6220148736 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:31:41,519 basehttp 3888 6236975104 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:31:41,519 basehttp 3888 6253801472 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:31:41,520 basehttp 3888 6270627840 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:31:41,539 basehttp 3888 6270627840 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+ERROR 2026-03-10 16:31:43,795 log 3888 6270627840 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: account_myuser.is_staff
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/sites.py", line 449, in login
+    return LoginView.as_view(**defaults)(request)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 105, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/debug.py", line 143, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/views.py", line 89, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/generic/base.py", line 144, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/generic/edit.py", line 150, in post
+    if form.is_valid():
+       ~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+    ~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/forms/forms.py", line 338, in full_clean
+    self._clean_form()
+    ~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/forms/forms.py", line 354, in _clean_form
+    cleaned_data = self.clean()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/forms.py", line 366, in clean
+    self.user_cache = authenticate(
+                      ~~~~~~~~~~~~^
+        self.request, username=username, password=password
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/backends.py", line 65, in authenticate
+    user = UserModel._default_manager.get_by_natural_key(username)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/auth/base_user.py", line 37, in get_by_natural_key
+    return self.get(**{self.model.USERNAME_FIELD: username})
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 631, in get
+    num = len(clone)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 368, in __len__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: account_myuser.is_staff
+ERROR 2026-03-10 16:31:43,802 basehttp 3888 6270627840 "POST /admin/login/?next=/admin/ HTTP/1.1" 500 253707
+INFO 2026-03-10 16:31:46,669 basehttp 3888 6270627840 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-10 16:37:30,261 autoreload 4253 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 16:37:37,401 basehttp 4253 6170832896 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:37:37,425 basehttp 4253 6170832896 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-10 16:37:50,002 basehttp 4253 6170832896 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:37:50,007 basehttp 4253 6170832896 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:37:50,013 basehttp 4253 6170832896 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-10 16:38:00,950 basehttp 4253 6170832896 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:38:00,954 basehttp 4253 6170832896 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:38:00,959 basehttp 4253 6170832896 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-10 16:38:03,364 basehttp 4253 6170832896 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4358
+INFO 2026-03-10 16:38:08,695 basehttp 4253 6170832896 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:38:08,719 basehttp 4253 6170832896 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-10 16:38:21,083 basehttp 4253 6170832896 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:38:21,089 basehttp 4253 6170832896 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:38:21,095 basehttp 4253 6170832896 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-10 16:39:08,916 basehttp 4253 6170832896 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:39:08,924 basehttp 4253 6170832896 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+WARNING 2026-03-10 16:39:21,354 log 4253 6187659264 Not Found: /
+WARNING 2026-03-10 16:39:21,355 basehttp 4253 6187659264 "GET / HTTP/1.1" 404 2465
+WARNING 2026-03-10 16:39:22,030 log 4253 6187659264 Not Found: /favicon.ico
+WARNING 2026-03-10 16:39:22,031 basehttp 4253 6187659264 "GET /favicon.ico HTTP/1.1" 404 2516
+INFO 2026-03-10 16:39:29,888 basehttp 4253 6187659264 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:39:29,897 basehttp 4253 6187659264 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-10 16:39:30,284 basehttp 4253 6187659264 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:30,284 basehttp 4253 6204485632 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:30,284 basehttp 4253 6221312000 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:30,286 basehttp 4253 6187659264 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:30,287 basehttp 4253 6204485632 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:30,288 basehttp 4253 6238138368 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:30,288 basehttp 4253 6254964736 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:43,525 basehttp 4253 6221312000 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-10 16:39:43,546 basehttp 4253 6187659264 "GET /admin/ HTTP/1.1" 200 11731
+INFO 2026-03-10 16:39:43,567 basehttp 4253 6204485632 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:43,583 basehttp 4253 6254964736 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:43,583 basehttp 4253 6238138368 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:43,584 basehttp 4253 6221312000 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,487 basehttp 4253 6204485632 "GET /admin/account/emailverificationtoken/ HTTP/1.1" 200 14255
+INFO 2026-03-10 16:39:48,502 basehttp 4253 6238138368 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,502 basehttp 4253 6187659264 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,503 basehttp 4253 6221312000 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,504 basehttp 4253 6204485632 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,510 basehttp 4253 6187659264 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,510 basehttp 4253 6221312000 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,511 basehttp 4253 6271791104 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,511 basehttp 4253 6204485632 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,511 basehttp 4253 6238138368 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,516 basehttp 4253 6254964736 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 16:39:48,516 basehttp 4253 6221312000 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:48,517 basehttp 4253 6187659264 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:50,685 basehttp 4253 6271791104 "GET /admin/account/emailverificationtoken/ HTTP/1.1" 200 14255
+INFO 2026-03-10 16:39:50,699 basehttp 4253 6204485632 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 16:39:51,795 basehttp 4253 6187659264 "GET /admin/account/loginattempt/ HTTP/1.1" 200 13450
+INFO 2026-03-10 16:39:51,807 basehttp 4253 6254964736 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 16:39:52,612 basehttp 4253 6271791104 "GET /admin/account/note/ HTTP/1.1" 200 13974
+INFO 2026-03-10 16:39:52,625 basehttp 4253 6204485632 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 16:39:52,638 basehttp 4253 6221312000 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:53,894 basehttp 4253 6254964736 "GET /admin/account/passwordresettoken/ HTTP/1.1" 200 14235
+INFO 2026-03-10 16:39:53,906 basehttp 4253 6238138368 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 16:39:54,786 basehttp 4253 6204485632 "GET /admin/account/myuser/ HTTP/1.1" 200 17103
+INFO 2026-03-10 16:39:54,795 basehttp 4253 6187659264 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-03-10 16:39:54,799 basehttp 4253 6221312000 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 16:39:54,817 basehttp 4253 6254964736 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-03-10 16:42:20,022 basehttp 4253 6187659264 "GET /admin/account/myuser/ HTTP/1.1" 200 17103
+INFO 2026-03-10 16:42:20,380 basehttp 4253 6187659264 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-03-10 16:43:54,634 log 4253 6204485632 Not Found: /api/auth/register
+WARNING 2026-03-10 16:43:54,636 basehttp 4253 6204485632 "GET /api/auth/register HTTP/1.1" 404 7273
+WARNING 2026-03-10 16:44:24,084 log 4253 6204485632 Method Not Allowed: /api/auth/auth/register/
+WARNING 2026-03-10 16:44:24,084 basehttp 4253 6204485632 "GET /api/auth/auth/register/ HTTP/1.1" 405 40
+WARNING 2026-03-10 16:44:29,950 log 4253 6204485632 Bad Request: /api/auth/auth/register/
+WARNING 2026-03-10 16:44:29,950 basehttp 4253 6204485632 "POST /api/auth/auth/register/ HTTP/1.1" 400 178
+WARNING 2026-03-10 16:49:59,741 log 4253 6170832896 Bad Request: /api/auth/auth/register/
+WARNING 2026-03-10 16:49:59,742 basehttp 4253 6170832896 "POST /api/auth/auth/register/ HTTP/1.1" 400 178
+INFO 2026-03-10 16:57:52,913 basehttp 4253 6170832896 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-10 16:57:52,916 basehttp 4253 6204485632 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+INFO 2026-03-10 16:57:52,919 basehttp 4253 6221312000 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-10 16:57:52,930 log 4253 6170832896 Not Found: /api/api/algorithms
+WARNING 2026-03-10 16:57:52,937 log 4253 6204485632 Not Found: /api/api/categories
+WARNING 2026-03-10 16:57:52,943 basehttp 4253 6170832896 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:52,946 basehttp 4253 6204485632 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:52,946 log 4253 6221312000 Not Found: /api/auth/check/
+WARNING 2026-03-10 16:57:52,947 basehttp 4253 6221312000 "GET /api/auth/check/ HTTP/1.1" 404 7267
+WARNING 2026-03-10 16:57:53,141 log 4253 6221312000 Not Found: /api/api/algorithms
+WARNING 2026-03-10 16:57:53,145 log 4253 6170832896 Not Found: /api/api/algorithms
+WARNING 2026-03-10 16:57:53,148 log 4253 6204485632 Not Found: /api/api/categories
+WARNING 2026-03-10 16:57:53,149 basehttp 4253 6221312000 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,150 basehttp 4253 6170832896 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,152 log 4253 6238138368 Not Found: /api/api/categories
+WARNING 2026-03-10 16:57:53,153 basehttp 4253 6204485632 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,153 basehttp 4253 6238138368 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,167 log 4253 6221312000 Not Found: /api/api/algorithms
+WARNING 2026-03-10 16:57:53,176 log 4253 6170832896 Not Found: /api/api/categories
+WARNING 2026-03-10 16:57:53,179 log 4253 6204485632 Not Found: /api/api/algorithms
+WARNING 2026-03-10 16:57:53,182 log 4253 6238138368 Not Found: /api/auth/check/
+WARNING 2026-03-10 16:57:53,185 log 4253 6254964736 Not Found: /api/api/categories
+WARNING 2026-03-10 16:57:53,186 basehttp 4253 6221312000 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,186 basehttp 4253 6170832896 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,190 log 4253 6187659264 Not Found: /api/auth/check/
+WARNING 2026-03-10 16:57:53,191 basehttp 4253 6204485632 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,191 basehttp 4253 6254964736 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,191 basehttp 4253 6238138368 "GET /api/auth/check/ HTTP/1.1" 404 7267
+WARNING 2026-03-10 16:57:53,191 basehttp 4253 6187659264 "GET /api/auth/check/ HTTP/1.1" 404 7267
+WARNING 2026-03-10 16:57:53,959 log 4253 6221312000 Not Found: /api/api/algorithms
+WARNING 2026-03-10 16:57:53,964 log 4253 6204485632 Not Found: /api/auth/check/
+WARNING 2026-03-10 16:57:53,967 log 4253 6254964736 Not Found: /api/api/algorithms
+WARNING 2026-03-10 16:57:53,970 log 4253 6170832896 Not Found: /api/api/categories
+WARNING 2026-03-10 16:57:53,973 log 4253 6238138368 Not Found: /api/api/categories
+WARNING 2026-03-10 16:57:53,973 basehttp 4253 6221312000 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,976 log 4253 6187659264 Not Found: /api/auth/check/
+WARNING 2026-03-10 16:57:53,977 basehttp 4253 6254964736 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,977 basehttp 4253 6204485632 "GET /api/auth/check/ HTTP/1.1" 404 7267
+WARNING 2026-03-10 16:57:53,977 basehttp 4253 6238138368 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,977 basehttp 4253 6170832896 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 16:57:53,978 basehttp 4253 6187659264 "GET /api/auth/check/ HTTP/1.1" 404 7267
+INFO 2026-03-10 16:58:10,179 basehttp 4253 6221312000 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2026-03-10 16:58:10,187 log 4253 6204485632 Not Found: /api/auth/login/
+WARNING 2026-03-10 16:58:10,188 basehttp 4253 6204485632 "POST /api/auth/login/ HTTP/1.1" 404 7268
+WARNING 2026-03-10 16:58:16,926 log 4253 6254964736 Not Found: /api/auth/login/
+WARNING 2026-03-10 16:58:16,927 basehttp 4253 6254964736 "POST /api/auth/login/ HTTP/1.1" 404 7268
+WARNING 2026-03-10 16:58:18,314 log 4253 6170832896 Not Found: /api/auth/login/
+WARNING 2026-03-10 16:58:18,314 basehttp 4253 6170832896 "POST /api/auth/login/ HTTP/1.1" 404 7268
+INFO 2026-03-10 16:58:50,455 basehttp 4253 6170832896 "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+WARNING 2026-03-10 16:58:50,465 log 4253 6170832896 Not Found: /api/auth/register/
+WARNING 2026-03-10 16:58:50,465 basehttp 4253 6170832896 "POST /api/auth/register/ HTTP/1.1" 404 7277
+INFO 2026-03-10 17:01:14,177 autoreload 4253 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/urls.py changed, reloading.
+INFO 2026-03-10 17:01:14,751 autoreload 7240 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:01:16,016 autoreload 7240 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/urls.py changed, reloading.
+INFO 2026-03-10 17:01:16,310 autoreload 7246 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:01:20,591 autoreload 7246 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/urls.py changed, reloading.
+INFO 2026-03-10 17:01:20,945 autoreload 7257 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:01:23,187 autoreload 7257 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/account/urls.py changed, reloading.
+INFO 2026-03-10 17:01:23,493 autoreload 7265 8613388800 Watching for file changes with StatReloader
+WARNING 2026-03-10 17:01:36,150 log 7265 6198243328 Not Found: /api/api/algorithms
+WARNING 2026-03-10 17:01:36,150 log 7265 6215069696 Not Found: /api/api/categories
+WARNING 2026-03-10 17:01:36,153 log 7265 6231896064 Not Found: /api/api/algorithms
+WARNING 2026-03-10 17:01:36,163 log 7265 6282375168 Not Found: /api/auth/check/
+WARNING 2026-03-10 17:01:36,174 basehttp 7265 6282375168 "GET /api/auth/check/ HTTP/1.1" 404 7257
+WARNING 2026-03-10 17:01:36,168 log 7265 6248722432 Not Found: /api/api/categories
+WARNING 2026-03-10 17:01:36,169 basehttp 7265 6215069696 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:01:36,153 log 7265 6265548800 Not Found: /api/auth/check/
+WARNING 2026-03-10 17:01:36,177 basehttp 7265 6198243328 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:01:36,176 basehttp 7265 6248722432 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:01:36,175 basehttp 7265 6231896064 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:01:36,179 basehttp 7265 6265548800 "GET /api/auth/check/ HTTP/1.1" 404 7257
+ERROR 2026-03-10 17:02:54,335 utils 7265 6198243328 Failed to send email to djangoforgithub@gmail.com: No module named 'Ecommerce'
+INFO 2026-03-10 17:02:54,336 basehttp 7265 6198243328 "POST /api/auth/register/ HTTP/1.1" 201 162
+INFO 2026-03-10 17:05:23,907 basehttp 7265 6198243328 "GET /admin/account/myuser/ HTTP/1.1" 200 17855
+INFO 2026-03-10 17:05:23,982 basehttp 7265 6198243328 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:05:23,986 basehttp 7265 6198243328 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2026-03-10 17:05:29,563 basehttp 7265 6198243328 "POST /admin/account/myuser/ HTTP/1.1" 200 12152
+INFO 2026-03-10 17:05:29,581 basehttp 7265 6198243328 "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2026-03-10 17:05:30,751 basehttp 7265 6198243328 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-10 17:05:30,770 basehttp 7265 6198243328 "GET /admin/account/myuser/ HTTP/1.1" 200 17237
+INFO 2026-03-10 17:05:30,779 basehttp 7265 6198243328 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2026-03-10 17:05:58,499 utils 7265 6215069696 Failed to send email to djangoforgithub@gmail.com: No module named 'Ecommerce'
+INFO 2026-03-10 17:05:58,500 basehttp 7265 6215069696 "POST /api/auth/register/ HTTP/1.1" 201 162
+INFO 2026-03-10 17:07:52,584 autoreload 7265 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-10 17:07:53,124 autoreload 7538 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:08:00,529 autoreload 7538 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-10 17:08:00,946 autoreload 7550 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:08:19,570 basehttp 7550 6198816768 "GET /admin/account/myuser/ HTTP/1.1" 200 17989
+INFO 2026-03-10 17:08:19,693 basehttp 7550 6198816768 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:08:24,698 basehttp 7550 6198816768 "POST /admin/account/myuser/ HTTP/1.1" 200 12286
+INFO 2026-03-10 17:08:25,860 basehttp 7550 6198816768 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-10 17:08:25,877 basehttp 7550 6198816768 "GET /admin/account/myuser/ HTTP/1.1" 200 17318
+INFO 2026-03-10 17:08:25,890 basehttp 7550 6198816768 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:08:43,648 utils 7550 6215643136 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-10 17:08:43,649 basehttp 7550 6215643136 "POST /api/auth/register/ HTTP/1.1" 201 162
+INFO 2026-03-10 17:12:34,745 autoreload 7550 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-10 17:12:35,312 autoreload 7752 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:12:43,751 autoreload 7752 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-10 17:12:44,118 autoreload 7767 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:13:16,777 basehttp 7767 6189445120 "GET /admin/account/myuser/ HTTP/1.1" 200 18070
+INFO 2026-03-10 17:13:16,831 basehttp 7767 6189445120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:13:22,358 basehttp 7767 6189445120 "POST /admin/account/myuser/ HTTP/1.1" 200 12367
+INFO 2026-03-10 17:13:23,449 basehttp 7767 6189445120 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-10 17:13:23,469 basehttp 7767 6189445120 "GET /admin/account/myuser/ HTTP/1.1" 200 17399
+INFO 2026-03-10 17:13:23,481 basehttp 7767 6189445120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:13:27,503 basehttp 7767 6206271488 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-10 17:13:27,505 basehttp 7767 6223097856 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+INFO 2026-03-10 17:13:27,505 basehttp 7767 6239924224 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-10 17:13:27,513 basehttp 7767 6256750592 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-10 17:13:27,519 basehttp 7767 6273576960 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+INFO 2026-03-10 17:13:27,519 basehttp 7767 6290403328 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-10 17:13:27,522 log 7767 6206271488 Not Found: /api/api/algorithms
+WARNING 2026-03-10 17:13:27,523 log 7767 6239924224 Not Found: /api/auth/check/
+WARNING 2026-03-10 17:13:27,523 log 7767 6223097856 Not Found: /api/api/categories
+WARNING 2026-03-10 17:13:27,523 log 7767 6256750592 Not Found: /api/api/algorithms
+WARNING 2026-03-10 17:13:27,525 log 7767 6273576960 Not Found: /api/api/categories
+WARNING 2026-03-10 17:13:27,527 log 7767 6290403328 Not Found: /api/auth/check/
+WARNING 2026-03-10 17:13:27,528 basehttp 7767 6206271488 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:13:27,528 basehttp 7767 6239924224 "GET /api/auth/check/ HTTP/1.1" 404 7257
+WARNING 2026-03-10 17:13:27,528 basehttp 7767 6273576960 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:13:27,528 basehttp 7767 6256750592 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:13:27,528 basehttp 7767 6290403328 "GET /api/auth/check/ HTTP/1.1" 404 7257
+WARNING 2026-03-10 17:13:27,528 basehttp 7767 6223097856 "GET /api/api/categories HTTP/1.1" 404 3787
+INFO 2026-03-10 17:13:48,246 basehttp 7767 6206271488 "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+ERROR 2026-03-10 17:13:50,475 utils 7767 6256750592 Failed to send email to djangoforgithub@gmail.com: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
+INFO 2026-03-10 17:13:50,476 basehttp 7767 6256750592 "POST /api/auth/register/ HTTP/1.1" 201 162
+INFO 2026-03-10 17:20:03,006 basehttp 7767 6189445120 "GET /admin/account/myuser/ HTTP/1.1" 200 18151
+INFO 2026-03-10 17:20:03,078 basehttp 7767 6189445120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:20:09,960 basehttp 7767 6189445120 "POST /admin/account/myuser/ HTTP/1.1" 200 12448
+INFO 2026-03-10 17:20:11,082 basehttp 7767 6189445120 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-10 17:20:11,096 basehttp 7767 6189445120 "GET /admin/account/myuser/ HTTP/1.1" 200 17480
+INFO 2026-03-10 17:20:11,106 basehttp 7767 6189445120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2026-03-10 17:20:38,621 utils 7767 6206271488 Failed to send email to djangoforgithub@gmail.com: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
+INFO 2026-03-10 17:20:38,623 basehttp 7767 6206271488 "POST /api/auth/register/ HTTP/1.1" 201 162
+INFO 2026-03-10 17:21:37,573 basehttp 7767 6189445120 "GET /admin/account/myuser/ HTTP/1.1" 200 18232
+INFO 2026-03-10 17:21:37,587 basehttp 7767 6189445120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:21:43,466 basehttp 7767 6189445120 "POST /admin/account/myuser/ HTTP/1.1" 200 12529
+INFO 2026-03-10 17:21:44,762 basehttp 7767 6189445120 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-10 17:21:44,781 basehttp 7767 6189445120 "GET /admin/account/myuser/ HTTP/1.1" 200 17561
+INFO 2026-03-10 17:21:44,790 basehttp 7767 6189445120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-03-10 17:21:57,713 log 7767 6206271488 Not Found: /api/api/algorithms
+WARNING 2026-03-10 17:21:57,715 log 7767 6256750592 Not Found: /api/api/algorithms
+WARNING 2026-03-10 17:21:57,718 log 7767 6223097856 Not Found: /api/api/categories
+WARNING 2026-03-10 17:21:57,720 log 7767 6273576960 Not Found: /api/api/categories
+WARNING 2026-03-10 17:21:57,723 log 7767 6239924224 Not Found: /api/auth/check/
+WARNING 2026-03-10 17:21:57,724 basehttp 7767 6206271488 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:21:57,726 log 7767 6290403328 Not Found: /api/auth/check/
+WARNING 2026-03-10 17:21:57,726 basehttp 7767 6256750592 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:21:57,726 basehttp 7767 6273576960 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:21:57,726 basehttp 7767 6223097856 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:21:57,727 basehttp 7767 6239924224 "GET /api/auth/check/ HTTP/1.1" 404 7257
+WARNING 2026-03-10 17:21:57,727 basehttp 7767 6290403328 "GET /api/auth/check/ HTTP/1.1" 404 7257
+ERROR 2026-03-10 17:22:16,569 utils 7767 6206271488 Failed to send email to djangoforgithub@gmail.com: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
+INFO 2026-03-10 17:22:16,572 basehttp 7767 6206271488 "POST /api/auth/register/ HTTP/1.1" 201 162
+INFO 2026-03-10 17:23:56,285 autoreload 7767 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-10 17:23:56,820 autoreload 8145 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:24:07,288 autoreload 8145 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-10 17:24:07,701 autoreload 8160 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:26:06,076 basehttp 8160 6190116864 "GET /admin/account/myuser/ HTTP/1.1" 200 18313
+INFO 2026-03-10 17:26:06,164 basehttp 8160 6190116864 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:26:10,076 basehttp 8160 6190116864 "POST /admin/account/myuser/ HTTP/1.1" 200 12610
+INFO 2026-03-10 17:26:11,215 basehttp 8160 6190116864 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-10 17:26:11,236 basehttp 8160 6190116864 "GET /admin/account/myuser/ HTTP/1.1" 200 17642
+INFO 2026-03-10 17:26:11,251 basehttp 8160 6190116864 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:26:28,708 basehttp 8160 6206943232 "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2026-03-10 17:26:34,353 utils 8160 6206943232 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-10 17:26:34,361 basehttp 8160 6206943232 "POST /api/auth/register/ HTTP/1.1" 201 162
+INFO 2026-03-10 17:32:02,059 autoreload 8160 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-10 17:32:02,624 autoreload 8650 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:32:03,890 autoreload 8650 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algoflow_django/settings.py changed, reloading.
+INFO 2026-03-10 17:32:04,195 autoreload 8655 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:32:10,087 basehttp 8655 6198915072 "GET /admin/account/myuser/ HTTP/1.1" 200 18394
+INFO 2026-03-10 17:32:10,243 basehttp 8655 6198915072 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:32:14,214 basehttp 8655 6198915072 "POST /admin/account/myuser/ HTTP/1.1" 200 12691
+INFO 2026-03-10 17:32:15,315 basehttp 8655 6198915072 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-10 17:32:15,335 basehttp 8655 6198915072 "GET /admin/account/myuser/ HTTP/1.1" 200 17723
+INFO 2026-03-10 17:32:15,349 basehttp 8655 6198915072 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-10 17:32:47,154 utils 8655 6215741440 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-10 17:32:47,158 basehttp 8655 6215741440 "POST /api/auth/register/ HTTP/1.1" 201 162
+INFO 2026-03-10 17:32:59,487 basehttp 8655 6232567808 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-10 17:32:59,488 basehttp 8655 6249394176 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+INFO 2026-03-10 17:32:59,490 basehttp 8655 6266220544 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-10 17:32:59,491 basehttp 8655 6283046912 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-10 17:32:59,491 basehttp 8655 6299873280 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+INFO 2026-03-10 17:32:59,494 basehttp 8655 6316699648 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-10 17:32:59,509 log 8655 6350352384 Not Found: /api/api/categories
+WARNING 2026-03-10 17:32:59,509 log 8655 6333526016 Not Found: /api/api/algorithms
+WARNING 2026-03-10 17:32:59,509 log 8655 6367178752 Not Found: /api/auth/check/
+WARNING 2026-03-10 17:32:59,510 basehttp 8655 6350352384 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:32:59,510 basehttp 8655 6367178752 "GET /api/auth/check/ HTTP/1.1" 404 7257
+WARNING 2026-03-10 17:32:59,511 basehttp 8655 6333526016 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:32:59,519 log 8655 6350352384 Not Found: /api/api/categories
+WARNING 2026-03-10 17:32:59,521 log 8655 6384005120 Not Found: /api/api/algorithms
+WARNING 2026-03-10 17:32:59,524 log 8655 6400831488 Not Found: /api/auth/check/
+WARNING 2026-03-10 17:32:59,525 basehttp 8655 6384005120 "GET /api/api/algorithms HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:32:59,525 basehttp 8655 6350352384 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:32:59,527 basehttp 8655 6400831488 "GET /api/auth/check/ HTTP/1.1" 404 7257
+WARNING 2026-03-10 17:33:11,346 log 8655 6400831488 Not Found: /api/api/categories
+WARNING 2026-03-10 17:33:11,346 basehttp 8655 6400831488 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:33:11,351 log 8655 6384005120 Not Found: /api/api/categories
+WARNING 2026-03-10 17:33:11,351 basehttp 8655 6384005120 "GET /api/api/categories HTTP/1.1" 404 3787
+INFO 2026-03-10 17:39:21,474 basehttp 8655 6198915072 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+INFO 2026-03-10 17:39:21,475 basehttp 8655 6215741440 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+WARNING 2026-03-10 17:39:21,483 log 8655 6198915072 Not Found: /api/api/categories
+WARNING 2026-03-10 17:39:21,485 log 8655 6215741440 Not Found: /api/api/categories
+WARNING 2026-03-10 17:39:21,485 basehttp 8655 6198915072 "GET /api/api/categories HTTP/1.1" 404 3787
+WARNING 2026-03-10 17:39:21,486 basehttp 8655 6215741440 "GET /api/api/categories HTTP/1.1" 404 3787
+INFO 2026-03-10 17:45:13,749 autoreload 8655 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algorithms/views.py changed, reloading.
+INFO 2026-03-10 17:45:14,284 autoreload 9075 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:45:18,534 autoreload 9075 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algorithms/views.py changed, reloading.
+INFO 2026-03-10 17:45:18,846 autoreload 9084 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:45:39,445 autoreload 9084 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algorithms/views.py changed, reloading.
+INFO 2026-03-10 17:45:39,871 autoreload 9099 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:46:02,488 autoreload 9099 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algorithms/views.py changed, reloading.
+INFO 2026-03-10 17:46:02,934 autoreload 9122 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:46:27,696 autoreload 9122 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algorithms/views.py changed, reloading.
+INFO 2026-03-10 17:46:28,128 autoreload 9133 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-10 17:46:38,505 autoreload 9133 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algorithms/views.py changed, reloading.
+INFO 2026-03-10 17:46:38,919 autoreload 9151 8613388800 Watching for file changes with StatReloader

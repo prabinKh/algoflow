@@ -62,6 +62,18 @@ export default function AlgorithmViewer({ algorithm, onClose }: AlgorithmViewerP
   const [activeTab, setActiveTab] = useState<'code' | 'info' | 'assets' | 'assessment'>('code');
   const Icon = iconMap[algorithm.icon || 'Sparkles'] || Sparkles;
 
+  const hasAssets = (algorithm.assets && algorithm.assets.length > 0) || false;
+  const hasQuestions = (algorithm.questions && algorithm.questions.length > 0) || false;
+
+  const desktopTabs = [
+    { id: 'code', icon: Terminal, label: 'Source', show: true },
+    { id: 'info', icon: Info, label: 'Guide', show: true },
+    { id: 'assets', icon: FileText, label: 'Assets', show: hasAssets },
+    { id: 'assessment', icon: HelpCircle, label: 'Quiz', show: hasQuestions },
+  ] as const;
+
+  const visibleTabs = desktopTabs.filter(t => t.show);
+
   return (
     <motion.div 
       initial={{ opacity: 0, scale: 0.98 }}
@@ -76,34 +88,39 @@ export default function AlgorithmViewer({ algorithm, onClose }: AlgorithmViewerP
           <div className="w-16 h-16 rounded-2xl bg-indigo-600 flex items-center justify-center text-white shadow-2xl shadow-indigo-500/40 border border-white/20">
             <Icon size={32} />
           </div>
-          <div>
-            <div className="flex items-center gap-3 mb-2">
-              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-400 px-3 py-1 bg-indigo-500/10 rounded-full border border-indigo-500/20">
-                {algorithm.category}
+          <div className="space-y-3">
+            {/* Top-left: category / branch badge */}
+            <div className="flex items-center flex-wrap gap-3">
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-300 px-3 py-1 bg-indigo-500/10 rounded-full border border-indigo-500/30">
+                {algorithm.category || 'Uncategorized'}
               </span>
-              <div className="flex gap-2">
-                <span className={cn(
-                  "px-3 py-1 rounded-full text-[10px] font-black uppercase border",
-                  algorithm.complexity.timeRating === 'good' ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20" :
-                  algorithm.complexity.timeRating === 'average' ? "bg-amber-500/10 text-amber-400 border-amber-500/20" :
-                  "bg-rose-500/10 text-rose-400 border-rose-500/20"
-                )}>
-                  Time: {algorithm.complexity.time}
-                </span>
-              </div>
+              <span className={cn(
+                "px-3 py-1 rounded-full text-[10px] font-black uppercase border",
+                algorithm.complexity.timeRating === 'good' ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20" :
+                algorithm.complexity.timeRating === 'average' ? "bg-amber-500/10 text-amber-400 border-amber-500/20" :
+                "bg-rose-500/10 text-rose-400 border-rose-500/20"
+              )}>
+                Time: {algorithm.complexity.time}
+              </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tighter text-white">{algorithm.name}</h2>
+
+            {/* Center: algorithm name */}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tighter text-white">
+              {algorithm.name}
+            </h2>
+
+            {/* Under name: description */}
+            {algorithm.description && (
+              <p className="text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
+                {algorithm.description}
+              </p>
+            )}
           </div>
         </div>
 
         <div className="flex items-center gap-3">
           <div className="hidden lg:flex bg-white/5 p-1 rounded-2xl border border-white/10">
-            {[
-              { id: 'code', icon: Terminal, label: 'Source' },
-              { id: 'info', icon: Info, label: 'Guide' },
-              { id: 'assets', icon: FileText, label: 'Assets' },
-              { id: 'assessment', icon: HelpCircle, label: 'Quiz' }
-            ].map((tab) => (
+            {visibleTabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
@@ -145,12 +162,7 @@ export default function AlgorithmViewer({ algorithm, onClose }: AlgorithmViewerP
 
       {/* Mobile Tabs */}
       <div className="flex lg:hidden bg-white/5 p-1.5 rounded-2xl border border-white/10 shadow-xl overflow-x-auto no-scrollbar">
-        {[
-          { id: 'code', icon: Terminal, label: 'Source' },
-          { id: 'info', icon: Info, label: 'Guide' },
-          { id: 'assets', icon: FileText, label: 'Assets' },
-          { id: 'assessment', icon: HelpCircle, label: 'Quiz' }
-        ].map((tab) => (
+        {visibleTabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id as any)}
@@ -167,37 +179,28 @@ export default function AlgorithmViewer({ algorithm, onClose }: AlgorithmViewerP
         ))}
       </div>
 
-      {/* Main Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-        {/* Left: Code Panel */}
-        <div className={cn(
-          "space-y-6",
-          activeTab !== 'code' && "hidden lg:block"
-        )}>
-          <CodePanel algorithm={algorithm} />
-        </div>
+      {/* Main Content */}
+      <div className="space-y-6">
+        {activeTab === 'code' && (
+          <div className="w-full">
+            <CodePanel algorithm={algorithm} />
+          </div>
+        )}
 
-        {/* Right: Explanation Panel or Assets Panel or Questions Panel */}
-        <div className={cn(
-          "space-y-6",
-          activeTab === 'code' && "hidden lg:block",
-          (activeTab === 'assets' || activeTab === 'assessment') && "lg:hidden"
-        )}>
-          {activeTab === 'info' && <ExplanationPanel algorithm={algorithm} />}
-          {activeTab === 'assets' && <div className="lg:hidden"><AssetsPanel algorithm={algorithm} /></div>}
-          {activeTab === 'assessment' && <div className="lg:hidden"><QuestionsPanel algorithm={algorithm} /></div>}
-        </div>
+        {activeTab === 'info' && (
+          <div className="w-full">
+            <ExplanationPanel algorithm={algorithm} />
+          </div>
+        )}
 
-        {/* Desktop Assets Panel (Full Width if active) */}
         {activeTab === 'assets' && (
-          <div className="hidden lg:block lg:col-span-2">
+          <div className="w-full">
             <AssetsPanel algorithm={algorithm} />
           </div>
         )}
 
-        {/* Desktop Questions Panel (Full Width if active) */}
         {activeTab === 'assessment' && (
-          <div className="hidden lg:block lg:col-span-2">
+          <div className="w-full">
             <QuestionsPanel algorithm={algorithm} />
           </div>
         )}

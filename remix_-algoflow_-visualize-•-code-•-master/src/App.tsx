@@ -78,8 +78,8 @@ export default function App() {
     setIsLoading(true);
     try {
       const [algosRes, catsRes] = await Promise.all([
-        apiFetch('/api/algorithms'),
-        apiFetch('/api/categories')
+        apiFetch('/api/algorithms/'),
+        apiFetch('/api/categories/')
       ]);
       const algos = await algosRes.json();
       const cats = await catsRes.json();
@@ -140,7 +140,7 @@ export default function App() {
 
   const handleAddAlgorithm = async (newAlgo: Algorithm) => {
     try {
-      const response = await apiFetch('/api/algorithms', {
+      const response = await apiFetch('/api/algorithms/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newAlgo)
@@ -157,7 +157,7 @@ export default function App() {
   const handleDeleteAlgorithm = async (id: string) => {
     if (window.confirm('Are you sure you want to delete this algorithm?')) {
       try {
-        const response = await apiFetch(`/api/algorithms/${id}`, {
+        const response = await apiFetch(`/api/algorithms/${id}/`, {
           method: 'DELETE'
         });
         if (response.ok) {

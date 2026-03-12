@@ -17,9 +17,9 @@ export const saveApiConfig = (config: { geminiKey?: string; backendUrl?: string 
 };
 
 export const getBackendUrl = () => {
-  const config = getApiConfig();
-  // Default to Django backend URL
-  return config.backendUrl || 'http://localhost:8000/api';
+  // For now, always talk to the Django backend.
+  // If you want to make this configurable again, wire it through getApiConfig().
+  return 'http://localhost:8000';
 };
 
 export const getGeminiKey = () => {

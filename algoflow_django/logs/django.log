@@ -1099,3 +1099,849 @@ INFO 2026-03-10 17:46:27,696 autoreload 9122 8613388800 /Users/prabinkhadka/Docu
 INFO 2026-03-10 17:46:28,128 autoreload 9133 8613388800 Watching for file changes with StatReloader
 INFO 2026-03-10 17:46:38,505 autoreload 9133 8613388800 /Users/prabinkhadka/Documents/practice/algoflow/algoflow/algoflow_django/algorithms/views.py changed, reloading.
 INFO 2026-03-10 17:46:38,919 autoreload 9151 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-11 14:19:22,530 autoreload 25934 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-11 15:19:34,420 autoreload 25934 8613388800 /Users/prabinkhadka/Documents/practice/algo flow new v3/git algoflow/algoflow/algoflow_django/algorithms/models.py changed, reloading.
+INFO 2026-03-11 15:19:34,974 autoreload 28694 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-11 15:20:06,062 autoreload 28694 8613388800 /Users/prabinkhadka/Documents/practice/algo flow new v3/git algoflow/algoflow/algoflow_django/algorithms/serializers.py changed, reloading.
+INFO 2026-03-11 15:20:06,511 autoreload 28735 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-11 15:20:39,502 autoreload 28735 8613388800 /Users/prabinkhadka/Documents/practice/algo flow new v3/git algoflow/algoflow/algoflow_django/algorithms/views.py changed, reloading.
+INFO 2026-03-11 15:20:39,954 autoreload 28761 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-11 15:20:55,608 autoreload 28761 8613388800 /Users/prabinkhadka/Documents/practice/algo flow new v3/git algoflow/algoflow/algoflow_django/algorithms/admin.py changed, reloading.
+INFO 2026-03-11 15:20:56,030 autoreload 28781 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-11 15:44:26,292 autoreload 29667 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-11 15:44:40,440 basehttp 29667 6159527936 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-11 15:44:40,442 basehttp 29667 6176354304 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+WARNING 2026-03-11 15:44:40,462 log 29667 6176354304 Not Found: /api/api/categories
+WARNING 2026-03-11 15:44:40,463 log 29667 6159527936 Not Found: /api/api/algorithms
+INFO 2026-03-11 15:44:40,463 basehttp 29667 6193180672 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-11 15:44:40,463 basehttp 29667 6176354304 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-11 15:44:40,464 basehttp 29667 6159527936 "GET /api/api/algorithms HTTP/1.1" 404 5317
+WARNING 2026-03-11 15:44:40,473 log 29667 6193180672 Not Found: /api/auth/check/
+WARNING 2026-03-11 15:44:40,477 log 29667 6176354304 Not Found: /api/api/algorithms
+WARNING 2026-03-11 15:44:40,480 log 29667 6159527936 Not Found: /api/api/categories
+WARNING 2026-03-11 15:44:40,480 basehttp 29667 6193180672 "GET /api/auth/check/ HTTP/1.1" 404 8787
+WARNING 2026-03-11 15:44:40,484 log 29667 6210007040 Not Found: /api/auth/check/
+WARNING 2026-03-11 15:44:40,485 basehttp 29667 6159527936 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-11 15:44:40,485 basehttp 29667 6176354304 "GET /api/api/algorithms HTTP/1.1" 404 5317
+WARNING 2026-03-11 15:44:40,486 basehttp 29667 6210007040 "GET /api/auth/check/ HTTP/1.1" 404 8787
+WARNING 2026-03-11 15:44:40,878 log 29667 6193180672 Not Found: /api/api/categories
+WARNING 2026-03-11 15:44:40,883 log 29667 6159527936 Not Found: /api/api/categories
+WARNING 2026-03-11 15:44:40,884 basehttp 29667 6193180672 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-11 15:44:40,884 basehttp 29667 6159527936 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-11 15:44:41,364 log 29667 6226833408 Not Found: /
+WARNING 2026-03-11 15:44:41,364 basehttp 29667 6226833408 "GET / HTTP/1.1" 404 2465
+INFO 2026-03-11 15:44:45,271 basehttp 29667 6226833408 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-11 15:44:45,307 basehttp 29667 6226833408 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4790
+INFO 2026-03-11 15:44:46,828 basehttp 29667 6226833408 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:44:46,830 basehttp 29667 6243659776 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:44:46,830 basehttp 29667 6260486144 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:44:46,831 basehttp 29667 6294138880 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:44:46,832 basehttp 29667 6277312512 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:44:46,832 basehttp 29667 6226833408 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:44:46,832 basehttp 29667 6310965248 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:44:46,869 basehttp 29667 6243659776 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-03-11 15:44:58,109 basehttp 29667 6260486144 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4966
+INFO 2026-03-11 15:45:05,800 basehttp 29667 6294138880 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4966
+INFO 2026-03-11 15:45:24,598 basehttp 29667 6260486144 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-11 15:45:24,632 basehttp 29667 6294138880 "GET /admin/ HTTP/1.1" 200 13585
+INFO 2026-03-11 15:45:24,649 basehttp 29667 6260486144 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:45:24,703 basehttp 29667 6294138880 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-03-11 15:45:24,703 basehttp 29667 6260486144 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-03-11 15:45:24,704 basehttp 29667 6159527936 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+ERROR 2026-03-11 15:45:29,402 log 29667 6260486144 Internal Server Error: /admin/algorithms/algorithm/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: algorithms_category
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 145, in __init__
+    self.queryset = self.get_queryset(request)
+                    ~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 545, in get_queryset
+    ) = self.get_filters(request)
+        ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 216, in get_filters
+    spec = field_list_filter_class(
+        field,
+    ...<4 lines>...
+        field_path=field_path,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/filters.py", line 217, in create
+    return list_filter_class(
+        field, request, params, model, model_admin, field_path=field_path
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/filters.py", line 232, in __init__
+    self.lookup_choices = self.field_choices(field, request, model_admin)
+                          ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/filters.py", line 273, in field_choices
+    return field.get_choices(include_blank=False, ordering=ordering)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/fields/__init__.py", line 1083, in get_choices
+    (choice_func(x), str(x)) for x in qs
+                                      ^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 386, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 1954, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 93, in __iter__
+    results = compiler.execute_sql(
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: algorithms_category
+ERROR 2026-03-11 15:45:29,410 basehttp 29667 6260486144 "GET /admin/algorithms/algorithm/ HTTP/1.1" 500 214485
+ERROR 2026-03-11 15:45:33,451 log 29667 6294138880 Internal Server Error: /admin/algorithms/asset/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: algorithms_asset
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 606, in count
+    return self.query.get_count(using=self.db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 646, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 628, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: algorithms_asset
+ERROR 2026-03-11 15:45:33,457 basehttp 29667 6294138880 "GET /admin/algorithms/asset/ HTTP/1.1" 500 196940
+ERROR 2026-03-11 15:45:39,117 log 29667 6159527936 Internal Server Error: /admin/algorithms/question/
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: algorithms_question
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+        request,
+    ...<12 lines>...
+        self.search_help_text,
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/query.py", line 606, in count
+    return self.query.get_count(using=self.db)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 646, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/query.py", line 628, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 360, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: algorithms_question
+ERROR 2026-03-11 15:45:39,129 basehttp 29667 6159527936 "GET /admin/algorithms/question/ HTTP/1.1" 500 197135
+INFO 2026-03-11 15:48:13,965 basehttp 29667 6176354304 "GET /admin/ HTTP/1.1" 200 13585
+INFO 2026-03-11 15:48:17,056 basehttp 29667 6176354304 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 14832
+INFO 2026-03-11 15:48:17,081 basehttp 29667 6277312512 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,081 basehttp 29667 6226833408 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,082 basehttp 29667 6243659776 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,082 basehttp 29667 6210007040 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,082 basehttp 29667 6176354304 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-11 15:48:17,083 basehttp 29667 6193180672 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,085 basehttp 29667 6243659776 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,085 basehttp 29667 6277312512 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,086 basehttp 29667 6210007040 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,086 basehttp 29667 6226833408 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,087 basehttp 29667 6176354304 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,087 basehttp 29667 6193180672 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:17,148 basehttp 29667 6277312512 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:20,287 basehttp 29667 6210007040 "GET /admin/algorithms/asset/ HTTP/1.1" 200 14366
+INFO 2026-03-11 15:48:20,303 basehttp 29667 6226833408 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-11 15:48:22,331 basehttp 29667 6193180672 "GET /admin/algorithms/algorithm/add/ HTTP/1.1" 200 35377
+INFO 2026-03-11 15:48:22,345 basehttp 29667 6176354304 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:22,346 basehttp 29667 6226833408 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:22,346 basehttp 29667 6210007040 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:22,357 basehttp 29667 6193180672 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-03-11 15:48:22,358 basehttp 29667 6277312512 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-11 15:48:22,361 basehttp 29667 6243659776 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15628
+INFO 2026-03-11 15:48:22,361 basehttp 29667 6176354304 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2026-03-11 16:23:24,233 basehttp 29667 6176354304 "GET /admin/algorithms/category/ HTTP/1.1" 200 13563
+INFO 2026-03-11 16:23:24,325 basehttp 29667 6176354304 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-11 16:23:25,841 basehttp 29667 6176354304 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 14832
+INFO 2026-03-11 16:23:25,851 basehttp 29667 6176354304 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-11 16:23:38,404 basehttp 29667 6210007040 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-11 16:23:38,408 basehttp 29667 6226833408 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+INFO 2026-03-11 16:23:38,410 basehttp 29667 6243659776 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-11 16:23:38,412 basehttp 29667 6277312512 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-11 16:23:38,412 basehttp 29667 6310965248 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+WARNING 2026-03-11 16:23:38,424 log 29667 6226833408 Not Found: /api/api/categories
+WARNING 2026-03-11 16:23:38,429 log 29667 6243659776 Not Found: /api/auth/check/
+WARNING 2026-03-11 16:23:38,433 log 29667 6210007040 Not Found: /api/api/algorithms
+INFO 2026-03-11 16:23:38,433 basehttp 29667 6327791616 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-11 16:23:38,433 basehttp 29667 6226833408 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-11 16:23:38,436 log 29667 6277312512 Not Found: /api/api/algorithms
+WARNING 2026-03-11 16:23:38,439 log 29667 6310965248 Not Found: /api/api/categories
+WARNING 2026-03-11 16:23:38,439 basehttp 29667 6243659776 "GET /api/auth/check/ HTTP/1.1" 404 8787
+WARNING 2026-03-11 16:23:38,439 basehttp 29667 6210007040 "GET /api/api/algorithms HTTP/1.1" 404 5317
+WARNING 2026-03-11 16:23:38,443 log 29667 6327791616 Not Found: /api/auth/check/
+WARNING 2026-03-11 16:23:38,444 basehttp 29667 6277312512 "GET /api/api/algorithms HTTP/1.1" 404 5317
+WARNING 2026-03-11 16:23:38,444 basehttp 29667 6310965248 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-11 16:23:38,444 basehttp 29667 6327791616 "GET /api/auth/check/ HTTP/1.1" 404 8787
+WARNING 2026-03-11 16:23:38,536 log 29667 6226833408 Not Found: /api/api/categories
+WARNING 2026-03-11 16:23:38,539 log 29667 6243659776 Not Found: /api/api/categories
+WARNING 2026-03-11 16:23:38,540 basehttp 29667 6226833408 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-11 16:23:38,540 basehttp 29667 6243659776 "GET /api/api/categories HTTP/1.1" 404 5317
+INFO 2026-03-12 15:11:23,880 basehttp 29667 6176354304 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 14832
+INFO 2026-03-12 15:11:26,087 basehttp 29667 6176354304 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,093 basehttp 29667 6210007040 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,093 basehttp 29667 6277312512 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,094 basehttp 29667 6243659776 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,095 basehttp 29667 6176354304 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,096 basehttp 29667 6226833408 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,096 basehttp 29667 6243659776 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,096 basehttp 29667 6210007040 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,097 basehttp 29667 6176354304 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,097 basehttp 29667 6277312512 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,098 basehttp 29667 6226833408 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,101 basehttp 29667 6210007040 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,101 basehttp 29667 6176354304 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,102 basehttp 29667 6243659776 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,103 basehttp 29667 6277312512 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,103 basehttp 29667 6226833408 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,104 basehttp 29667 6243659776 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,108 basehttp 29667 6310965248 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:11:26,274 basehttp 29667 6176354304 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,274 basehttp 29667 6210007040 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,275 basehttp 29667 6226833408 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:26,275 basehttp 29667 6277312512 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+WARNING 2026-03-12 15:11:26,322 log 29667 6327791616 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2026-03-12 15:11:26,322 basehttp 29667 6327791616 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2579
+WARNING 2026-03-12 15:11:26,606 log 29667 6327791616 Not Found: /apple-touch-icon.png
+WARNING 2026-03-12 15:11:26,606 basehttp 29667 6327791616 "GET /apple-touch-icon.png HTTP/1.1" 404 2543
+INFO 2026-03-12 15:11:27,694 basehttp 29667 6310965248 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 14832
+INFO 2026-03-12 15:11:27,707 basehttp 29667 6210007040 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:11:30,959 basehttp 29667 6226833408 "GET /admin/algorithms/algorithm/add/ HTTP/1.1" 200 35377
+INFO 2026-03-12 15:11:30,970 basehttp 29667 6243659776 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:30,971 basehttp 29667 6310965248 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:30,971 basehttp 29667 6226833408 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:30,972 basehttp 29667 6176354304 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:30,972 basehttp 29667 6210007040 "GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:30,972 basehttp 29667 6243659776 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:30,974 basehttp 29667 6310965248 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-03-12 15:11:30,976 basehttp 29667 6277312512 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-03-12 15:13:17,202 log 29667 6210007040 Not Found: /apple-touch-icon.png
+WARNING 2026-03-12 15:13:17,204 log 29667 6243659776 Not Found: /favicon.ico
+WARNING 2026-03-12 15:13:17,207 log 29667 6176354304 Not Found: /apple-touch-icon-precomposed.png
+WARNING 2026-03-12 15:13:17,207 basehttp 29667 6210007040 "GET /apple-touch-icon.png HTTP/1.1" 404 2543
+WARNING 2026-03-12 15:13:17,207 basehttp 29667 6243659776 "GET /favicon.ico HTTP/1.1" 404 2516
+WARNING 2026-03-12 15:13:17,208 basehttp 29667 6176354304 "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2579
+INFO 2026-03-12 15:13:30,643 basehttp 29667 6277312512 "POST /admin/algorithms/algorithm/add/ HTTP/1.1" 200 36628
+INFO 2026-03-12 15:13:30,689 basehttp 29667 6277312512 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:35:02,927 autoreload 38194 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-12 15:35:16,401 basehttp 38194 6166032384 "GET /admin/algorithms/algorithm/add/ HTTP/1.1" 200 35377
+INFO 2026-03-12 15:35:18,505 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:35:37,098 basehttp 38194 6166032384 "POST /admin/algorithms/algorithm/add/ HTTP/1.1" 200 35744
+INFO 2026-03-12 15:35:37,146 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:35:40,209 basehttp 38194 6166032384 "GET /admin/account/myuser/ HTTP/1.1" 200 18597
+INFO 2026-03-12 15:35:40,225 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:35:40,252 basehttp 38194 6166032384 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-03-12 15:35:41,319 basehttp 38194 6166032384 "GET /admin/account/passwordresettoken/ HTTP/1.1" 200 15729
+INFO 2026-03-12 15:35:41,332 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:35:43,148 basehttp 38194 6166032384 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 14832
+INFO 2026-03-12 15:35:43,162 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:35:45,361 basehttp 38194 6166032384 "GET /admin/algorithms/asset/ HTTP/1.1" 200 14366
+INFO 2026-03-12 15:35:45,375 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:35:46,560 basehttp 38194 6166032384 "GET /admin/algorithms/category/ HTTP/1.1" 200 13563
+INFO 2026-03-12 15:35:46,572 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:35:48,099 basehttp 38194 6166032384 "GET /admin/algorithms/question/ HTTP/1.1" 200 14369
+INFO 2026-03-12 15:35:48,112 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:37:43,598 autoreload 38333 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-12 15:38:59,083 basehttp 38194 6166032384 "GET /admin/algorithms/question/ HTTP/1.1" 200 14369
+INFO 2026-03-12 15:38:59,291 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:39:00,033 basehttp 38194 6166032384 "GET /admin/algorithms/question/ HTTP/1.1" 200 14369
+INFO 2026-03-12 15:39:00,048 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:39:00,349 basehttp 38194 6166032384 "GET /admin/algorithms/question/ HTTP/1.1" 200 14369
+INFO 2026-03-12 15:39:00,359 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:39:00,585 basehttp 38194 6166032384 "GET /admin/algorithms/question/ HTTP/1.1" 200 14369
+INFO 2026-03-12 15:39:00,598 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:39:02,418 basehttp 38194 6166032384 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 14832
+INFO 2026-03-12 15:39:02,432 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:39:03,452 basehttp 38194 6166032384 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 14832
+INFO 2026-03-12 15:39:03,466 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:39:03,732 basehttp 38194 6166032384 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 14832
+INFO 2026-03-12 15:39:03,752 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:39:05,785 basehttp 38194 6166032384 "GET /admin/algorithms/asset/ HTTP/1.1" 200 14366
+INFO 2026-03-12 15:39:05,800 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:39:06,618 basehttp 38194 6182858752 "GET /admin/algorithms/category/ HTTP/1.1" 200 13563
+INFO 2026-03-12 15:39:06,631 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:39:08,599 basehttp 38194 6166032384 "GET /admin/algorithms/question/ HTTP/1.1" 200 14369
+INFO 2026-03-12 15:39:08,613 basehttp 38194 6182858752 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:41:16,684 basehttp 38194 6199685120 "GET /admin/algorithms/question/ HTTP/1.1" 200 18266
+INFO 2026-03-12 15:41:16,909 basehttp 38194 6199685120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:41:19,913 basehttp 38194 6199685120 "GET /admin/algorithms/category/ HTTP/1.1" 200 16482
+INFO 2026-03-12 15:41:19,928 basehttp 38194 6199685120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:41:21,654 basehttp 38194 6199685120 "GET /admin/algorithms/asset/ HTTP/1.1" 200 14366
+INFO 2026-03-12 15:41:21,672 basehttp 38194 6199685120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:41:23,095 basehttp 38194 6199685120 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 20237
+INFO 2026-03-12 15:41:23,106 basehttp 38194 6199685120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 15:41:31,284 basehttp 38194 6166032384 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-12 15:41:31,286 basehttp 38194 6182858752 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+INFO 2026-03-12 15:41:31,287 basehttp 38194 6216511488 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:41:31,294 basehttp 38194 6233337856 "OPTIONS /api/api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-12 15:41:31,308 basehttp 38194 6250164224 "OPTIONS /api/api/categories HTTP/1.1" 200 0
+INFO 2026-03-12 15:41:31,316 basehttp 38194 6266990592 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-12 15:41:31,329 log 38194 6166032384 Not Found: /api/api/algorithms
+WARNING 2026-03-12 15:41:31,329 log 38194 6216511488 Not Found: /api/auth/check/
+WARNING 2026-03-12 15:41:31,330 log 38194 6182858752 Not Found: /api/api/categories
+WARNING 2026-03-12 15:41:31,330 log 38194 6233337856 Not Found: /api/api/algorithms
+WARNING 2026-03-12 15:41:31,330 log 38194 6250164224 Not Found: /api/api/categories
+WARNING 2026-03-12 15:41:31,330 log 38194 6266990592 Not Found: /api/auth/check/
+WARNING 2026-03-12 15:41:31,331 basehttp 38194 6166032384 "GET /api/api/algorithms HTTP/1.1" 404 5317
+WARNING 2026-03-12 15:41:31,332 basehttp 38194 6233337856 "GET /api/api/algorithms HTTP/1.1" 404 5317
+WARNING 2026-03-12 15:41:31,332 basehttp 38194 6182858752 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-12 15:41:31,332 basehttp 38194 6216511488 "GET /api/auth/check/ HTTP/1.1" 404 8787
+WARNING 2026-03-12 15:41:31,333 basehttp 38194 6266990592 "GET /api/auth/check/ HTTP/1.1" 404 8787
+WARNING 2026-03-12 15:41:31,333 basehttp 38194 6250164224 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-12 15:41:31,600 log 38194 6166032384 Not Found: /api/api/categories
+WARNING 2026-03-12 15:41:31,605 log 38194 6182858752 Not Found: /api/api/categories
+WARNING 2026-03-12 15:41:31,606 basehttp 38194 6182858752 "GET /api/api/categories HTTP/1.1" 404 5317
+WARNING 2026-03-12 15:41:31,607 basehttp 38194 6166032384 "GET /api/api/categories HTTP/1.1" 404 5317
+INFO 2026-03-12 15:43:42,560 basehttp 38194 6166032384 "OPTIONS /api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-12 15:43:42,562 basehttp 38194 6182858752 "OPTIONS /api/algorithms HTTP/1.1" 200 0
+INFO 2026-03-12 15:43:42,563 basehttp 38194 6199685120 "OPTIONS /api/categories HTTP/1.1" 200 0
+INFO 2026-03-12 15:43:42,565 basehttp 38194 6216511488 "OPTIONS /api/categories HTTP/1.1" 200 0
+INFO 2026-03-12 15:43:42,578 basehttp 38194 6182858752 "GET /api/algorithms HTTP/1.1" 301 0
+INFO 2026-03-12 15:43:42,582 basehttp 38194 6166032384 "GET /api/algorithms HTTP/1.1" 301 0
+INFO 2026-03-12 15:43:42,583 basehttp 38194 6233337856 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:43:42,584 basehttp 38194 6199685120 "GET /api/categories HTTP/1.1" 301 0
+INFO 2026-03-12 15:43:42,584 basehttp 38194 6216511488 "GET /api/categories HTTP/1.1" 301 0
+INFO 2026-03-12 15:43:42,589 basehttp 38194 6233337856 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:43:42,589 basehttp 38194 6182858752 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:43:42,591 basehttp 38194 6233337856 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:43:42,641 basehttp 38194 6182858752 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 15:43:42,649 basehttp 38194 6182858752 - Broken pipe from ('127.0.0.1', 51762)
+INFO 2026-03-12 15:43:42,657 basehttp 38194 6166032384 - Broken pipe from ('127.0.0.1', 51763)
+INFO 2026-03-12 15:43:42,660 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:43:42,663 basehttp 38194 6199685120 - Broken pipe from ('127.0.0.1', 51764)
+INFO 2026-03-12 15:43:42,665 basehttp 38194 6233337856 - Broken pipe from ('127.0.0.1', 51761)
+INFO 2026-03-12 15:43:43,604 basehttp 38194 6166032384 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:43:43,605 basehttp 38194 6182858752 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-12 15:43:43,612 log 38194 6166032384 Not Found: /auth/check/
+WARNING 2026-03-12 15:43:43,615 log 38194 6182858752 Not Found: /auth/check/
+WARNING 2026-03-12 15:43:43,616 basehttp 38194 6166032384 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 15:43:43,620 basehttp 38194 6182858752 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 15:43:43,632 basehttp 38194 6199685120 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 15:43:43,634 basehttp 38194 6233337856 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 15:43:43,637 basehttp 38194 6216511488 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:43:43,637 basehttp 38194 6250164224 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:44:04,473 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:44:04,484 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 352
+ERROR 2026-03-12 15:45:26,691 log 38194 6166032384 Internal Server Error: /api/algorithms
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/algorithms/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-03-12 15:45:26,701 basehttp 38194 6166032384 "POST /api/algorithms HTTP/1.1" 500 80251
+ERROR 2026-03-12 15:45:28,812 log 38194 6166032384 Internal Server Error: /api/algorithms
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/algorithms/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-03-12 15:45:28,814 basehttp 38194 6166032384 "POST /api/algorithms HTTP/1.1" 500 80251
+INFO 2026-03-12 15:46:39,936 basehttp 38194 6166032384 "GET /api/algorithms HTTP/1.1" 301 0
+INFO 2026-03-12 15:46:44,554 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 15:47:26,683 basehttp 38194 6182858752 "GET /api/algorithms HTTP/1.1" 301 0
+INFO 2026-03-12 15:47:26,684 basehttp 38194 6166032384 "GET /api/algorithms HTTP/1.1" 301 0
+INFO 2026-03-12 15:47:26,714 basehttp 38194 6199685120 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:47:26,714 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 15:47:26,719 basehttp 38194 6216511488 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:47:26,720 basehttp 38194 6182858752 "GET /api/algorithms/ HTTP/1.1" 200 6111
+WARNING 2026-03-12 15:47:28,123 log 38194 6199685120 Not Found: /auth/check/
+WARNING 2026-03-12 15:47:28,134 log 38194 6166032384 Not Found: /auth/check/
+WARNING 2026-03-12 15:47:28,137 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 15:47:28,138 basehttp 38194 6166032384 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 15:47:28,158 basehttp 38194 6233337856 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 15:47:28,163 basehttp 38194 6182858752 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 15:47:28,168 basehttp 38194 6216511488 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:47:28,173 basehttp 38194 6250164224 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:47:29,418 basehttp 38194 6199685120 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:47:29,423 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 352
+ERROR 2026-03-12 15:49:21,447 log 38194 6166032384 Internal Server Error: /api/algorithms
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/utils/deprecation.py", line 122, in __call__
+    response = self.process_response(request, response)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+    ...<9 lines>...
+    )
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to localhost:8000/api/algorithms/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2026-03-12 15:49:21,455 basehttp 38194 6166032384 "POST /api/algorithms HTTP/1.1" 500 80251
+INFO 2026-03-12 15:53:26,274 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:53:26,275 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:58:13,106 basehttp 38194 6182858752 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:58:13,107 basehttp 38194 6166032384 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:58:13,108 basehttp 38194 6216511488 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:58:13,120 basehttp 38194 6199685120 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:58:13,124 basehttp 38194 6233337856 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 15:58:13,125 basehttp 38194 6250164224 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-12 15:58:13,132 log 38194 6199685120 Not Found: /auth/check/
+WARNING 2026-03-12 15:58:13,135 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 15:58:13,137 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 15:58:13,142 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 15:58:13,154 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 15:58:13,157 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:58:13,157 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 15:58:13,159 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:58:13,258 basehttp 38194 6199685120 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 15:58:13,259 basehttp 38194 6250164224 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 16:02:24,328 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 16:03:02,419 basehttp 38194 6166032384 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:03:02,433 basehttp 38194 6182858752 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:03:02,438 basehttp 38194 6199685120 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:03:02,460 basehttp 38194 6216511488 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:03:02,463 basehttp 38194 6233337856 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:03:02,469 basehttp 38194 6250164224 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-12 16:03:02,482 log 38194 6300643328 Not Found: /auth/check/
+WARNING 2026-03-12 16:03:02,484 basehttp 38194 6300643328 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 16:03:02,492 log 38194 6300643328 Not Found: /auth/check/
+WARNING 2026-03-12 16:03:02,494 basehttp 38194 6300643328 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 16:03:02,502 basehttp 38194 6266990592 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 16:03:02,505 basehttp 38194 6283816960 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 16:03:02,516 basehttp 38194 6300643328 "GET /api/algorithms/ HTTP/1.1" 200 6111
+INFO 2026-03-12 16:03:02,522 basehttp 38194 6266990592 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 16:03:02,601 basehttp 38194 6266990592 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 16:03:02,614 basehttp 38194 6266990592 "GET /api/categories/ HTTP/1.1" 200 352
+INFO 2026-03-12 16:03:06,370 basehttp 38194 6266990592 "POST /api/algorithms/ HTTP/1.1" 201 884
+INFO 2026-03-12 16:03:29,959 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6996
+WARNING 2026-03-12 16:03:39,960 log 38194 6233337856 Not Found: /auth/check/
+WARNING 2026-03-12 16:03:39,963 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 16:03:39,966 basehttp 38194 6233337856 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 16:03:39,970 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 16:03:39,993 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6996
+INFO 2026-03-12 16:03:39,995 basehttp 38194 6199685120 "GET /api/algorithms/ HTTP/1.1" 200 6996
+INFO 2026-03-12 16:03:39,995 basehttp 38194 6216511488 "GET /api/categories/ HTTP/1.1" 200 378
+INFO 2026-03-12 16:03:39,998 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 378
+INFO 2026-03-12 16:04:09,925 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 378
+INFO 2026-03-12 16:04:09,931 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 378
+INFO 2026-03-12 16:06:17,914 basehttp 38194 6166032384 "POST /api/algorithms/ HTTP/1.1" 201 787901
+WARNING 2026-03-12 16:06:33,906 log 38194 6199685120 Not Found: /auth/check/
+WARNING 2026-03-12 16:06:33,910 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 16:06:33,911 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 16:06:33,913 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 16:06:33,947 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 794898
+INFO 2026-03-12 16:06:33,947 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 794898
+INFO 2026-03-12 16:06:33,954 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:06:33,954 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:07:46,764 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:07:46,764 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:07:46,766 basehttp 38194 6182858752 "OPTIONS /api/algorithms/dijkstra's-algorithm/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:07:46,766 basehttp 38194 6166032384 "OPTIONS /api/algorithms/dijkstra's-algorithm/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:07:46,783 basehttp 38194 6166032384 "GET /api/algorithms/dijkstra's-algorithm/ HTTP/1.1" 200 787901
+INFO 2026-03-12 16:07:46,784 basehttp 38194 6182858752 "GET /api/algorithms/dijkstra's-algorithm/ HTTP/1.1" 200 787901
+INFO 2026-03-12 16:11:42,413 basehttp 38194 6166032384 "GET /api/algorithms/quick-sort/ HTTP/1.1" 200 1633
+INFO 2026-03-12 16:12:09,770 basehttp 38194 6166032384 "GET /admin/algorithms/algorithm/ HTTP/1.1" 302 0
+INFO 2026-03-12 16:12:09,803 basehttp 38194 6166032384 "GET /admin/login/?next=/admin/algorithms/algorithm/ HTTP/1.1" 200 4832
+INFO 2026-03-12 16:12:09,878 basehttp 38194 6166032384 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-03-12 16:12:28,443 basehttp 38194 6166032384 "POST /admin/login/?next=/admin/algorithms/algorithm/ HTTP/1.1" 302 0
+INFO 2026-03-12 16:12:28,480 basehttp 38194 6166032384 "GET /admin/algorithms/algorithm/ HTTP/1.1" 200 21417
+INFO 2026-03-12 16:12:28,538 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 16:12:34,734 basehttp 38194 6166032384 "GET /admin/algorithms/asset/ HTTP/1.1" 200 16087
+INFO 2026-03-12 16:12:34,748 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 16:12:36,360 basehttp 38194 6166032384 "GET /admin/algorithms/category/ HTTP/1.1" 200 16773
+INFO 2026-03-12 16:12:36,375 basehttp 38194 6166032384 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-12 16:12:48,478 basehttp 38194 6182858752 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:12:48,479 basehttp 38194 6216511488 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:12:48,480 basehttp 38194 6199685120 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:12:48,490 basehttp 38194 6233337856 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:12:48,492 basehttp 38194 6250164224 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+WARNING 2026-03-12 16:12:48,496 log 38194 6216511488 Not Found: /auth/check/
+INFO 2026-03-12 16:12:48,499 basehttp 38194 6266990592 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-12 16:12:48,501 basehttp 38194 6216511488 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 16:12:48,505 log 38194 6266990592 Not Found: /auth/check/
+WARNING 2026-03-12 16:12:48,508 basehttp 38194 6266990592 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 16:12:48,521 basehttp 38194 6182858752 "GET /api/algorithms/ HTTP/1.1" 200 794898
+INFO 2026-03-12 16:12:48,531 basehttp 38194 6233337856 "GET /api/algorithms/ HTTP/1.1" 200 794898
+INFO 2026-03-12 16:12:48,535 basehttp 38194 6250164224 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:12:48,535 basehttp 38194 6199685120 "GET /api/categories/ HTTP/1.1" 200 445
+WARNING 2026-03-12 16:15:12,064 log 38194 6216511488 Not Found: /auth/check/
+WARNING 2026-03-12 16:15:12,067 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 16:15:12,069 basehttp 38194 6216511488 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 16:15:12,072 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 16:15:12,088 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:15:12,099 basehttp 38194 6182858752 "GET /api/algorithms/ HTTP/1.1" 200 794898
+INFO 2026-03-12 16:15:12,107 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 794898
+INFO 2026-03-12 16:15:12,109 basehttp 38194 6199685120 "GET /api/categories/ HTTP/1.1" 200 445
+WARNING 2026-03-12 16:15:20,781 log 38194 6233337856 Not Found: /auth/check/
+WARNING 2026-03-12 16:15:20,784 log 38194 6199685120 Not Found: /auth/check/
+WARNING 2026-03-12 16:15:20,785 basehttp 38194 6233337856 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 16:15:20,786 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 16:15:20,818 basehttp 38194 6182858752 "GET /api/algorithms/ HTTP/1.1" 200 794898
+INFO 2026-03-12 16:15:20,821 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 794898
+INFO 2026-03-12 16:15:20,821 basehttp 38194 6250164224 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:15:20,822 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:20:19,209 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:20:19,210 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 445
+INFO 2026-03-12 16:22:39,102 basehttp 38194 6166032384 "POST /api/algorithms/ HTTP/1.1" 201 2137986
+WARNING 2026-03-12 16:22:47,460 log 38194 6199685120 Not Found: /auth/check/
+WARNING 2026-03-12 16:22:47,464 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 16:22:47,470 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 16:22:47,471 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 16:22:47,543 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 2932885
+INFO 2026-03-12 16:22:47,544 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 2932885
+INFO 2026-03-12 16:22:47,546 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:22:47,548 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:25:08,022 basehttp 38194 6166032384 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:25:08,025 basehttp 38194 6182858752 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:25:08,048 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:25:08,048 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:45:51,976 basehttp 38194 6166032384 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:45:51,980 basehttp 38194 6182858752 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:45:52,066 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:45:52,068 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:46:03,797 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:46:03,804 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:51:02,134 basehttp 38194 6166032384 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:51:02,139 basehttp 38194 6199685120 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-12 16:51:02,148 basehttp 38194 6216511488 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+WARNING 2026-03-12 16:51:02,163 log 38194 6199685120 Not Found: /auth/check/
+INFO 2026-03-12 16:51:02,164 basehttp 38194 6250164224 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-12 16:51:02,170 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 16:51:02,174 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 16:51:02,179 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 16:51:02,220 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 2932885
+INFO 2026-03-12 16:51:02,224 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:51:02,248 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:51:02,250 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 2932885
+INFO 2026-03-12 16:54:36,735 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:54:36,736 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 496
+INFO 2026-03-12 16:56:29,657 basehttp 38194 6166032384 "POST /api/algorithms/ HTTP/1.1" 201 3865194
+INFO 2026-03-12 16:56:38,342 basehttp 38194 6182858752 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+WARNING 2026-03-12 16:56:38,351 log 38194 6199685120 Not Found: /auth/check/
+INFO 2026-03-12 16:56:38,351 basehttp 38194 6233337856 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+WARNING 2026-03-12 16:56:38,355 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 16:56:38,358 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 16:56:38,359 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 16:56:38,379 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 16:56:38,383 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 16:56:38,467 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 16:56:38,489 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:01:39,374 basehttp 38194 6166032384 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:01:39,376 basehttp 38194 6199685120 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:01:39,388 basehttp 38194 6216511488 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+WARNING 2026-03-12 17:01:39,399 log 38194 6199685120 Not Found: /auth/check/
+INFO 2026-03-12 17:01:39,399 basehttp 38194 6250164224 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-12 17:01:39,401 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:01:39,410 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 17:01:39,412 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:01:39,431 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:01:39,438 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:01:39,549 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:01:39,551 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:01:41,047 basehttp 38194 6199685120 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:01:41,053 basehttp 38194 6250164224 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:02:53,380 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:02:53,381 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:02:53,389 basehttp 38194 6166032384 "OPTIONS /api/algorithms/sfsdfsdfsdf/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:02:53,390 basehttp 38194 6182858752 "OPTIONS /api/algorithms/sfsdfsdfsdf/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:02:53,455 basehttp 38194 6166032384 "GET /api/algorithms/sfsdfsdfsdf/ HTTP/1.1" 200 3865194
+INFO 2026-03-12 17:02:53,455 basehttp 38194 6182858752 "GET /api/algorithms/sfsdfsdfsdf/ HTTP/1.1" 200 3865194
+INFO 2026-03-12 17:15:04,736 basehttp 38194 6166032384 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:15:04,744 basehttp 38194 6182858752 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:15:04,803 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:15:04,804 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:19:26,943 basehttp 38194 6166032384 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:19:26,964 basehttp 38194 6199685120 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:19:26,984 basehttp 38194 6216511488 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:19:27,062 basehttp 38194 6250164224 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-12 17:19:27,066 log 38194 6199685120 Not Found: /auth/check/
+WARNING 2026-03-12 17:19:27,071 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:19:27,076 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 17:19:27,086 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:19:27,112 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:19:27,113 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:19:27,244 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:19:27,246 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+WARNING 2026-03-12 17:19:35,472 log 38194 6216511488 Not Found: /auth/check/
+WARNING 2026-03-12 17:19:35,473 log 38194 6182858752 Not Found: /auth/check/
+WARNING 2026-03-12 17:19:35,475 basehttp 38194 6216511488 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:19:35,477 basehttp 38194 6182858752 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:19:35,549 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:19:35,549 basehttp 38194 6250164224 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:19:35,585 basehttp 38194 6199685120 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:19:35,604 basehttp 38194 6233337856 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+WARNING 2026-03-12 17:19:50,518 log 38194 6166032384 Not Found: /auth/check/
+WARNING 2026-03-12 17:19:50,522 log 38194 6233337856 Not Found: /auth/check/
+WARNING 2026-03-12 17:19:50,523 basehttp 38194 6166032384 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:19:50,526 basehttp 38194 6233337856 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:19:50,539 basehttp 38194 6199685120 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:19:50,539 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:19:50,793 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:19:50,796 basehttp 38194 6250164224 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+WARNING 2026-03-12 17:19:54,511 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 17:19:54,513 log 38194 6199685120 Not Found: /auth/check/
+WARNING 2026-03-12 17:19:54,518 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:19:54,519 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:19:54,536 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:19:54,627 basehttp 38194 6216511488 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:19:54,631 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:19:54,637 basehttp 38194 6182858752 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:26:33,196 basehttp 38194 6182858752 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+WARNING 2026-03-12 17:26:33,200 log 38194 6199685120 Not Found: /auth/check/
+INFO 2026-03-12 17:26:33,203 basehttp 38194 6233337856 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+WARNING 2026-03-12 17:26:33,207 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 17:26:33,209 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:26:33,209 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:26:33,233 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:26:33,234 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:26:33,347 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:26:33,347 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:32:58,481 basehttp 38194 6166032384 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:32:58,487 basehttp 38194 6199685120 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:32:58,489 basehttp 38194 6216511488 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-12 17:32:58,492 basehttp 38194 6250164224 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-12 17:32:58,500 log 38194 6199685120 Not Found: /auth/check/
+WARNING 2026-03-12 17:32:58,504 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 17:32:58,509 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:32:58,509 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:32:58,546 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:32:58,548 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:32:58,652 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:32:58,669 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+WARNING 2026-03-12 17:33:14,501 log 38194 6182858752 Not Found: /auth/check/
+WARNING 2026-03-12 17:33:14,505 log 38194 6166032384 Not Found: /auth/check/
+WARNING 2026-03-12 17:33:14,506 basehttp 38194 6182858752 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:33:14,506 basehttp 38194 6166032384 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:33:14,522 basehttp 38194 6250164224 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:33:14,523 basehttp 38194 6216511488 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:33:14,626 basehttp 38194 6233337856 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:33:14,628 basehttp 38194 6199685120 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+WARNING 2026-03-12 17:33:19,880 log 38194 6199685120 Not Found: /auth/check/
+WARNING 2026-03-12 17:33:19,882 log 38194 6250164224 Not Found: /auth/check/
+WARNING 2026-03-12 17:33:19,885 basehttp 38194 6199685120 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:33:19,886 basehttp 38194 6250164224 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:33:19,907 basehttp 38194 6166032384 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:33:19,957 basehttp 38194 6233337856 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:33:19,990 basehttp 38194 6182858752 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:33:20,014 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+WARNING 2026-03-12 17:33:23,882 log 38194 6166032384 Not Found: /auth/check/
+WARNING 2026-03-12 17:33:23,884 log 38194 6216511488 Not Found: /auth/check/
+WARNING 2026-03-12 17:33:23,885 basehttp 38194 6216511488 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-12 17:33:23,886 basehttp 38194 6166032384 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-12 17:33:23,905 basehttp 38194 6250164224 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:33:23,906 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-12 17:33:24,021 basehttp 38194 6233337856 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 17:33:24,022 basehttp 38194 6199685120 "GET /api/algorithms/ HTTP/1.1" 200 6798080

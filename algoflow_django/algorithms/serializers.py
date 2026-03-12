@@ -1,116 +1,256 @@
 from rest_framework import serializers
-from .models import Algorithm, Category
-import json
+from .models import Category, Algorithm, Asset, Question
 
 
+# ─────────────────────────────────────────────
+#  Asset
+# ─────────────────────────────────────────────
+class AssetSerializer(serializers.ModelSerializer):
+    id   = serializers.CharField(source='asset_id')
+    type = serializers.CharField(source='asset_type')
+
+    class Meta:
+        model  = Asset
+        fields = ['id', 'name', 'type', 'data']
+
+
+# ─────────────────────────────────────────────
+#  Question
+# ─────────────────────────────────────────────
+class QuestionSerializer(serializers.ModelSerializer):
+    id = serializers.CharField(source='question_id')
+
+    class Meta:
+        model  = Question
+        fields = ['id', 'text', 'answer', 'language', 'explanation']
+
+
+# ─────────────────────────────────────────────
+#  Category
+# ─────────────────────────────────────────────
 class CategorySerializer(serializers.ModelSerializer):
-    """Serializer for Category model."""
-    
+    algorithms = serializers.SerializerMethodField()
+
     class Meta:
-        model = Category
-        fields = ['name', 'icon']
+        model  = Category
+        fields = ['name', 'icon', 'algorithms']
+
+    def get_algorithms(self, obj):
+        return list(obj.algorithms.values_list('algo_id', flat=True))
 
 
+# ─────────────────────────────────────────────
+#  Algorithm  — full read/write
+# ─────────────────────────────────────────────
 class AlgorithmSerializer(serializers.ModelSerializer):
-    """Serializer for Algorithm model with nested JSON fields."""
-    category = serializers.CharField(source='category.name')
+    # Flatten the "id" field to match frontend shape
+    id       = serializers.CharField(source='algo_id')
+    category = serializers.SerializerMethodField()
+
+    # Nested collections
+    assets    = AssetSerializer(many=True, required=False)
+    questions = QuestionSerializer(many=True, required=False)
+
+    # Complexity as nested object
     complexity = serializers.SerializerMethodField()
-    
+
+    # Code as nested object
+    code = serializers.SerializerMethodField()
+
+    # Explanation as nested object
+    explanation = serializers.SerializerMethodField()
+
+    # ISO timestamps
+    createdAt = serializers.DateTimeField(source='created_at', read_only=True)
+    updatedAt = serializers.DateTimeField(source='updated_at', read_only=True)
+
     class Meta:
-        model = Algorithm
+        model  = Algorithm
         fields = [
-            'id', 'name', 'category', 'description', 'icon',
-            'complexity', 'code', 'explanation', 'assets'
+            'id', 'name', 'category', 'icon', 'description',
+            'complexity', 'code', 'explanation',
+            'assets', 'questions',
+            'createdAt', 'updatedAt',
         ]
-    
+
+    # ── read helpers ──────────────────────────
+    def get_category(self, obj):
+        return obj.category.name if obj.category else ''
+
     def get_complexity(self, obj):
-        return obj.complexity
-    
-    def validate_code(self, value):
-        """Ensure code is a valid dict with required languages."""
-        if not isinstance(value, dict):
-            raise serializers.ValidationError("Code must be a JSON object")
-        
-        required_langs = ['python', 'cpp', 'c', 'rust']
-        for lang in required_langs:
-            if lang not in value:
-                value[lang] = {'iterative': ''}
-        return value
-    
-    def validate_explanation(self, value):
-        """Ensure explanation has required fields."""
-        if not isinstance(value, dict):
-            raise serializers.ValidationError("Explanation must be a JSON object")
-        
-        required_fields = ['problem', 'intuition', 'walkthrough', 'whenToUse']
-        for field in required_fields:
-            if field not in value:
-                value[field] = ''
-        return value
-    
+        return {
+            'time':        obj.complexity_time,
+            'space':       obj.complexity_space,
+            'timeRating':  obj.complexity_time_rating,
+            'spaceRating': obj.complexity_space_rating,
+        }
+
+    def get_code(self, obj):
+        def normalise(raw):
+            """Ensure all expected keys are present."""
+            base = {
+                'classCode':     '',
+                'functionCode':  '',
+                'recursiveCode': '',
+                'outcome':       '',
+                'runtime':       '',
+            }
+            if isinstance(raw, dict):
+                base.update(raw)
+            return base
+
+        return {
+            'python': normalise(obj.code_python),
+            'cpp':    normalise(obj.code_cpp),
+            'c':      normalise(obj.code_c),
+            'rust':   normalise(obj.code_rust),
+        }
+
+    def get_explanation(self, obj):
+        return {
+            'problem':       obj.explanation_problem,
+            'intuition':     obj.explanation_intuition,
+            'walkthrough':   obj.explanation_walkthrough,
+            'whenToUse':     obj.explanation_when_to_use,
+            'funFact':       obj.explanation_fun_fact,
+            'researchLinks': obj.explanation_research_links or [],
+        }
+
+    # ── write (create / update) ───────────────
+    def _get_or_create_category(self, name):
+        if not name:
+            return None
+        category, _ = Category.objects.get_or_create(name=name)
+        return category
+
     def create(self, validated_data):
-        category_name = validated_data.pop('category')['name']
-        category, _ = Category.objects.get_or_create(name=category_name)
-        
-        # Extract complexity fields
-        complexity_data = validated_data.pop('complexity', {})
-        
-        algorithm = Algorithm.objects.create(
-            category=category,
-            complexity_time=complexity_data.get('time', 'O(n)'),
-            complexity_space=complexity_data.get('space', 'O(1)'),
-            complexity_time_rating=complexity_data.get('timeRating', 'average'),
-            complexity_space_rating=complexity_data.get('spaceRating', 'good'),
-            **validated_data
+        request_data = self.initial_data
+
+        assets_data    = request_data.get('assets', [])
+        questions_data = request_data.get('questions', [])
+
+        # Pull nested objects from request (not validated_data, because they are
+        # SerializerMethodFields so DRF won't put them in validated_data)
+        complexity  = request_data.get('complexity', {})
+        code        = request_data.get('code', {})
+        explanation = request_data.get('explanation', {})
+        category_name = request_data.get('category', '')
+
+        algo = Algorithm.objects.create(
+            algo_id     = request_data.get('id', ''),
+            name        = request_data.get('name', ''),
+            category    = self._get_or_create_category(category_name),
+            icon        = request_data.get('icon', 'Sparkles'),
+            description = request_data.get('description', ''),
+
+            complexity_time         = complexity.get('time', 'O(n)'),
+            complexity_space        = complexity.get('space', 'O(1)'),
+            complexity_time_rating  = complexity.get('timeRating', 'average'),
+            complexity_space_rating = complexity.get('spaceRating', 'good'),
+
+            code_python = code.get('python', {}),
+            code_cpp    = code.get('cpp', {}),
+            code_c      = code.get('c', {}),
+            code_rust   = code.get('rust', {}),
+
+            explanation_problem     = explanation.get('problem', ''),
+            explanation_intuition   = explanation.get('intuition', ''),
+            explanation_walkthrough = explanation.get('walkthrough', ''),
+            explanation_when_to_use = explanation.get('whenToUse', ''),
+            explanation_fun_fact    = explanation.get('funFact', ''),
+            explanation_research_links = explanation.get('researchLinks', []),
         )
-        return algorithm
-    
-    def update(self, instance, validated_data):
-        if 'category' in validated_data:
-            category_name = validated_data.pop('category')['name']
-            category, _ = Category.objects.get_or_create(name=category_name)
-            instance.category = category
-        
-        # Update complexity if provided
-        complexity_data = validated_data.pop('complexity', None)
-        if complexity_data:
-            instance.complexity_time = complexity_data.get('time', instance.complexity_time)
-            instance.complexity_space = complexity_data.get('space', instance.complexity_space)
-            instance.complexity_time_rating = complexity_data.get('timeRating', instance.complexity_time_rating)
-            instance.complexity_space_rating = complexity_data.get('spaceRating', instance.complexity_space_rating)
-        
-        for attr, value in validated_data.items():
-            setattr(instance, attr, value)
-        
-        instance.save()
-        return instance
 
-
-class AlgorithmImportSerializer(serializers.Serializer):
-    """Serializer for bulk importing algorithms."""
-    algorithms = AlgorithmSerializer(many=True)
-    
-    def create(self, validated_data):
-        algorithms_data = validated_data.get('algorithms', [])
-        created = []
-        
-        for algo_data in algorithms_data:
-            category_name = algo_data.pop('category')['name']
-            category, _ = Category.objects.get_or_create(name=category_name)
-            
-            complexity_data = algo_data.pop('complexity', {})
-            
-            algorithm, _ = Algorithm.objects.update_or_create(
-                id=algo_data.get('id'),
-                defaults={
-                    'category': category,
-                    'complexity_time': complexity_data.get('time', 'O(n)'),
-                    'complexity_space': complexity_data.get('space', 'O(1)'),
-                    'complexity_time_rating': complexity_data.get('timeRating', 'average'),
-                    'complexity_space_rating': complexity_data.get('spaceRating', 'good'),
-                    **algo_data
-                }
+        # Create related assets
+        for asset in assets_data:
+            Asset.objects.create(
+                algorithm  = algo,
+                asset_id   = asset.get('id', ''),
+                name       = asset.get('name', ''),
+                asset_type = asset.get('type', 'text'),
+                data       = asset.get('data', ''),
             )
-            created.append(algorithm)
-        
-        return created
+
+        # Create related questions
+        for q in questions_data:
+            Question.objects.create(
+                algorithm   = algo,
+                question_id = q.get('id', ''),
+                text        = q.get('text', ''),
+                answer      = q.get('answer', ''),
+                language    = q.get('language', 'python'),
+                explanation = q.get('explanation', ''),
+            )
+
+        # Update category algorithm list (icon might be present in request)
+        if algo.category:
+            icon = request_data.get('icon')
+            # also allow passing category icon via a separate field
+            cat_icon = request_data.get('categoryIcon')
+            if cat_icon:
+                algo.category.icon = cat_icon
+                algo.category.save()
+
+        return algo
+
+    def update(self, instance, validated_data):
+        request_data = self.initial_data
+
+        complexity  = request_data.get('complexity', {})
+        code        = request_data.get('code', {})
+        explanation = request_data.get('explanation', {})
+        category_name = request_data.get('category', '')
+
+        instance.algo_id     = request_data.get('id', instance.algo_id)
+        instance.name        = request_data.get('name', instance.name)
+        instance.category    = self._get_or_create_category(category_name)
+        instance.icon        = request_data.get('icon', instance.icon)
+        instance.description = request_data.get('description', instance.description)
+
+        instance.complexity_time         = complexity.get('time', instance.complexity_time)
+        instance.complexity_space        = complexity.get('space', instance.complexity_space)
+        instance.complexity_time_rating  = complexity.get('timeRating', instance.complexity_time_rating)
+        instance.complexity_space_rating = complexity.get('spaceRating', instance.complexity_space_rating)
+
+        instance.code_python = code.get('python', instance.code_python)
+        instance.code_cpp    = code.get('cpp', instance.code_cpp)
+        instance.code_c      = code.get('c', instance.code_c)
+        instance.code_rust   = code.get('rust', instance.code_rust)
+
+        instance.explanation_problem     = explanation.get('problem', instance.explanation_problem)
+        instance.explanation_intuition   = explanation.get('intuition', instance.explanation_intuition)
+        instance.explanation_walkthrough = explanation.get('walkthrough', instance.explanation_walkthrough)
+        instance.explanation_when_to_use = explanation.get('whenToUse', instance.explanation_when_to_use)
+        instance.explanation_fun_fact    = explanation.get('funFact', instance.explanation_fun_fact)
+        instance.explanation_research_links = explanation.get('researchLinks', instance.explanation_research_links)
+
+        instance.save()
+
+        # Replace assets & questions entirely
+        assets_data    = request_data.get('assets')
+        questions_data = request_data.get('questions')
+
+        if assets_data is not None:
+            instance.assets.all().delete()
+            for asset in assets_data:
+                Asset.objects.create(
+                    algorithm  = instance,
+                    asset_id   = asset.get('id', ''),
+                    name       = asset.get('name', ''),
+                    asset_type = asset.get('type', 'text'),
+                    data       = asset.get('data', ''),
+                )
+
+        if questions_data is not None:
+            instance.questions.all().delete()
+            for q in questions_data:
+                Question.objects.create(
+                    algorithm   = instance,
+                    question_id = q.get('id', ''),
+                    text        = q.get('text', ''),
+                    answer      = q.get('answer', ''),
+                    language    = q.get('language', 'python'),
+                    explanation = q.get('explanation', ''),
+                )
+
+        return instance

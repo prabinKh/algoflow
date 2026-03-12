@@ -315,7 +315,7 @@ export default function ForgeAlgorithm() {
   useEffect(() => {
     const fetchInitialData = async () => {
       try {
-        const catRes = await apiFetch('/api/categories');
+        const catRes = await apiFetch('/api/categories/');
         const cats = await catRes.json();
         setCategories(cats.map((c: any) => c.name));
         
@@ -324,7 +324,7 @@ export default function ForgeAlgorithm() {
         }
 
         if (isEditing) {
-          const algoRes = await apiFetch(`/api/algorithms/${id}`);
+          const algoRes = await apiFetch(`/api/algorithms/${id}/`);
           if (algoRes.ok) {
             const algo = await algoRes.json();
             setFormData(algo);
@@ -427,7 +427,7 @@ export default function ForgeAlgorithm() {
     };
 
     try {
-      const response = await apiFetch(isEditing ? `/api/algorithms/${id}` : '/api/algorithms', {
+      const response = await apiFetch(isEditing ? `/api/algorithms/${id}/` : '/api/algorithms/', {
         method: isEditing ? 'PUT' : 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(algoData)
@@ -535,43 +535,14 @@ export default function ForgeAlgorithm() {
       </header>
 
       <main className="max-w-[1400px] mx-auto px-4 sm:px-8 py-8 sm:py-12">
-        <AnimatePresence>
-          {showPreview && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="mb-12 overflow-hidden lg:hidden"
-            >
-              <Card variant="glass" className="p-8">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
-                    <Eye size={20} />
-                  </div>
-                  <div>
-                    <h2 className="text-lg font-black tracking-tight text-white uppercase">Live Preview</h2>
-                    <p className="text-[10px] text-slate-500">Real-time visualization of your algorithm node.</p>
-                  </div>
-                </div>
-                <div className="bg-white dark:bg-slate-950 rounded-3xl overflow-hidden border border-white/10">
-                  <AlgorithmViewer 
-                    algorithm={formData as Algorithm} 
-                    onClose={() => setShowPreview(false)} 
-                  />
-                </div>
-              </Card>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
         <div className={cn(
-          "grid grid-cols-1 gap-12 transition-all duration-500",
-          showPreview ? "lg:grid-cols-2" : "lg:grid-cols-12"
+          "grid grid-cols-1 lg:grid-cols-12 gap-12 transition-all duration-500"
         )}>
-          {/* Left Column: Core Data */}
+          {/* Left Column: Core Data (The Entry Form) */}
           <div className={cn(
             "space-y-12",
-            showPreview ? "lg:col-span-1" : "lg:col-span-8"
+            // Hides the entire form when preview is active
+            showPreview ? "hidden" : "lg:col-span-8"
           )}>
             {/* Identity Section */}
             <Card variant="glass" className="p-6 sm:p-10 relative overflow-hidden group">
@@ -958,10 +929,11 @@ export default function ForgeAlgorithm() {
           {/* Right Column: Meta & Assets or Preview */}
           <div className={cn(
             "space-y-12",
-            showPreview ? "lg:col-span-1" : "lg:col-span-4"
+            // Expands to full width when preview is active
+            showPreview ? "lg:col-span-12" : "lg:col-span-4"
           )}>
             {showPreview ? (
-              <div className="sticky top-32 h-[calc(100vh-160px)] overflow-y-auto custom-scrollbar pr-2">
+              <div className="sticky top-32 min-h-[calc(100vh-160px)] overflow-y-auto custom-scrollbar pr-2 pb-12">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
                     <Eye size={20} />
@@ -971,7 +943,7 @@ export default function ForgeAlgorithm() {
                     <p className="text-[10px] text-slate-500">Real-time neural rendering.</p>
                   </div>
                 </div>
-                <div className="bg-slate-950 rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl">
+                <div className="bg-slate-950 rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl relative group/preview">
                   <AlgorithmViewer 
                     algorithm={formData as Algorithm} 
                     onClose={() => setShowPreview(false)} 

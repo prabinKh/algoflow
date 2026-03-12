@@ -1,20 +1,47 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
+from django.urls import path
 from . import views
 
-# Create a router for ViewSet routes
-router = DefaultRouter()
-router.register(r'algorithms', views.AlgorithmViewSet, basename='algorithm')
-router.register(r'categories', views.CategoryViewSet, basename='category')
-
 urlpatterns = [
-    # Function-based views (matching original API exactly)
-    path('algorithms', views.algorithms_list, name='algorithms-list'),
-    path('algorithms/import', views.algorithms_import, name='algorithms-import'),
-    path('algorithms/<str:id>', views.algorithm_detail, name='algorithm-detail'),
-    path('categories', views.categories_list, name='categories-list'),
-    path('categories/<str:name>', views.category_detail, name='category-detail'),
-    
-    # ViewSet routes (alternative)
-    # path('', include(router.urls)),
+
+    # ── Algorithms ──────────────────────────────────────────
+    # GET  /api/algorithms/          list all + optional ?search= / ?category=
+    # POST /api/algorithms/          create new algorithm
+    path('algorithms/', views.algorithm_list, name='algorithm-list'),
+
+    # GET    /api/algorithms/stats/  aggregate stats for Dashboard
+    path('algorithms/stats/', views.algorithm_stats, name='algorithm-stats'),
+
+    # POST   /api/algorithms/import/ bulk import from JSON array
+    path('algorithms/import/', views.algorithm_bulk_import, name='algorithm-bulk-import'),
+
+    # GET    /api/algorithms/<id>/   retrieve single algorithm
+    # PUT    /api/algorithms/<id>/   full update
+    # PATCH  /api/algorithms/<id>/   partial update
+    # DELETE /api/algorithms/<id>/   delete
+    path('algorithms/<str:algo_id>/', views.algorithm_detail, name='algorithm-detail'),
+
+    # ── Assets ──────────────────────────────────────────────
+    # POST   /api/algorithms/<id>/assets/                 add asset
+    path('algorithms/<str:algo_id>/assets/', views.asset_create, name='asset-create'),
+
+    # DELETE /api/algorithms/<id>/assets/<asset_id>/      remove asset
+    path('algorithms/<str:algo_id>/assets/<str:asset_id>/', views.asset_delete, name='asset-delete'),
+
+    # ── Questions ───────────────────────────────────────────
+    # POST   /api/algorithms/<id>/questions/              add question
+    path('algorithms/<str:algo_id>/questions/', views.question_create, name='question-create'),
+
+    # PUT    /api/algorithms/<id>/questions/<q_id>/       update question
+    # DELETE /api/algorithms/<id>/questions/<q_id>/       delete question
+    path('algorithms/<str:algo_id>/questions/<str:question_id>/', views.question_detail, name='question-detail'),
+
+    # ── Categories ──────────────────────────────────────────
+    # GET  /api/categories/          list all categories
+    # POST /api/categories/          create new category
+    path('categories/', views.category_list, name='category-list'),
+
+    # GET    /api/categories/<name>/ retrieve single category
+    # PUT    /api/categories/<name>/ update category
+    # DELETE /api/categories/<name>/ delete category
+    path('categories/<str:name>/', views.category_detail, name='category-detail'),
 ]

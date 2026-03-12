@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   FileText, 
   FileVideo, 
   Image as ImageIcon, 
   File, 
   Download,
-  ExternalLink,
-  Eye
+  Eye,
+  X
 } from 'lucide-react';
 import { Button } from './ui/Button';
 import { Card } from './ui/Card';
@@ -19,6 +19,7 @@ interface AssetsPanelProps {
 
 export default function AssetsPanel({ algorithm }: AssetsPanelProps) {
   const assets = algorithm.assets || [];
+  const [activeAsset, setActiveAsset] = useState<Asset | null>(null);
 
   if (assets.length === 0) {
     return (
@@ -78,19 +79,40 @@ export default function AssetsPanel({ algorithm }: AssetsPanelProps) {
 
             {/* Preview for images */}
             {asset.type === 'image' && (
-              <div className="mt-6 rounded-2xl overflow-hidden border border-white/10 aspect-video bg-black/40 group-hover/asset:border-indigo-500/30 transition-all">
-                <img src={asset.data} alt={asset.name} className="w-full h-full object-cover group-hover/asset:scale-110 transition-transform duration-500" />
-              </div>
+              <button
+                type="button"
+                onClick={() => setActiveAsset(asset)}
+                className="mt-6 rounded-2xl overflow-hidden border border-white/10 aspect-video bg-black/40 group-hover/asset:border-indigo-500/30 transition-all w-full"
+              >
+                <img
+                  src={asset.data}
+                  alt={asset.name}
+                  className="w-full h-full object-cover group-hover/asset:scale-110 transition-transform duration-500"
+                />
+              </button>
             )}
 
             {/* Preview for videos */}
             {asset.type === 'video' && (
-              <div className="mt-6 rounded-2xl overflow-hidden border border-white/10 aspect-video bg-black/40 group-hover/asset:border-indigo-500/30 transition-all">
-                <video src={asset.data} controls className="w-full h-full object-cover" />
-              </div>
+              <button
+                type="button"
+                onClick={() => setActiveAsset(asset)}
+                className="mt-6 rounded-2xl overflow-hidden border border-white/10 aspect-video bg-black/40 group-hover/asset:border-indigo-500/30 transition-all w-full"
+              >
+                <video src={asset.data} className="w-full h-full object-cover" />
+              </button>
             )}
 
             <div className="absolute top-6 right-6 flex gap-2">
+              <Button 
+                variant="ghost" 
+                size="icon"
+                onClick={() => setActiveAsset(asset)}
+                className="w-10 h-10 bg-black/40 border border-white/10 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/30 transition-all shadow-xl"
+                title="Read / View Asset"
+              >
+                <Eye size={18} />
+              </Button>
               <Button 
                 variant="ghost" 
                 size="icon"
@@ -104,6 +126,94 @@ export default function AssetsPanel({ algorithm }: AssetsPanelProps) {
           </div>
         ))}
       </div>
+
+      {/* Fullscreen viewer */}
+      {activeAsset && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+          <Card variant="glass" className="relative w-full max-w-5xl max-h-[90vh] p-6 overflow-hidden">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 text-slate-300">
+                  {activeAsset.type === 'pdf' && <FileText size={20} />}
+                  {activeAsset.type === 'text' && <File size={20} />}
+                  {activeAsset.type === 'image' && <ImageIcon size={20} />}
+                  {activeAsset.type === 'video' && <FileVideo size={20} />}
+                </div>
+                <div>
+                  <h3 className="text-sm font-black text-white truncate">{activeAsset.name}</h3>
+                  <p className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500">{activeAsset.type}</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => handleDownload(activeAsset)}
+                  className="w-10 h-10 bg-black/40 border border-white/10 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/30 transition-all shadow-xl"
+                  title="Download"
+                >
+                  <Download size={18} />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => setActiveAsset(null)}
+                  className="w-10 h-10 text-slate-400 hover:text-rose-400"
+                  title="Close"
+                >
+                  <X size={20} />
+                </Button>
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-black/60 w-full h-[70vh] overflow-hidden">
+              {/* PDF rendered via iframe */}
+              {activeAsset.type === 'pdf' && (
+                <iframe
+                  src={activeAsset.data}
+                  title={activeAsset.name}
+                  className="w-full h-full border-0"
+                />
+              )}
+
+              {/* Plain text / markdown rendered as scrollable text */}
+              {activeAsset.type === 'text' && (
+                <div className="w-full h-full overflow-auto p-6 font-mono text-sm text-slate-100 whitespace-pre-wrap">
+                  {(() => {
+                    try {
+                      const parts = activeAsset.data.split(',');
+                      const base64 = parts.length > 1 ? parts[1] : parts[0];
+                      // decode base64 data URL payload
+                      return atob(base64);
+                    } catch (e) {
+                      return 'Unable to decode text content.';
+                    }
+                  })()}
+                </div>
+              )}
+
+              {activeAsset.type === 'image' && (
+                <div className="w-full h-full flex items-center justify-center bg-black">
+                  <img
+                    src={activeAsset.data}
+                    alt={activeAsset.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              )}
+
+              {activeAsset.type === 'video' && (
+                <video
+                  src={activeAsset.data}
+                  controls
+                  autoPlay
+                  className="w-full h-full object-contain bg-black"
+                />
+              )}
+            </div>
+          </Card>
+        </div>
+      )}
     </Card>
   );
 }

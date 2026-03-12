@@ -1,11 +1,12 @@
+// src/components/DocumentationView.tsx
 import React, { useState, useMemo, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { 
-  BookOpen, 
-  Code2, 
-  Target, 
-  Lightbulb, 
-  ArrowRight, 
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  BookOpen,
+  Code2,
+  Target,
+  Lightbulb,
+  ArrowRight,
   ChevronRight,
   Clock,
   Database,
@@ -22,13 +23,13 @@ import {
   Download,
   Layers,
   Sparkles,
-  Hash
+  Hash,
 } from 'lucide-react';
 import { Button } from './ui/Button';
 import { Card } from './ui/Card';
 import { Input } from './ui/Input';
 import { cn } from '../lib/utils';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom'; // unused → removed
 import { Algorithm, Language } from '../types';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
@@ -36,221 +37,251 @@ import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 function AlgorithmDocCard({ algo }: { algo: Algorithm }) {
   const [selectedLang, setSelectedLang] = useState<Language>('python');
 
+  const codeSnippet =
+    algo.code?.[selectedLang]?.functionCode ||
+    algo.code?.[selectedLang]?.classCode ||
+    algo.code?.[selectedLang]?.recursiveCode ||
+    'No implementation available.';
+
+  const getLanguageForHighlighter = (lang: Language) => {
+    switch (lang) {
+      case 'python': return 'python';
+      case 'cpp':    return 'cpp';
+      case 'c':      return 'c';
+      case 'rust':   return 'rust';
+      
+    }
+  };
+
   return (
-    <motion.section 
+    <motion.section
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="group relative z-0"
+      className="group relative z-0 scroll-mt-20"
       id={`algo-${algo.id}`}
     >
       {/* Latest Badge */}
       {algo.createdAt && (
-        <div className="absolute -top-4 left-12 z-10 flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg shadow-emerald-500/20">
-          <Calendar size={12} />
-          Latest Upload: {new Date(algo.createdAt).toLocaleString()}
+        <div className="absolute -top-5 left-8 sm:left-12 z-10 flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-emerald-500/30 border border-emerald-400/20">
+          <Calendar size={13} />
+          Latest: {new Date(algo.createdAt).toLocaleDateString('en-GB', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}
         </div>
       )}
 
-      <Card variant="glass" className="p-0 rounded-[2rem] sm:rounded-[3rem] overflow-hidden hover:border-indigo-500/30 transition-all duration-500 group/main">
+      <Card
+        variant="glass"
+        className="p-0 rounded-[2rem] sm:rounded-[3rem] overflow-hidden hover:border-indigo-500/30 transition-all duration-500 group/main shadow-2xl"
+      >
         <div className="p-5 sm:p-8 lg:p-16 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/5 blur-[120px] -z-10 group-hover/main:bg-indigo-600/10 transition-colors" />
-          
-          <div className="flex flex-col lg:flex-row gap-6 sm:gap-16">
-            {/* Left: Info */}
-            <div className="lg:w-1/2 space-y-6 sm:space-y-12">
-              <div>
-                <div className="flex flex-wrap items-center gap-3 mb-4 sm:mb-6">
-                  <span className="px-3 py-1 bg-indigo-500/10 text-indigo-400 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] rounded-full border border-indigo-500/20 shadow-sm">
-                    {algo.category}
-                  </span>
-                  <span className="hidden sm:block w-1.5 h-1.5 rounded-full bg-white/10" />
-                  <span className="text-[9px] sm:text-[10px] font-black text-slate-500 uppercase tracking-[0.2em] flex items-center gap-2">
-                    <Hash size={10} className="sm:size-[12px]" /> {algo.id}
-                  </span>
-                </div>
-                <h2 className="text-2xl sm:text-5xl lg:text-6xl font-black tracking-tighter mb-4 sm:mb-8 text-white group-hover/main:text-indigo-400 transition-colors leading-[0.9] break-words">
-                  {algo.name}
-                </h2>
-                <p className="text-slate-400 text-sm sm:text-xl leading-relaxed font-medium break-words">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-600/5 blur-[120px] -z-10 group-hover/main:bg-indigo-600/10 transition-colors duration-700" />
+
+          <div className="flex flex-col gap-16 sm:gap-24">
+            {/* Header: Centered Name & Description */}
+            <div className="text-center max-w-7xl mx-auto space-y-8 sm:space-y-12">
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <span className="px-4 py-1.5 bg-indigo-500/10 text-indigo-400 text-xs sm:text-sm font-black uppercase tracking-widest rounded-full border border-indigo-500/20 shadow-sm">
+                  {algo.category}
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-white/10" />
+                <span className="text-xs sm:text-sm font-black text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                  <Hash size={14} /> {algo.id}
+                </span>
+              </div>
+
+              <h2 className="text-5xl sm:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter text-white leading-none uppercase">
+                {algo.name}
+              </h2>
+
+              <div className="space-y-8 max-w-5xl mx-auto">
+                <p className="text-slate-300 text-xl sm:text-2xl lg:text-3xl leading-relaxed font-medium">
                   {algo.description}
                 </p>
-              </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
-                <div className="p-5 sm:p-8 bg-white/5 rounded-[1.5rem] sm:rounded-[2rem] border border-white/5 group/card hover:border-indigo-500/20 transition-all shadow-xl">
-                  <div className="flex items-center gap-2 sm:gap-3 text-slate-500 mb-2 sm:mb-3">
-                    <Clock size={16} className="sm:size-[18px] group-hover/card:text-indigo-400 transition-colors" />
-                    <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em]">Time Complexity</span>
+                <div className="flex flex-wrap justify-center gap-6 sm:gap-10 pt-4">
+                  <div className="flex items-center gap-3 px-7 py-4 bg-white/5 rounded-2xl border border-white/10 shadow-xl">
+                    <Clock size={20} className="text-indigo-400" />
+                    <span className="text-sm font-black uppercase tracking-widest text-slate-200">
+                      Time: {algo.complexity?.time ?? '—'}
+                    </span>
                   </div>
-                  <p className="text-xl sm:text-3xl font-mono font-black text-indigo-400 tracking-tighter break-all">{algo.complexity.time}</p>
-                </div>
-                <div className="p-5 sm:p-8 bg-white/5 rounded-[1.5rem] sm:rounded-[2rem] border border-white/5 group/card hover:border-indigo-500/20 transition-all shadow-xl">
-                  <div className="flex items-center gap-2 sm:gap-3 text-slate-500 mb-2 sm:mb-3">
-                    <Database size={16} className="sm:size-[18px] group-hover/card:text-indigo-400 transition-colors" />
-                    <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em]">Space Complexity</span>
-                  </div>
-                  <p className="text-xl sm:text-3xl font-mono font-black text-indigo-400 tracking-tighter break-all">{algo.complexity.space}</p>
-                </div>
-              </div>
-
-              <div className="space-y-6 sm:space-y-14">
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 group/item">
-                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-rose-500/10 flex items-center justify-center text-rose-400 flex-shrink-0 border border-rose-500/20 shadow-lg shadow-rose-500/5 group-hover/item:scale-110 transition-transform">
-                    <Target size={20} className="sm:size-[28px]" />
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="text-base sm:text-xl font-black mb-1 sm:mb-3 uppercase tracking-tight text-white">The Problem</h4>
-                    <p className="text-xs sm:text-base text-slate-400 leading-relaxed font-medium break-words">{algo.explanation.problem}</p>
+                  <div className="flex items-center gap-3 px-7 py-4 bg-white/5 rounded-2xl border border-white/10 shadow-xl">
+                    <Database size={20} className="text-indigo-400" />
+                    <span className="text-sm font-black uppercase tracking-widest text-slate-200">
+                      Space: {algo.complexity?.space ?? '—'}
+                    </span>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 group/item">
-                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 flex-shrink-0 border border-amber-500/20 shadow-lg shadow-amber-500/5 group-hover/item:scale-110 transition-transform">
-                    <Lightbulb size={20} className="sm:size-[28px]" />
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="text-base sm:text-xl font-black mb-1 sm:mb-3 uppercase tracking-tight text-white">Intuition</h4>
-                    <p className="text-xs sm:text-base text-slate-400 italic leading-relaxed font-medium break-words">"{algo.explanation.intuition}"</p>
-                  </div>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 group/item">
-                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 flex-shrink-0 border border-emerald-500/20 shadow-lg shadow-emerald-500/5 group-hover/item:scale-110 transition-transform">
-                    <CheckCircle2 size={20} className="sm:size-[28px]" />
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="text-base sm:text-xl font-black mb-1 sm:mb-3 uppercase tracking-tight text-white">Strategic Use</h4>
-                    <p className="text-xs sm:text-base text-slate-400 leading-relaxed font-medium break-words">{algo.explanation.whenToUse}</p>
-                  </div>
-                </div>
-                {algo.explanation.funFact && (
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 group/item">
-                    <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-violet-500/10 flex items-center justify-center text-violet-400 flex-shrink-0 border border-violet-500/20 shadow-lg shadow-violet-500/5 group-hover/item:scale-110 transition-transform">
-                      <History size={20} className="sm:size-[28px]" />
-                    </div>
-                    <div className="min-w-0">
-                      <h4 className="text-base sm:text-xl font-black mb-1 sm:mb-3 uppercase tracking-tight text-white">Historical Note</h4>
-                      <p className="text-xs sm:text-base text-slate-400 leading-relaxed font-medium break-words">{algo.explanation.funFact}</p>
-                    </div>
-                  </div>
-                )}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-8 group/item">
-                  <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 flex-shrink-0 border border-indigo-500/20 shadow-lg shadow-indigo-500/5 group-hover/item:scale-110 transition-transform">
-                    <Terminal size={20} className="sm:size-[28px]" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-base sm:text-xl font-black mb-3 sm:mb-6 uppercase tracking-tight text-white">Execution Sequence</h4>
-                    <div className="space-y-3 sm:space-y-5">
-                      {algo.explanation.walkthrough.split('\n').filter(s => s.trim()).map((step, i) => (
-                        <div key={i} className="flex gap-3 sm:gap-5 p-3 sm:p-6 bg-white/5 rounded-2xl border border-white/5 hover:border-indigo-500/30 transition-all group/step">
-                          <span className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-indigo-600 text-white text-[8px] sm:text-[10px] font-black flex items-center justify-center shadow-2xl shadow-indigo-500/40 group-hover/step:scale-110 transition-transform">
-                            {String(i + 1).padStart(2, '0')}
-                          </span>
-                          <span className="text-[10px] sm:text-sm text-slate-400 leading-relaxed font-medium group-hover/step:text-slate-200 transition-colors break-words">
-                            {step.replace(/^\d+\.\s*/, '')}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Assets Section */}
-                {algo.assets && algo.assets.length > 0 && (
-                  <div className="flex gap-8 group/item">
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-slate-500 flex-shrink-0 border border-white/10 shadow-lg group-hover/item:scale-110 transition-transform">
-                      <FileText size={28} />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-black mb-6 uppercase tracking-tight text-white">Reference Library</h4>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {algo.assets.map((asset) => (
-                          <div key={asset.id} className="flex items-center justify-between p-5 bg-white/5 rounded-2xl border border-white/5 hover:bg-white/10 hover:border-indigo-500/30 transition-all group/asset">
-                            <div className="flex items-center gap-4 min-w-0">
-                              <div className="w-10 h-10 rounded-xl bg-black/40 flex items-center justify-center text-slate-500 shadow-inner border border-white/5 group-hover/asset:text-indigo-400 transition-colors">
-                                <FileText size={18} />
-                              </div>
-                              <span className="text-xs font-black uppercase tracking-tight truncate text-slate-300">{asset.name}</span>
-                            </div>
-                            <Button 
-                              variant="ghost" 
-                              size="icon"
-                              onClick={() => {
-                                const link = document.createElement('a');
-                                link.href = asset.data;
-                                link.download = asset.name;
-                                document.body.appendChild(link);
-                                link.click();
-                                document.body.removeChild(link);
-                              }}
-                              className="w-10 h-10 text-slate-500 hover:text-indigo-400"
-                            >
-                              <Download size={18} />
-                            </Button>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
 
-            {/* Right: Code */}
-            <div className="lg:w-1/2 min-w-0">
-              <div className="sticky top-32 bg-black/60 backdrop-blur-3xl rounded-[2rem] sm:rounded-[3rem] border border-white/10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col">
-                <div className="p-5 sm:p-8 border-b border-white/5 flex items-center justify-between bg-white/5">
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
-                      <Terminal size={16} className="sm:size-[20px]" />
-                    </div>
-                    <div>
-                      <span className="text-[9px] sm:text-[10px] font-black text-indigo-400 uppercase tracking-[0.2em]">Source Matrix</span>
-                      <p className="text-[7px] sm:text-[8px] font-black text-slate-600 uppercase tracking-[0.3em] mt-0.5">Neural Implementation</p>
-                    </div>
+            {/* Source Code Section */}
+            <div className="space-y-10">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 px-4 sm:px-0">
+                <div className="flex items-center gap-5">
+                  <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
+                    <Terminal size={28} />
                   </div>
-                  <div className="flex gap-1.5 sm:gap-2.5">
-                    <div className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full bg-rose-500/20 border border-rose-500/30" />
-                    <div className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full bg-amber-500/20 border border-amber-500/30" />
-                    <div className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full bg-emerald-500/20 border border-emerald-500/30" />
+                  <div>
+                    <h3 className="text-3xl sm:text-4xl font-black tracking-tight text-white uppercase">Source Matrix</h3>
+                    <p className="text-xs font-black text-slate-500 uppercase tracking-widest mt-1">Neural Implementation</p>
                   </div>
                 </div>
-                
-                {/* Language Tabs */}
-                <div className="flex border-b border-white/5 bg-black/40 p-1 sm:p-1.5 overflow-x-auto custom-scrollbar">
-                  {Object.entries(algo.code).map(([lang, snippet]) => (
-                    (snippet.functionCode || snippet.classCode || snippet.recursiveCode) && (
+
+                <div className="flex flex-wrap gap-2 p-1.5 bg-white/5 rounded-2xl border border-white/10">
+                  {Object.entries(algo.code ?? {}).map(([lang, snippet]) => {
+                    if (!snippet?.functionCode && !snippet?.classCode && !snippet?.recursiveCode) return null;
+                    return (
                       <button
                         key={lang}
                         onClick={() => setSelectedLang(lang as Language)}
                         className={cn(
-                          "flex-1 min-w-[60px] py-2 sm:py-3 text-[8px] sm:text-[10px] font-black uppercase tracking-[0.2em] transition-all rounded-lg sm:rounded-xl",
-                          "hover:text-white",
-                          selectedLang === lang ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/20" : "text-slate-500 hover:bg-white/5"
+                          "px-6 py-3 text-xs sm:text-sm font-black uppercase tracking-widest transition-all rounded-xl",
+                          selectedLang === lang
+                            ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/30"
+                            : "text-slate-400 hover:text-white hover:bg-white/10"
                         )}
                       >
-                        {lang === 'cpp' ? 'C++' : lang}
+                        {lang === 'cpp' ? 'C++' : lang.charAt(0).toUpperCase() + lang.slice(1)}
                       </button>
-                    )
-                  ))}
+                    );
+                  })}
                 </div>
+              </div>
 
-                <div className="overflow-auto max-h-[400px] sm:max-h-[750px] custom-scrollbar bg-black/20">
+              <div className="bg-black/60 backdrop-blur-3xl rounded-[2.5rem] sm:rounded-[4rem] border border-white/10 shadow-2xl overflow-hidden">
+                <div className="p-6 sm:p-12 lg:p-16 overflow-auto max-h-[700px] lg:max-h-[900px] custom-scrollbar">
                   <SyntaxHighlighter
-                    language={selectedLang === 'python' ? 'python' : selectedLang === 'cpp' ? 'cpp' : selectedLang === 'c' ? 'c' : 'rust'}
+                    language={getLanguageForHighlighter(selectedLang)}
                     style={atomDark}
                     customStyle={{
                       margin: 0,
-                      padding: '1.5rem sm:3rem',
-                      fontSize: '0.75rem sm:0.9rem',
-                      lineHeight: '1.6 sm:1.8',
-                      background: 'transparent'
+                      padding: 0,
+                      background: 'transparent',
+                      fontSize: '1.05rem',
+                      lineHeight: '1.75',
                     }}
+                    wrapLongLines
                   >
-                    {algo.code[selectedLang]?.functionCode || algo.code[selectedLang]?.classCode || algo.code[selectedLang]?.recursiveCode || 'No implementation available.'}
+                    {codeSnippet}
                   </SyntaxHighlighter>
                 </div>
               </div>
             </div>
+
+            {/* Execution Sequence */}
+            {algo.explanation?.walkthrough && (
+              <div className="space-y-12">
+                <div className="flex items-center gap-5 px-4 sm:px-0">
+                  <div className="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
+                    <Zap size={28} />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl sm:text-4xl font-black tracking-tight text-white uppercase">Execution Sequence</h3>
+                    <p className="text-xs font-black text-slate-500 uppercase tracking-widest mt-1">Step-by-Step Walkthrough</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                  {algo.explanation.walkthrough.split('\n').filter(s => s.trim()).map((step, i) => (
+                    <div
+                      key={i}
+                      className="flex flex-col gap-6 p-8 lg:p-10 bg-white/[0.03] rounded-[2.5rem] border border-white/8 hover:border-indigo-500/30 hover:bg-white/[0.06] transition-all duration-300 group/step shadow-xl"
+                    >
+                      <div className="flex items-center gap-6">
+                        <span className="flex-shrink-0 w-12 h-12 rounded-2xl bg-indigo-600 text-white text-base font-black flex items-center justify-center shadow-lg shadow-indigo-600/40 group-hover/step:scale-105 transition-transform">
+                          {String(i + 1).padStart(2, '0')}
+                        </span>
+                        <div className="h-px flex-1 bg-white/10 group-hover/step:bg-indigo-500/30 transition-all" />
+                      </div>
+                      <p className="text-base lg:text-lg text-slate-300 leading-relaxed group-hover/step:text-slate-100 transition-colors">
+                        {step.replace(/^\d+\.\s*/, '')}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Strategic Analysis */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+              <div className="p-8 lg:p-10 bg-white/[0.03] rounded-[2.5rem] border border-white/8 hover:border-rose-500/30 transition-all group/item shadow-xl">
+                <div className="w-14 h-14 rounded-2xl bg-rose-500/10 flex items-center justify-center text-rose-400 mb-6 border border-rose-500/20 shadow-lg shadow-rose-500/10 group-hover/item:scale-105 transition-transform">
+                  <Target size={28} />
+                </div>
+                <h4 className="text-2xl font-black mb-4 uppercase tracking-tight text-white">The Problem</h4>
+                <p className="text-base text-slate-300 leading-relaxed">{algo.explanation?.problem ?? '—'}</p>
+              </div>
+
+              <div className="p-8 lg:p-10 bg-white/[0.03] rounded-[2.5rem] border border-white/8 hover:border-amber-500/30 transition-all group/item shadow-xl">
+                <div className="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 mb-6 border border-amber-500/20 shadow-lg shadow-amber-500/10 group-hover/item:scale-105 transition-transform">
+                  <Lightbulb size={28} />
+                </div>
+                <h4 className="text-2xl font-black mb-4 uppercase tracking-tight text-white">Intuition</h4>
+                <p className="text-base text-slate-300 leading-relaxed italic">
+                  {algo.explanation?.intuition ? `"${algo.explanation.intuition}"` : '—'}
+                </p>
+              </div>
+
+              <div className="p-8 lg:p-10 bg-white/[0.03] rounded-[2.5rem] border border-white/8 hover:border-emerald-500/30 transition-all group/item shadow-xl">
+                <div className="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 border border-emerald-500/20 shadow-lg shadow-emerald-500/10 group-hover/item:scale-105 transition-transform">
+                  <CheckCircle2 size={28} />
+                </div>
+                <h4 className="text-2xl font-black mb-4 uppercase tracking-tight text-white">Strategic Use</h4>
+                <p className="text-base text-slate-300 leading-relaxed">{algo.explanation?.whenToUse ?? '—'}</p>
+              </div>
+            </div>
+
+            {/* Assets Section */}
+            {algo.assets && algo.assets.length > 0 && (
+              <div className="space-y-10 pt-8">
+                <div className="flex items-center gap-5 px-4 sm:px-0">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-slate-400 border border-white/10">
+                    <FileText size={28} />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-black tracking-tight text-white uppercase">Reference Library</h3>
+                    <p className="text-xs font-black text-slate-500 uppercase tracking-widest mt-1">
+                      Documentation & Media Assets
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  {algo.assets.map((asset) => (
+                    <div
+                      key={asset.id}
+                      className="p-6 bg-white/[0.04] rounded-3xl border border-white/8 hover:bg-white/8 hover:border-indigo-500/30 transition-all group/asset flex flex-col"
+                    >
+                      <div className="w-12 h-12 rounded-2xl bg-black/40 flex items-center justify-center text-slate-400 border border-white/10 mb-4 group-hover/asset:text-indigo-400 transition-colors">
+                        <FileText size={24} />
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-base font-semibold text-white mb-1 truncate">{asset.name}</p>
+                        <p className="text-xs uppercase tracking-wider text-slate-500">{asset.type || 'File'}</p>
+                      </div>
+                      <Button
+                        variant="ghost"
+                        className="mt-4 w-full bg-white/5 hover:bg-indigo-600/80 hover:text-white rounded-xl py-5 text-sm font-semibold"
+                        onClick={() => {
+                          const link = document.createElement('a');
+                          link.href = asset.data;
+                          link.download = asset.name;
+                          link.click();
+                        }}
+                      >
+                        <Download size={18} className="mr-2" />
+                        Download
+                      </Button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </Card>
@@ -263,7 +294,6 @@ export default function DocumentationView({ algorithms }: { algorithms: Algorith
   const [selectedAlgoId, setSelectedAlgoId] = useState<string>('all');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -278,143 +308,149 @@ export default function DocumentationView({ algorithms }: { algorithms: Algorith
   const filteredAndSortedAlgorithms = useMemo(() => {
     let result = [...algorithms];
 
-    // Filter by search query (Name, Category, ID)
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(algo => 
-        algo.name.toLowerCase().includes(query) ||
-        algo.category.toLowerCase().includes(query) ||
-        algo.id.toLowerCase().includes(query)
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      result = result.filter(
+        (algo) =>
+          algo.name.toLowerCase().includes(q) ||
+          algo.category.toLowerCase().includes(q) ||
+          algo.id.toLowerCase().includes(q)
       );
     }
 
-    // Filter by selected algorithm
     if (selectedAlgoId !== 'all') {
-      result = result.filter(algo => algo.id === selectedAlgoId);
+      result = result.filter((algo) => algo.id === selectedAlgoId);
     }
 
-    // Sort by latest (createdAt)
     return result.sort((a, b) => {
-      const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-      const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-      return dateB - dateA;
+      const da = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+      const db = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+      return db - da;
     });
   }, [algorithms, searchQuery, selectedAlgoId]);
 
   const latestAlgo = useMemo(() => {
-    if (algorithms.length === 0) return null;
+    if (!algorithms.length) return null;
     return [...algorithms].sort((a, b) => {
-      const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
-      const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
-      return dateB - dateA;
+      const da = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+      const db = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+      return db - da;
     })[0];
   }, [algorithms]);
 
-  const selectedAlgoName = algorithms.find(a => a.id === selectedAlgoId)?.name || 'All Algorithms';
+  const selectedAlgoName =
+    algorithms.find((a) => a.id === selectedAlgoId)?.name || 'All Algorithms';
 
   return (
     <div className="space-y-16 pb-32">
-      <header className="text-center max-w-3xl mx-auto space-y-6 relative z-[60]">
-        <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 dark:text-white break-words px-4">
-          Algorithm <span className="text-indigo-600">Documentation</span>
+      <header className="text-center max-w-4xl mx-auto space-y-6 relative z-10 px-4">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">
+          Algorithm <span className="text-indigo-500">Documentation</span>
         </h1>
-        <p className="text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-relaxed break-words px-6">
-          Comprehensive guide to algorithm implementations, complexity analysis, and strategic use cases.
+        <p className="text-slate-400 text-lg sm:text-xl leading-relaxed">
+          In-depth guide to implementations, complexity, and strategic usage.
         </p>
 
-        {/* Latest Upload Highlight */}
         {latestAlgo && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="pt-4 px-4"
+            className="pt-6 px-4"
           >
-            <Card variant="glass" className="p-6 sm:p-8 text-left shadow-xl bg-indigo-600 border-indigo-500 text-white rounded-3xl overflow-hidden relative z-0">
-              <div className="flex items-center gap-3 mb-4 opacity-80">
-                <Zap size={16} className="flex-shrink-0" />
-                <span className="text-[10px] font-black uppercase tracking-widest truncate">Latest Neural Upload</span>
+            <Card
+              variant="glass"
+              className="p-6 sm:p-8 bg-gradient-to-br from-indigo-900/60 to-purple-900/40 border-indigo-500/30 text-white rounded-3xl shadow-2xl"
+            >
+              <div className="flex items-center gap-3 mb-4 opacity-90">
+                <Zap size={16} />
+                <span className="text-xs font-black uppercase tracking-widest">Latest Upload</span>
               </div>
-              <h3 className="text-2xl sm:text-3xl font-black mb-2 break-words">{latestAlgo.name}</h3>
-              <p className="text-indigo-100 mb-6 line-clamp-2 font-medium opacity-90 break-words">{latestAlgo.description}</p>
-              <Button 
+              <h3 className="text-2xl sm:text-3xl font-black mb-3">{latestAlgo.name}</h3>
+              <p className="text-indigo-100 mb-6 line-clamp-2">{latestAlgo.description}</p>
+              <Button
                 onClick={() => {
                   setSelectedAlgoId(latestAlgo.id);
-                  const el = document.getElementById(`algo-${latestAlgo.id}`);
-                  el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  document.getElementById(`algo-${latestAlgo.id}`)?.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
                 }}
-                className="w-full sm:w-auto bg-white text-indigo-600 hover:bg-indigo-50 font-bold"
+                className="w-full sm:w-auto bg-white text-indigo-700 hover:bg-indigo-100 font-bold"
               >
-                View Documentation
-                <ArrowRight size={18} className="ml-2 flex-shrink-0" />
+                View Details
+                <ArrowRight size={18} className="ml-2" />
               </Button>
             </Card>
           </motion.div>
         )}
 
-        {/* Controls Matrix */}
+        {/* Search & Filter Controls */}
         <div className="px-4">
-          <Card variant="glass" className="flex flex-col md:flex-row gap-4 sm:gap-8 mt-12 sm:mt-20 p-5 sm:p-10 rounded-[2rem] sm:rounded-[3rem] border-white/10 shadow-2xl relative z-50 overflow-visible">
-            <div className="relative flex-1 group min-w-0">
-              <Input 
-                placeholder="Search neural signatures..."
+          <Card
+            variant="glass"
+            className="flex flex-col md:flex-row gap-5 sm:gap-8 mt-10 p-6 sm:p-10 rounded-[2rem] sm:rounded-[3rem] border-white/10 shadow-2xl"
+          >
+            <div className="relative flex-1">
+              <Input
+                placeholder="Search algorithms..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                icon={<Search size={20} className="sm:size-[24px] flex-shrink-0" />}
+                icon={<Search size={20} />}
                 className="w-full"
               />
             </div>
-            
-            <div className="relative min-w-full md:min-w-[350px]" ref={dropdownRef}>
-              <button 
+
+            <div className="relative min-w-full md:min-w-[340px]" ref={dropdownRef}>
+              <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className={cn(
-                  "w-full bg-white/5 border border-white/10 rounded-2xl py-4 sm:py-6 px-6 sm:px-10 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] flex items-center justify-between text-white hover:bg-white/10 hover:border-indigo-500/50 transition-all shadow-xl",
+                  "w-full bg-white/5 border border-white/10 rounded-2xl py-4 px-6 text-sm font-black uppercase tracking-wider flex items-center justify-between text-white hover:bg-white/10 transition-all shadow-lg",
                   isDropdownOpen && "border-indigo-500/50 bg-white/10"
                 )}
               >
-                <div className="flex items-center gap-3 sm:gap-4 min-w-0">
-                  <Layers size={18} className="sm:size-[20px] text-indigo-400 flex-shrink-0" />
+                <div className="flex items-center gap-3 truncate">
+                  <Layers size={18} className="text-indigo-400" />
                   <span className="truncate">{selectedAlgoName}</span>
                 </div>
-                <ChevronDown className={cn("text-slate-500 transition-transform duration-300 flex-shrink-0", isDropdownOpen && "rotate-180 text-white")} size={20} />
+                <ChevronDown className={cn("transition-transform", isDropdownOpen && "rotate-180")} size={20} />
               </button>
 
               <AnimatePresence>
                 {isDropdownOpen && (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 15, scale: 0.95 }}
+                  <motion.div
+                    initial={{ opacity: 0, y: 12, scale: 0.98 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 15, scale: 0.95 }}
-                    className="absolute top-full left-0 right-0 mt-4 z-[100]"
+                    exit={{ opacity: 0, y: 12, scale: 0.98 }}
+                    className="absolute top-full left-0 right-0 mt-3 z-50"
                   >
-                    <Card variant="glass" className="p-2 sm:p-3 border-white/10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.8)] backdrop-blur-3xl overflow-hidden">
-                      <div className="max-h-[300px] sm:max-h-[450px] overflow-auto custom-scrollbar space-y-1">
+                    <Card variant="glass" className="border-white/10 shadow-2xl max-h-[420px] overflow-hidden">
+                      <div className="max-h-[400px] overflow-y-auto custom-scrollbar p-2">
                         <button
                           onClick={() => { setSelectedAlgoId('all'); setIsDropdownOpen(false); }}
                           className={cn(
-                            "w-full text-left px-6 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] transition-all flex items-center gap-3 sm:gap-4",
-                            selectedAlgoId === 'all' ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/20" : "hover:bg-white/5 text-slate-400 hover:text-white"
+                            "w-full text-left px-6 py-4 rounded-xl text-sm font-black uppercase tracking-wider flex items-center gap-3 transition-all",
+                            selectedAlgoId === 'all' ? "bg-indigo-600 text-white" : "hover:bg-white/8 text-slate-300 hover:text-white"
                           )}
                         >
-                          <Filter size={16} className="sm:size-[18px] flex-shrink-0" />
-                          <span className="truncate">All Algorithms</span>
+                          <Filter size={18} />
+                          All Algorithms
                         </button>
-                        <div className="h-px bg-white/5 my-2 sm:my-3 mx-4 sm:mx-6" />
-                        {algorithms.map(algo => (
+
+                        <div className="h-px bg-white/10 my-2 mx-4" />
+
+                        {algorithms.map((algo) => (
                           <button
                             key={algo.id}
                             onClick={() => { setSelectedAlgoId(algo.id); setIsDropdownOpen(false); }}
                             className={cn(
-                              "w-full text-left px-6 sm:px-8 py-3 sm:py-5 rounded-xl sm:rounded-2xl text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] transition-all flex items-center gap-3 sm:gap-4",
-                              selectedAlgoId === algo.id ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/20" : "hover:bg-white/5 text-slate-400 hover:text-white"
+                              "w-full text-left px-6 py-4 rounded-xl text-sm font-medium flex items-center gap-3 transition-all",
+                              selectedAlgoId === algo.id ? "bg-indigo-600/90 text-white" : "hover:bg-white/8 text-slate-300 hover:text-white"
                             )}
                           >
-                            <Sparkles size={16} className={cn("sm:size-[18px] flex-shrink-0", selectedAlgoId === algo.id ? "text-white" : "text-indigo-400")} />
+                            <Sparkles size={18} className={selectedAlgoId === algo.id ? "text-white" : "text-indigo-400"} />
                             <div className="flex flex-col min-w-0">
-                              <span className="text-xs sm:text-sm tracking-tight truncate">{algo.name}</span>
-                              <span className={cn("text-[7px] sm:text-[8px] uppercase tracking-[0.3em] mt-0.5 sm:mt-1 opacity-60 truncate", selectedAlgoId === algo.id ? "text-white" : "text-slate-500")}>
-                                {algo.category}
-                              </span>
+                              <span className="truncate">{algo.name}</span>
+                              <span className="text-xs text-slate-500 mt-0.5">{algo.category}</span>
                             </div>
                           </button>
                         ))}
@@ -428,23 +464,23 @@ export default function DocumentationView({ algorithms }: { algorithms: Algorith
         </div>
       </header>
 
-      <div className="grid grid-cols-1 gap-32">
+      <div className="grid grid-cols-1 gap-24 lg:gap-32 px-4 sm:px-6">
         {filteredAndSortedAlgorithms.map((algo) => (
           <AlgorithmDocCard key={algo.id} algo={algo} />
         ))}
 
         {filteredAndSortedAlgorithms.length === 0 && (
-          <div className="text-center py-40 bg-white dark:bg-slate-900 rounded-[4rem] border border-dashed border-slate-200 dark:border-slate-800 shadow-inner">
-            <div className="w-24 h-24 bg-slate-100 dark:bg-slate-800 rounded-[2rem] flex items-center justify-center text-slate-400 mx-auto mb-8 shadow-sm">
+          <div className="text-center py-40 bg-gradient-to-b from-slate-900/30 to-transparent rounded-[3rem] border border-dashed border-slate-700/50">
+            <div className="w-24 h-24 bg-slate-800/50 rounded-3xl flex items-center justify-center text-slate-400 mx-auto mb-8">
               <Filter size={48} />
             </div>
-            <h3 className="text-3xl font-black mb-3">No neural signatures found</h3>
-            <p className="text-slate-500 text-lg">Try adjusting your search or filter criteria to find the algorithm.</p>
-            <button 
+            <h3 className="text-3xl font-black mb-4">No algorithms found</h3>
+            <p className="text-slate-400 text-lg mb-8">Try adjusting your search or filter.</p>
+            <button
               onClick={() => { setSearchQuery(''); setSelectedAlgoId('all'); }}
-              className="mt-10 px-8 py-4 bg-indigo-600 text-white rounded-2xl font-black text-sm hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-500/20 active:scale-95"
+              className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-black transition-all shadow-xl"
             >
-              Reset Matrix Filters
+              Reset Filters
             </button>
           </div>
         )}

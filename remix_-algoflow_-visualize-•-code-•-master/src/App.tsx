@@ -193,7 +193,7 @@ export default function App() {
       <header className="lg:hidden flex items-center justify-between p-4 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-black/80 backdrop-blur-md sticky top-0 z-50">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold">A</div>
-          <span className="font-bold text-lg tracking-tight">AlgoFlow</span>
+          <span className="font-bold text-lg tracking-tight">AlgoFlow </span>
         </div>
         <div className="flex items-center gap-2">
           <UserMenu />

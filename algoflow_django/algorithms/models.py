@@ -38,7 +38,8 @@ class Algorithm(models.Model):
     complexity_space_rating = models.CharField(max_length=10, choices=TIME_RATING_CHOICES, default='good')
 
     # Code — stored as JSON text per language
-    code_python = models.JSONField(default=dict, blank=True)   # {classCode, functionCode, recursiveCode, outcome, runtime}
+    # Each language has: classCode, functionCode, recursiveCode, classOutcome, classRuntime, functionOutcome, functionRuntime, recursiveOutcome, recursiveRuntime
+    code_python = models.JSONField(default=dict, blank=True)
     code_cpp    = models.JSONField(default=dict, blank=True)
     code_c      = models.JSONField(default=dict, blank=True)
     code_rust   = models.JSONField(default=dict, blank=True)

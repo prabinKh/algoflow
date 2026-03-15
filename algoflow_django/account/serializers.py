@@ -432,11 +432,11 @@ class ChangePasswordSerializer(serializers.Serializer):
 
 class UserProfileSerializer(serializers.ModelSerializer):
     """Serializer for user profile"""
-    
+
     class Meta:
         model = MyUser
-        fields = ['id', 'email', 'name', 'email_verified', 'created_at', 'last_login']
-        read_only_fields = ['id', 'email', 'email_verified', 'created_at', 'last_login']
+        fields = ['id', 'email', 'name', 'email_verified', 'is_staff', 'is_superuser', 'created_at', 'last_login']
+        read_only_fields = ['id', 'email', 'email_verified', 'is_staff', 'is_superuser', 'created_at', 'last_login']
 
 
 class NoteSerializer(serializers.ModelSerializer):

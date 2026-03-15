@@ -110,6 +110,8 @@ class EmailVerificationView(APIView):
                             "email": user.email,
                             "name": user.name,
                             "email_verified": user.email_verified,
+                            "is_staff": user.is_staff,
+                            "is_superuser": user.is_superuser
                         },
                     },
                     status=status.HTTP_200_OK,
@@ -217,7 +219,9 @@ class CustomTokenObtainPairView(TokenObtainPairView):
                 'id': str(user.id),
                 'email': user.email,
                 'name': user.name,
-                'email_verified': user.email_verified
+                'email_verified': user.email_verified,
+                'is_staff': user.is_staff,
+                'is_superuser': user.is_superuser
             }
         }, status=status.HTTP_200_OK)
         
@@ -501,14 +505,17 @@ class IsAuthenticatedView(APIView):
     GET /api/auth/check/
     """
     permission_classes = [IsAuthenticated]
-    
+
     def get(self, request):
         return Response({
             'authenticated': True,
             'user': {
                 'id': str(request.user.id),
                 'email': request.user.email,
-                'name': request.user.name
+                'name': request.user.name,
+                'is_staff': request.user.is_staff,
+                'is_superuser': request.user.is_superuser,
+                'email_verified': request.user.email_verified
             }
         }, status=status.HTTP_200_OK)
 

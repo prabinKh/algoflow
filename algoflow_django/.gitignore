@@ -1,3 +1,11 @@
+# ═══════════════════════════════════════════════════════════
+# Django Backend .gitignore
+# ═══════════════════════════════════════════════════════════
+
+# ═══════════════════════════════════════════════════════════
+# PYTHON
+# ═══════════════════════════════════════════════════════════
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -20,6 +28,7 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -34,62 +43,167 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
+# ═══════════════════════════════════════════════════════════
+# DJANGO
+# ═══════════════════════════════════════════════════════════
 
-# Translations
+# Database
+*.db
+*.sqlite
+*.sqlite3
+algoflow.db
+
+# Static files
+staticfiles/
+static_root/
+
+# Media files (user uploads)
+media/
+user_uploads/
+
+# Logs
+logs/
+*.log
+
+# Locale
 *.mo
 *.pot
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-/media
-/staticfiles
-/static
-algoflow.db
+# Migrations (uncomment if you don't want to track migrations)
+# */migrations/*.py
+# !*/migrations/__init__.py
 
-# Virtual environment
+# ═══════════════════════════════════════════════════════════
+# VIRTUAL ENVIRONMENT
+# ═══════════════════════════════════════════════════════════
+
 venv/
 env/
+ENV/
+.venv
 ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
+# Python version
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# ═══════════════════════════════════════════════════════════
+# TESTING
+# ═══════════════════════════════════════════════════════════
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Nose
+nosetests.xml
+
+# Tox
+.tox/
+
+# ═══════════════════════════════════════════════════════════
+# IDE
+# ═══════════════════════════════════════════════════════════
+
+# PyCharm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Eclipse
+.pydevproject
+.settings/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Spyder
 .spyderproject
 .spyproject
 
-# Rope project settings
+# Rope
 .ropeproject
 
-# mkdocs
-/site
+# ═══════════════════════════════════════════════════════════
+# ENVIRONMENT VARIABLES
+# ═══════════════════════════════════════════════════════════
 
-# MyPy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
 
-# Pyre type checker
-.pyre/
+# Secrets
+*.pem
+*.key
+secrets/
+credentials/
 
-# pytype static type analyzer
-.pytype/
+# AWS
+.aws/
 
-# Cython debug symbols
-cython_debug/
+# ═══════════════════════════════════════════════════════════
+# DJANGO SPECIFIC
+# ═══════════════════════════════════════════════════════════
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Daphne
+daphne.pid
+
+# Gunicorn
+*.pid
+
+# uWSGI
+*.pid
+*.sock
+
+# ═══════════════════════════════════════════════════════════
+# OS
+# ═══════════════════════════════════════════════════════════
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ═══════════════════════════════════════════════════════════
+# DO NOT IGNORE (Keep these)
+# ═══════════════════════════════════════════════════════════
+
+# DO keep these files
+!.gitignore
+!requirements.txt
+!manage.py
+!Dockerfile
+!*.md
+!.env.example

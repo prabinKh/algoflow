@@ -87,13 +87,20 @@ class AlgorithmSerializer(serializers.ModelSerializer):
 
     def get_code(self, obj):
         def normalise(raw):
-            """Ensure all expected keys are present."""
+            """Ensure all expected keys are present, including separate outcome/runtime for each implementation."""
             base = {
                 'classCode':     '',
                 'functionCode':  '',
                 'recursiveCode': '',
-                'outcome':       '',
-                'runtime':       '',
+                'classOutcome':      '',
+                'classRuntime':      '',
+                'functionOutcome':   '',
+                'functionRuntime':   '',
+                'recursiveOutcome':  '',
+                'recursiveRuntime':  '',
+                # Legacy fields for backward compatibility
+                'outcome': '',
+                'runtime': '',
             }
             if isinstance(raw, dict):
                 base.update(raw)

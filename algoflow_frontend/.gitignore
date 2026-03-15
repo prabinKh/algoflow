@@ -1,140 +1,27 @@
 # ═══════════════════════════════════════════════════════════
-# AlgoFlow .gitignore
-# Comprehensive gitignore for Django + React project
+# React Frontend .gitignore
 # ═══════════════════════════════════════════════════════════
 
 # ═══════════════════════════════════════════════════════════
-# ROOT
+# DEPENDENCIES
 # ═══════════════════════════════════════════════════════════
 
-# IDE and Editors
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-Thumbs.db
-Desktop.ini
-
-# Logs
-*.log
-logs/
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# ═══════════════════════════════════════════════════════════
-# DJANGO BACKEND
-# ═══════════════════════════════════════════════════════════
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Django
-*.pot
-*.pyc
-db.sqlite3
-*.db
-media/
-staticfiles/
-static_root/
-algoflow_django/algoflow.db
-algoflow_django/logs/
-
-# Virtual environments
-venv/
-env/
-ENV/
-.venv
-.python-version
-
-# Testing
-.tox/
-.coverage
-.coverage.*
-htmlcov/
-.pytest_cache/
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-
-# Translations
-*.mo
-*.pot
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# Celery
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath
-*.sage.py
-
-# Spyder
-.spyderproject
-.spyproject
-
-# Rope
-.ropeproject
-
-# mkdocs
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre
-.pyre/
-
-# macOS
-.AppleDouble
-.LSOverride
-
-# ═══════════════════════════════════════════════════════════
-# REACT FRONTEND
-# ═══════════════════════════════════════════════════════════
-
-# Dependencies
+# Node modules
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
-yarn.lock
+pnpm-debug.log*
+lerna-debug.log*
+
+# Package lock files (keep one based on your package manager)
+# package-lock.json  # Keep if using npm
+# yarn.lock          # Keep if using yarn
+# pnpm-lock.yaml     # Keep if using pnpm
+
+# ═══════════════════════════════════════════════════════════
+# BUILD OUTPUTS
+# ═══════════════════════════════════════════════════════════
 
 # Build outputs
 dist/
@@ -144,104 +31,123 @@ out/
 # Vite
 *.local
 
-# Testing
+# Rollup
+.rollup.cache
+
+# Parcel
+.parcel-cache/
+.cache/
+
+# Webpack
+webpack-stats.json
+webpack.manifest.json
+
+# ═══════════════════════════════════════════════════════════
+# TESTING
+# ═══════════════════════════════════════════════════════════
+
+# Test coverage
 coverage/
 .nyc_output/
 
+# Jest
+jest-results.json
+
+# ═══════════════════════════════════════════════════════════
 # IDE
+# ═══════════════════════════════════════════════════════════
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# WebStorm
+.idea/
+
+# Other IDE files
 *.iml
 *.ipr
 *.iws
 
-# Parcel
-.parcel-cache/
-
-# Server
-server.ts
-*.ts
-
-# Database (if using local DB)
-database.sqlite
-*.sqlite
-
-# Temporary files
-*.tmp
-*.temp
-
 # ═══════════════════════════════════════════════════════════
-# DOCKER
+# ENVIRONMENT VARIABLES
 # ═══════════════════════════════════════════════════════════
 
-# Docker
-.docker/
-docker-compose.override.yml
-*.pid
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
 
-# Docker volumes (if mounted locally)
-volumes/
+# Keep example env files
+!.env.example
 
-# ═══════════════════════════════════════════════════════════
-# SECURITY
-# ═══════════════════════════════════════════════════════════
-
-# Secrets and keys
+# Secrets
 *.pem
 *.key
 secrets/
 credentials/
 
-# AWS
-.aws/
-
-# Firebase
-.firebaserc
-firebase-debug.log
-firestore-debug.log
-ui-debug.log
-
-# Application specific
-config.local.json
-settings.local.py
-
 # ═══════════════════════════════════════════════════════════
-# DOCUMENTATION
+# TYPESCRIPT
 # ═══════════════════════════════════════════════════════════
 
-# Documentation build
-docs/_build/
-docs/.doctrees/
+# TypeScript cache
+*.tsbuildinfo
+
+# TypeScript build outputs
+dist/
+
+# ═══════════════════════════════════════════════════════════
+# OS
+# ═══════════════════════════════════════════════════════════
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
 
 # ═══════════════════════════════════════════════════════════
 # MISCELLANEOUS
 # ═══════════════════════════════════════════════════════════
 
-# Cache files
-*.cache
-.cache/
-
-# Backup files
-*.bak
-*.backup
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
 *~
 
-# OS generated files
-ehthumbs.db
-Icon
-._*
+# Cache
+.cache/
+.eslintcache
+.stylelintcache
+
+# Storybook
+storybook-static/
 
 # ═══════════════════════════════════════════════════════════
-# KEEP THESE (Examples)
+# DO NOT IGNORE (Keep these)
 # ═══════════════════════════════════════════════════════════
 
-# DO NOT ignore these - they are needed
+# DO keep these files
 !.gitignore
-!README.md
-!QUICKSTART.md
-!docker-compose.yml
-!docker-control.sh
-!docker-control.bat
-!.env.example
-!requirements.txt
 !package.json
+!package-lock.json
+!vite.config.ts
+!tsconfig.json
+!README.md
 !Dockerfile
 !nginx.conf
+!.env.example

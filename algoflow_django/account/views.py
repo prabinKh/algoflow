@@ -82,35 +82,77 @@ class EmailVerificationView(APIView):
     permission_classes = [AllowAny]
     
     def post(self, request):
+        """
+        Verify the user's email using the provided token.
+        On success, also issue JWT tokens and set them as cookies
+        so the user is automatically logged in.
+        """
         try:
             serializer = EmailVerificationSerializer(data=request.data)
-            
+
             if serializer.is_valid():
                 user = serializer.save()
-                
+
                 # Send welcome email
                 EmailService.send_welcome_email(user)
-                
-                return Response({
-                    'success': True,
-                    'message': 'Email verified successfully! You can now log in.',
-                    'user': {
-                        'email': user.email,
-                        'name': user.name
-                    }
-                }, status=status.HTTP_200_OK)
-            
-            return Response({
-                'success': False,
-                'errors': serializer.errors
-            }, status=status.HTTP_400_BAD_REQUEST)
-            
+
+                # Generate tokens and log the user in
+                tokens = get_tokens_for_user(user)
+
+                response = Response(
+                    {
+                        "success": True,
+                        "message": "Email verified successfully! You are now logged in.",
+                        "access": tokens["access"],
+                        "refresh": tokens["refresh"],
+                        "user": {
+                            "id": str(user.id),
+                            "email": user.email,
+                            "name": user.name,
+                            "email_verified": user.email_verified,
+                        },
+                    },
+                    status=status.HTTP_200_OK,
+                )
+
+                # Set cookies exactly like the login view
+                response.set_cookie(
+                    "access_token",
+                    tokens["access"],
+                    httponly=True,
+                    secure=False,  # Set True in production with HTTPS
+                    samesite="Lax",
+                    max_age=300,  # 5 minutes
+                )
+
+                response.set_cookie(
+                    "refresh_token",
+                    tokens["refresh"],
+                    httponly=True,
+                    secure=False,  # Set True in production with HTTPS
+                    samesite="Lax",
+                    max_age=86400,  # 24 hours
+                )
+
+                return response
+
+            return Response(
+                {
+                    "success": False,
+                    "errors": serializer.errors,
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
         except Exception as e:
             logger.error(f"Email verification error: {str(e)}")
-            return Response({
-                'success': False,
-                'message': 'An error occurred during verification. Please try again.'
-            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            return Response(
+                {
+                    "success": False,
+                    "message": "An error occurred during verification. Please try again.",
+                },
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )
 
 
 class ResendVerificationView(APIView):

@@ -2076,3 +2076,517 @@ INFO 2026-03-12 18:07:45,654 basehttp 38194 6233337856 "GET /api/categories/ HTT
 INFO 2026-03-12 18:07:45,658 basehttp 38194 6182858752 "GET /api/categories/ HTTP/1.1" 200 510
 INFO 2026-03-12 18:07:45,794 basehttp 38194 6216511488 "GET /api/algorithms/ HTTP/1.1" 200 6798080
 INFO 2026-03-12 18:07:45,795 basehttp 38194 6166032384 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-12 18:32:33,751 basehttp 38194 6166032384 "OPTIONS /auth/login/ HTTP/1.1" 200 0
+WARNING 2026-03-12 18:32:33,790 log 38194 6166032384 Not Found: /auth/login/
+WARNING 2026-03-12 18:32:33,791 basehttp 38194 6166032384 "POST /auth/login/ HTTP/1.1" 404 2517
+INFO 2026-03-15 13:55:07,451 autoreload 33033 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-15 13:55:33,645 basehttp 33033 6155579392 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-15 13:55:33,646 basehttp 33033 6172405760 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-15 13:55:33,648 basehttp 33033 6189232128 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-15 13:55:33,649 basehttp 33033 6206058496 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-15 13:55:33,652 basehttp 33033 6222884864 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-15 13:55:33,653 basehttp 33033 6239711232 "OPTIONS /auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-15 13:55:33,680 log 33033 6189232128 Not Found: /auth/check/
+WARNING 2026-03-15 13:55:33,680 log 33033 6239711232 Not Found: /auth/check/
+WARNING 2026-03-15 13:55:33,688 basehttp 33033 6189232128 "GET /auth/check/ HTTP/1.1" 404 2516
+WARNING 2026-03-15 13:55:33,688 basehttp 33033 6239711232 "GET /auth/check/ HTTP/1.1" 404 2516
+INFO 2026-03-15 13:55:33,760 basehttp 33033 6172405760 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-15 13:55:33,763 basehttp 33033 6222884864 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-15 13:55:33,802 basehttp 33033 6155579392 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-15 13:55:33,820 basehttp 33033 6206058496 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-15 13:55:51,206 basehttp 33033 6189232128 "OPTIONS /auth/login/ HTTP/1.1" 200 0
+WARNING 2026-03-15 13:55:51,217 log 33033 6239711232 Not Found: /auth/login/
+WARNING 2026-03-15 13:55:51,217 basehttp 33033 6239711232 "POST /auth/login/ HTTP/1.1" 404 2517
+INFO 2026-03-15 13:58:41,182 autoreload 33033 8613388800 /Users/prabinkhadka/Documents/practice/algo flow new v3/git algoflow/algoflow/algoflow_django/account/urls.py changed, reloading.
+INFO 2026-03-15 13:58:41,257 autoreload 38194 8613388800 /Users/prabinkhadka/Documents/practice/algo flow new v3/git algoflow/algoflow/algoflow_django/account/urls.py changed, reloading.
+INFO 2026-03-15 13:58:41,867 autoreload 34613 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-15 13:59:28,776 basehttp 34613 6164230144 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-15 13:59:28,779 basehttp 34613 6214709248 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-15 13:59:28,801 log 34613 6164230144 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 13:59:28,801 log 34613 6214709248 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 13:59:28,802 basehttp 34613 6214709248 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 13:59:28,803 basehttp 34613 6164230144 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 13:59:28,818 basehttp 34613 6197882880 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-15 13:59:28,820 basehttp 34613 6147403776 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-15 13:59:28,938 basehttp 34613 6130577408 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-15 13:59:28,941 basehttp 34613 6181056512 "GET /api/algorithms/ HTTP/1.1" 200 6798080
+INFO 2026-03-15 13:59:34,956 basehttp 34613 6214709248 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-15 13:59:34,957 basehttp 34613 6164230144 "GET /api/categories/ HTTP/1.1" 200 510
+INFO 2026-03-15 14:00:21,542 basehttp 34613 6130577408 "POST /api/algorithms/ HTTP/1.1" 201 949
+INFO 2026-03-15 14:00:42,237 basehttp 34613 6130577408 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2026-03-15 14:00:42,636 log 34613 6130577408 Unauthorized: /api/auth/login/
+WARNING 2026-03-15 14:00:42,636 basehttp 34613 6130577408 "POST /api/auth/login/ HTTP/1.1" 401 56
+INFO 2026-03-15 14:00:58,150 basehttp 34613 6130577408 "POST /api/auth/login/ HTTP/1.1" 200 743
+INFO 2026-03-15 14:01:08,894 basehttp 34613 6130577408 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:01:08,912 basehttp 34613 6130577408 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-03-15 14:01:44,471 basehttp 34613 6130577408 "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:01:50,081 utils 34613 6130577408 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:01:50,085 basehttp 34613 6130577408 "POST /api/auth/register/ HTTP/1.1" 201 162
+INFO 2026-03-15 14:02:21,834 basehttp 34613 6130577408 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:02:21,835 basehttp 34613 6147403776 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:02:21,836 basehttp 34613 6164230144 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:02:21,838 basehttp 34613 6181056512 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:02:21,839 basehttp 34613 6197882880 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:02:21,839 basehttp 34613 6214709248 "OPTIONS /api/auth/check/ HTTP/1.1" 200 0
+WARNING 2026-03-15 14:02:21,862 log 34613 6265188352 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:21,862 basehttp 34613 6265188352 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:02:21,866 log 34613 6282014720 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:21,866 basehttp 34613 6282014720 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:02:21,875 basehttp 34613 6248361984 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:21,890 basehttp 34613 6282014720 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:22,114 basehttp 34613 6231535616 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:02:22,319 basehttp 34613 6282014720 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+WARNING 2026-03-15 14:02:28,770 log 34613 6248361984 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:28,771 basehttp 34613 6248361984 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:02:28,773 log 34613 6265188352 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:28,775 basehttp 34613 6265188352 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:02:28,781 basehttp 34613 6231535616 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:28,844 basehttp 34613 6265188352 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:28,851 basehttp 34613 6282014720 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:02:29,030 basehttp 34613 6231535616 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+WARNING 2026-03-15 14:02:30,121 log 34613 6265188352 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:30,127 basehttp 34613 6265188352 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:02:30,129 log 34613 6248361984 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:30,130 basehttp 34613 6248361984 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:02:30,139 basehttp 34613 6282014720 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:30,213 basehttp 34613 6248361984 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:30,217 basehttp 34613 6231535616 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:02:30,297 basehttp 34613 6282014720 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+WARNING 2026-03-15 14:02:31,149 log 34613 6248361984 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:31,151 basehttp 34613 6248361984 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:02:31,153 log 34613 6265188352 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:31,153 basehttp 34613 6265188352 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:02:31,172 basehttp 34613 6231535616 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:31,252 basehttp 34613 6282014720 - Broken pipe from ('127.0.0.1', 59299)
+INFO 2026-03-15 14:02:31,268 basehttp 34613 6265188352 - Broken pipe from ('127.0.0.1', 59297)
+WARNING 2026-03-15 14:02:31,749 log 34613 6265188352 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:31,752 basehttp 34613 6265188352 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:02:31,754 log 34613 6282014720 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:31,756 basehttp 34613 6282014720 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:02:31,774 basehttp 34613 6248361984 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:31,926 basehttp 34613 6282014720 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:32,024 basehttp 34613 6231535616 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:02:32,119 basehttp 34613 6248361984 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+WARNING 2026-03-15 14:02:54,000 log 34613 12918534144 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:54,004 basehttp 34613 12918534144 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:02:54,005 log 34613 12969013248 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:02:54,011 basehttp 34613 12969013248 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:02:54,022 basehttp 34613 12901707776 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:54,023 basehttp 34613 12952186880 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:02:54,139 basehttp 34613 12935360512 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:02:54,165 basehttp 34613 6298841088 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:04:17,374 basehttp 34613 6298841088 "GET /admin/algorithms/category/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:04:17,450 basehttp 34613 6298841088 "GET /admin/login/?next=/admin/algorithms/category/ HTTP/1.1" 200 4830
+INFO 2026-03-15 14:04:17,586 basehttp 34613 6298841088 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:17,590 basehttp 34613 12901707776 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:17,598 basehttp 34613 6298841088 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:17,598 basehttp 34613 12935360512 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:17,598 basehttp 34613 12918534144 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:17,599 basehttp 34613 12969013248 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:17,599 basehttp 34613 12952186880 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:17,645 basehttp 34613 12901707776 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,012 basehttp 34613 6298841088 "POST /admin/login/?next=/admin/algorithms/category/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:04:29,054 basehttp 34613 12935360512 "GET /admin/algorithms/category/ HTTP/1.1" 200 17064
+INFO 2026-03-15 14:04:29,083 basehttp 34613 12901707776 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,087 basehttp 34613 12918534144 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,087 basehttp 34613 12935360512 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,094 basehttp 34613 12952186880 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,095 basehttp 34613 12935360512 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,095 basehttp 34613 12918534144 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,097 basehttp 34613 6298841088 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,098 basehttp 34613 12901707776 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,101 basehttp 34613 12935360512 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,101 basehttp 34613 12918534144 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,103 basehttp 34613 12952186880 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,106 basehttp 34613 12969013248 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:04:29,210 basehttp 34613 12901707776 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,210 basehttp 34613 6298841088 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:29,211 basehttp 34613 12935360512 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:32,771 basehttp 34613 12952186880 "GET /admin/account/emailverificationtoken/ HTTP/1.1" 200 18305
+INFO 2026-03-15 14:04:32,812 basehttp 34613 12969013248 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:04:32,849 basehttp 34613 6298841088 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:36,652 basehttp 34613 12935360512 "GET /admin/account/myuser/ HTTP/1.1" 200 19349
+INFO 2026-03-15 14:04:36,667 basehttp 34613 12952186880 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:36,673 basehttp 34613 12918534144 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:04:42,002 basehttp 34613 12969013248 "POST /admin/account/myuser/ HTTP/1.1" 200 13646
+INFO 2026-03-15 14:04:42,039 basehttp 34613 6298841088 "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:04:43,295 basehttp 34613 12901707776 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:04:43,313 basehttp 34613 12935360512 "GET /admin/account/myuser/ HTTP/1.1" 200 18678
+INFO 2026-03-15 14:04:43,325 basehttp 34613 12952186880 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:05:04,477 basehttp 34613 6214709248 "OPTIONS /api/auth/register/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:05:09,270 utils 34613 6248361984 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:05:09,275 basehttp 34613 6248361984 "POST /api/auth/register/ HTTP/1.1" 201 162
+WARNING 2026-03-15 14:05:22,720 log 34613 6282014720 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:05:22,724 basehttp 34613 6282014720 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:05:22,727 log 34613 6265188352 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:05:22,728 basehttp 34613 6265188352 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:05:22,771 basehttp 34613 6231535616 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:05:22,882 basehttp 34613 6265188352 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:05:23,014 basehttp 34613 6248361984 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:05:23,356 basehttp 34613 6231535616 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:07:42,330 autoreload 34613 8613388800 /Users/prabinkhadka/Documents/practice/algo flow new v3/git algoflow/algoflow/algoflow_django/account/views.py changed, reloading.
+INFO 2026-03-15 14:07:43,046 autoreload 38805 8613388800 Watching for file changes with StatReloader
+INFO 2026-03-15 14:07:55,927 basehttp 38805 6155513856 "OPTIONS /api/auth/verify-email/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:07:55,931 basehttp 38805 6172340224 "OPTIONS /api/auth/verify-email/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:08:00,398 utils 38805 6205992960 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:08:00,511 basehttp 38805 6205992960 "POST /api/auth/verify-email/ HTTP/1.1" 200 788
+INFO 2026-03-15 14:08:00,581 basehttp 38805 6205992960 "GET /api/auth/check/ HTTP/1.1" 200 127
+WARNING 2026-03-15 14:08:00,621 log 38805 6205992960 Bad Request: /api/auth/verify-email/
+WARNING 2026-03-15 14:08:00,622 basehttp 38805 6205992960 "POST /api/auth/verify-email/ HTTP/1.1" 400 86
+INFO 2026-03-15 14:08:00,713 utils 38805 6189166592 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:08:00,716 basehttp 38805 6189166592 "POST /api/auth/verify-email/ HTTP/1.1" 200 788
+INFO 2026-03-15 14:08:00,733 basehttp 38805 6189166592 "GET /api/auth/check/ HTTP/1.1" 200 127
+WARNING 2026-03-15 14:08:00,745 log 38805 6189166592 Bad Request: /api/auth/verify-email/
+WARNING 2026-03-15 14:08:00,745 basehttp 38805 6189166592 "POST /api/auth/verify-email/ HTTP/1.1" 400 86
+INFO 2026-03-15 14:08:23,853 basehttp 38805 6222819328 "GET /admin/account/myuser/ HTTP/1.1" 200 19428
+INFO 2026-03-15 14:08:24,012 basehttp 38805 6222819328 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:08:30,429 basehttp 38805 6222819328 "POST /admin/account/myuser/ HTTP/1.1" 200 13727
+INFO 2026-03-15 14:08:31,553 basehttp 38805 6222819328 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:08:31,576 basehttp 38805 6222819328 "GET /admin/account/myuser/ HTTP/1.1" 200 18759
+INFO 2026-03-15 14:08:31,592 basehttp 38805 6222819328 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:08:39,109 basehttp 38805 6239645696 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:08:39,110 basehttp 38805 6256472064 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:08:39,116 basehttp 38805 6273298432 "OPTIONS /api/algorithms/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:08:39,119 basehttp 38805 6290124800 "OPTIONS /api/categories/ HTTP/1.1" 200 0
+WARNING 2026-03-15 14:08:39,121 log 38805 6306951168 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:08:39,122 log 38805 6323777536 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:08:39,123 basehttp 38805 6306951168 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:08:39,125 basehttp 38805 6323777536 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:08:39,140 basehttp 38805 6256472064 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:08:39,141 basehttp 38805 6290124800 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:08:39,263 basehttp 38805 6239645696 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:08:39,266 basehttp 38805 6273298432 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:09:00,898 utils 38805 6306951168 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:09:00,904 basehttp 38805 6306951168 "POST /api/auth/register/ HTTP/1.1" 201 162
+WARNING 2026-03-15 14:09:20,243 authentication 38805 6205992960 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:20,245 log 38805 6205992960 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:09:20,245 authentication 38805 6189166592 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:20,245 authentication 38805 6222819328 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:20,245 basehttp 38805 6205992960 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:20,246 log 38805 6189166592 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:09:20,247 log 38805 6222819328 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:09:20,247 basehttp 38805 6189166592 "GET /api/algorithms/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:20,247 basehttp 38805 6222819328 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:20,256 authentication 38805 6205992960 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:20,257 log 38805 6205992960 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:09:20,259 authentication 38805 6239645696 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:20,259 basehttp 38805 6205992960 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:20,260 authentication 38805 6189166592 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:20,261 log 38805 6239645696 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:09:20,261 log 38805 6189166592 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:09:20,262 basehttp 38805 6239645696 "GET /api/algorithms/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:20,262 basehttp 38805 6189166592 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:36,083 authentication 38805 6205992960 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:36,084 authentication 38805 6189166592 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:36,084 log 38805 6205992960 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:09:36,084 authentication 38805 6239645696 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:36,084 log 38805 6189166592 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:09:36,085 log 38805 6239645696 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:09:36,085 basehttp 38805 6205992960 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:36,085 basehttp 38805 6189166592 "GET /api/algorithms/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:36,086 basehttp 38805 6239645696 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:36,095 authentication 38805 6222819328 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:36,096 authentication 38805 6256472064 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:36,096 log 38805 6222819328 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:09:36,096 log 38805 6256472064 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:09:36,097 authentication 38805 6189166592 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:09:36,097 log 38805 6189166592 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:09:36,098 basehttp 38805 6222819328 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:36,098 basehttp 38805 6256472064 "GET /api/algorithms/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:09:36,099 basehttp 38805 6189166592 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:18,297 authentication 38805 6256472064 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:18,298 authentication 38805 6189166592 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:18,298 authentication 38805 6222819328 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:18,299 log 38805 6256472064 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:11:18,299 log 38805 6189166592 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:11:18,300 log 38805 6222819328 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:11:18,300 basehttp 38805 6256472064 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:18,300 basehttp 38805 6189166592 "GET /api/algorithms/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:18,301 basehttp 38805 6222819328 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:18,309 authentication 38805 6239645696 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:18,310 log 38805 6239645696 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:11:18,311 basehttp 38805 6239645696 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:18,311 authentication 38805 6256472064 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:18,313 log 38805 6256472064 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:11:18,313 basehttp 38805 6256472064 "GET /api/algorithms/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:18,315 authentication 38805 6222819328 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:18,315 log 38805 6222819328 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:11:18,315 basehttp 38805 6222819328 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:27,474 authentication 38805 6256472064 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:27,474 authentication 38805 6222819328 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:27,474 authentication 38805 6239645696 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:27,475 log 38805 6256472064 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:11:27,475 log 38805 6222819328 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:11:27,475 log 38805 6239645696 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:11:27,476 basehttp 38805 6256472064 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:27,476 basehttp 38805 6222819328 "GET /api/algorithms/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:27,476 basehttp 38805 6239645696 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:27,482 authentication 38805 6256472064 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:27,482 authentication 38805 6189166592 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:27,483 log 38805 6256472064 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:11:27,483 authentication 38805 6222819328 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:27,483 log 38805 6189166592 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:11:27,483 log 38805 6222819328 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:11:27,484 basehttp 38805 6256472064 "GET /api/algorithms/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:27,484 basehttp 38805 6189166592 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:27,484 basehttp 38805 6222819328 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:31,363 authentication 38805 6256472064 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:31,363 authentication 38805 6189166592 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:31,364 log 38805 6256472064 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:11:31,364 log 38805 6189166592 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:11:31,364 authentication 38805 6222819328 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:31,365 basehttp 38805 6256472064 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:31,365 log 38805 6222819328 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:11:31,365 basehttp 38805 6189166592 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:31,368 basehttp 38805 6222819328 "GET /api/algorithms/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:31,373 authentication 38805 6239645696 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:31,373 log 38805 6239645696 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:11:31,374 basehttp 38805 6239645696 "GET /api/auth/check/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:31,375 authentication 38805 6256472064 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:31,376 authentication 38805 6189166592 Authentication failed: {'detail': ErrorDetail(string='User not found', code='authentication_failed'), 'code': ErrorDetail(string='user_not_found', code='authentication_failed')}
+WARNING 2026-03-15 14:11:31,376 log 38805 6256472064 Unauthorized: /api/categories/
+WARNING 2026-03-15 14:11:31,377 log 38805 6189166592 Unauthorized: /api/algorithms/
+WARNING 2026-03-15 14:11:31,377 basehttp 38805 6256472064 "GET /api/categories/ HTTP/1.1" 401 51
+WARNING 2026-03-15 14:11:31,377 basehttp 38805 6189166592 "GET /api/algorithms/ HTTP/1.1" 401 51
+INFO 2026-03-15 14:13:11,081 autoreload 41589 8613388800 Watching for file changes with StatReloader
+WARNING 2026-03-15 14:13:18,218 log 41589 6232748032 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:13:18,219 basehttp 41589 6232748032 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:13:18,221 log 41589 6232748032 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:13:18,224 basehttp 41589 6232748032 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:13:18,234 basehttp 41589 6215921664 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:13:18,250 basehttp 41589 6232748032 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:13:18,350 basehttp 41589 6199095296 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:13:18,536 basehttp 41589 6199095296 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:13:18,542 basehttp 41589 6232748032 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:13:18,567 basehttp 41589 6215921664 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:13:28,599 basehttp 41589 6266400768 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:13:28,646 basehttp 41589 6266400768 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-15 14:13:28,661 basehttp 41589 6266400768 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:13:28,662 basehttp 41589 6283227136 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:13:28,663 basehttp 41589 6300053504 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:13:28,782 basehttp 41589 6300053504 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:13:28,783 basehttp 41589 6283227136 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:13:28,784 basehttp 41589 6266400768 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:13:28,787 basehttp 41589 6266400768 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:13:31,307 basehttp 41589 6266400768 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:13:31,313 basehttp 41589 6266400768 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:13:31,318 basehttp 41589 6266400768 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-15 14:13:33,950 basehttp 41589 6266400768 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:13:33,956 basehttp 41589 6266400768 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:13:33,962 basehttp 41589 6266400768 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-15 14:13:39,245 basehttp 41589 6266400768 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:13:39,251 basehttp 41589 6266400768 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:13:39,257 basehttp 41589 6266400768 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4170
+INFO 2026-03-15 14:13:48,852 basehttp 41589 6316879872 "GET /admin/account/myuser/ HTTP/1.1" 200 19511
+INFO 2026-03-15 14:13:48,975 basehttp 41589 6316879872 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:13:55,294 basehttp 41589 6316879872 "POST /admin/account/myuser/ HTTP/1.1" 200 13808
+INFO 2026-03-15 14:13:57,103 basehttp 41589 6316879872 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:13:57,126 basehttp 41589 6316879872 "GET /admin/account/myuser/ HTTP/1.1" 200 18840
+INFO 2026-03-15 14:13:57,138 basehttp 41589 6316879872 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-03-15 14:14:04,519 log 41589 6199095296 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:14:04,522 basehttp 41589 6199095296 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:14:04,525 log 41589 6249574400 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:14:04,525 basehttp 41589 6249574400 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:14:04,548 basehttp 41589 6232748032 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:14:04,614 basehttp 41589 6249574400 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:14:04,676 basehttp 41589 6215921664 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:14:04,814 basehttp 41589 6215921664 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:14:04,832 basehttp 41589 6249574400 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:14:04,878 basehttp 41589 6232748032 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:14:29,292 utils 41589 6232748032 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:14:29,296 basehttp 41589 6232748032 "POST /api/auth/register/ HTTP/1.1" 201 162
+WARNING 2026-03-15 14:14:42,139 log 41589 6215921664 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:14:42,140 basehttp 41589 6215921664 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:14:42,143 log 41589 6199095296 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:14:42,144 basehttp 41589 6199095296 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:14:42,169 basehttp 41589 6249574400 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:14:42,262 basehttp 41589 6199095296 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:14:42,280 basehttp 41589 6232748032 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:14:42,579 basehttp 41589 6199095296 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:14:46,930 utils 41589 6232748032 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:14:46,957 basehttp 41589 6232748032 "POST /api/auth/verify-email/ HTTP/1.1" 200 788
+INFO 2026-03-15 14:14:46,980 basehttp 41589 6232748032 "GET /api/auth/check/ HTTP/1.1" 200 127
+WARNING 2026-03-15 14:14:46,993 log 41589 6232748032 Bad Request: /api/auth/verify-email/
+WARNING 2026-03-15 14:14:46,993 basehttp 41589 6232748032 "POST /api/auth/verify-email/ HTTP/1.1" 400 86
+INFO 2026-03-15 14:14:47,182 utils 41589 6249574400 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:14:47,189 basehttp 41589 6249574400 "POST /api/auth/verify-email/ HTTP/1.1" 200 788
+INFO 2026-03-15 14:14:47,198 basehttp 41589 6249574400 "GET /api/auth/check/ HTTP/1.1" 200 127
+WARNING 2026-03-15 14:14:47,209 log 41589 6249574400 Bad Request: /api/auth/verify-email/
+WARNING 2026-03-15 14:14:47,209 basehttp 41589 6249574400 "POST /api/auth/verify-email/ HTTP/1.1" 400 86
+INFO 2026-03-15 14:15:29,255 basehttp 41589 6249574400 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:15:29,293 basehttp 41589 6232748032 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:16:42,381 basehttp 41589 6333706240 "GET /admin/account/myuser/ HTTP/1.1" 200 19590
+INFO 2026-03-15 14:16:42,514 basehttp 41589 6333706240 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:16:46,740 basehttp 41589 6350532608 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:16:46,758 basehttp 41589 6232748032 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-03-15 14:16:55,079 basehttp 41589 6350532608 "OPTIONS /api/auth/password-reset/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:16:59,570 utils 41589 6232748032 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:16:59,574 basehttp 41589 6232748032 "POST /api/auth/password-reset/ HTTP/1.1" 200 106
+WARNING 2026-03-15 14:17:20,231 log 41589 6199095296 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:17:20,233 basehttp 41589 6199095296 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:17:20,239 log 41589 6215921664 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:17:20,242 basehttp 41589 6215921664 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:17:20,255 basehttp 41589 6249574400 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:17:20,274 basehttp 41589 6215921664 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:17:20,381 basehttp 41589 6232748032 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:17:20,601 basehttp 41589 6215921664 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+WARNING 2026-03-15 14:17:36,503 log 41589 6249574400 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:17:36,509 basehttp 41589 6249574400 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:17:36,512 log 41589 6199095296 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:17:36,513 basehttp 41589 6199095296 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:17:36,526 basehttp 41589 6232748032 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:17:36,535 basehttp 41589 6199095296 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:17:36,644 basehttp 41589 6215921664 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:17:36,680 basehttp 41589 6199095296 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+WARNING 2026-03-15 14:17:41,141 log 41589 6232748032 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:17:41,143 basehttp 41589 6232748032 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:17:41,145 log 41589 6249574400 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:17:41,149 basehttp 41589 6249574400 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:17:41,155 basehttp 41589 6215921664 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:17:41,216 basehttp 41589 6249574400 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:17:41,258 basehttp 41589 6199095296 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:17:41,297 basehttp 41589 6215921664 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+WARNING 2026-03-15 14:17:52,387 log 41589 6249574400 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:17:52,388 basehttp 41589 6249574400 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:17:52,390 log 41589 6232748032 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:17:52,391 basehttp 41589 6232748032 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:17:52,415 basehttp 41589 6199095296 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:17:52,506 basehttp 41589 6232748032 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:17:52,520 basehttp 41589 6215921664 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:17:52,716 basehttp 41589 6199095296 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:18:06,594 basehttp 41589 6316879872 "GET /admin/account/myuser/ HTTP/1.1" 200 19590
+INFO 2026-03-15 14:18:06,763 basehttp 41589 6316879872 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:18:09,348 basehttp 41589 6316879872 "GET /admin/account/myuser/84eb7db4-769f-4b2c-81d5-1dbbc719788f/change/ HTTP/1.1" 200 28507
+INFO 2026-03-15 14:18:09,368 basehttp 41589 6384185344 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:18:09,369 basehttp 41589 6401011712 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:18:09,370 basehttp 41589 6417838080 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-03-15 14:18:09,379 basehttp 41589 6316879872 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:18:09,382 basehttp 41589 6384185344 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-03-15 14:18:09,385 basehttp 41589 6333706240 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2026-03-15 14:18:09,386 basehttp 41589 6367358976 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15845
+INFO 2026-03-15 14:18:09,434 basehttp 41589 6401011712 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+WARNING 2026-03-15 14:21:42,140 log 41589 6232748032 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:21:42,145 basehttp 41589 6232748032 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:21:42,149 log 41589 6249574400 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:21:42,150 basehttp 41589 6249574400 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:21:42,177 basehttp 41589 6215921664 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:21:42,260 basehttp 41589 6249574400 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:21:42,365 basehttp 41589 6199095296 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:21:42,442 basehttp 41589 6215921664 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:21:46,248 basehttp 41589 6266400768 "GET /admin/account/myuser/84eb7db4-769f-4b2c-81d5-1dbbc719788f/change/ HTTP/1.1" 200 28507
+INFO 2026-03-15 14:21:46,399 basehttp 41589 6266400768 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:21:49,436 basehttp 41589 6266400768 "GET /admin/account/myuser/ HTTP/1.1" 200 19590
+INFO 2026-03-15 14:21:49,455 basehttp 41589 6266400768 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:21:56,367 basehttp 41589 6266400768 "POST /admin/account/myuser/ HTTP/1.1" 200 14154
+INFO 2026-03-15 14:21:58,426 basehttp 41589 6266400768 "POST /admin/account/myuser/ HTTP/1.1" 302 0
+INFO 2026-03-15 14:21:58,448 basehttp 41589 6266400768 "GET /admin/account/myuser/ HTTP/1.1" 200 18921
+INFO 2026-03-15 14:21:58,466 basehttp 41589 6266400768 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:22:34,095 utils 41589 6215921664 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:22:34,101 basehttp 41589 6215921664 "POST /api/auth/register/ HTTP/1.1" 201 162
+WARNING 2026-03-15 14:22:42,368 log 41589 6249574400 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:22:42,372 basehttp 41589 6249574400 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:22:42,377 log 41589 6232748032 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:22:42,379 basehttp 41589 6232748032 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:22:42,398 basehttp 41589 6199095296 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:22:42,431 basehttp 41589 6232748032 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:22:42,525 basehttp 41589 6215921664 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:22:42,797 basehttp 41589 6232748032 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:22:47,284 utils 41589 6215921664 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:22:47,298 basehttp 41589 6215921664 "POST /api/auth/verify-email/ HTTP/1.1" 200 788
+INFO 2026-03-15 14:22:47,331 basehttp 41589 6215921664 "GET /api/auth/check/ HTTP/1.1" 200 127
+WARNING 2026-03-15 14:22:47,345 log 41589 6215921664 Bad Request: /api/auth/verify-email/
+WARNING 2026-03-15 14:22:47,345 basehttp 41589 6215921664 "POST /api/auth/verify-email/ HTTP/1.1" 400 86
+INFO 2026-03-15 14:22:47,496 utils 41589 6199095296 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:22:47,501 basehttp 41589 6199095296 "POST /api/auth/verify-email/ HTTP/1.1" 200 788
+INFO 2026-03-15 14:22:47,509 basehttp 41589 6199095296 "GET /api/auth/check/ HTTP/1.1" 200 127
+WARNING 2026-03-15 14:22:47,525 log 41589 6199095296 Bad Request: /api/auth/verify-email/
+WARNING 2026-03-15 14:22:47,525 basehttp 41589 6199095296 "POST /api/auth/verify-email/ HTTP/1.1" 400 86
+INFO 2026-03-15 14:22:53,982 basehttp 41589 6199095296 "POST /api/auth/logout/ HTTP/1.1" 200 53
+INFO 2026-03-15 14:23:08,888 utils 41589 6199095296 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:23:08,894 basehttp 41589 6199095296 "POST /api/auth/password-reset/ HTTP/1.1" 200 106
+WARNING 2026-03-15 14:23:17,081 log 41589 6232748032 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:23:17,085 basehttp 41589 6232748032 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:23:17,087 log 41589 6249574400 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:23:17,089 basehttp 41589 6249574400 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:23:17,109 basehttp 41589 6215921664 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:23:17,197 basehttp 41589 6249574400 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:23:17,215 basehttp 41589 6199095296 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:23:17,458 basehttp 41589 6215921664 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:23:38,434 basehttp 41589 6266400768 "OPTIONS /api/auth/password-reset/confirm/ HTTP/1.1" 200 0
+ERROR 2026-03-15 14:23:38,842 views 41589 6215921664 Password reset confirm error: 'PasswordResetToken' object has no attribute 'mark_as_used'
+ERROR 2026-03-15 14:23:38,842 log 41589 6215921664 Internal Server Error: /api/auth/password-reset/confirm/
+ERROR 2026-03-15 14:23:38,842 basehttp 41589 6215921664 "POST /api/auth/password-reset/confirm/ HTTP/1.1" 500 66
+INFO 2026-03-15 14:24:13,951 autoreload 41589 8613388800 /Users/prabinkhadka/Documents/practice/algo flow new v3/git algoflow/algoflow/algoflow_django/account/serializers.py changed, reloading.
+INFO 2026-03-15 14:24:14,552 autoreload 46677 8613388800 Watching for file changes with StatReloader
+WARNING 2026-03-15 14:24:30,024 log 46677 6195294208 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:24:30,027 basehttp 46677 6195294208 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:24:30,029 log 46677 6195294208 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:24:30,032 basehttp 46677 6195294208 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:24:30,045 basehttp 46677 6178467840 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:24:30,122 basehttp 46677 6195294208 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:24:30,140 basehttp 46677 6161641472 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:24:30,352 basehttp 46677 6178467840 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:24:44,041 utils 46677 6178467840 Email sent successfully to djangoforgithub@gmail.com
+INFO 2026-03-15 14:24:44,047 basehttp 46677 6178467840 "POST /api/auth/password-reset/confirm/ HTTP/1.1" 200 100
+INFO 2026-03-15 14:25:01,544 basehttp 46677 6228946944 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-03-15 14:25:01,937 basehttp 46677 6178467840 "POST /api/auth/login/ HTTP/1.1" 200 754
+INFO 2026-03-15 14:25:29,784 basehttp 46677 6178467840 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:25:29,798 basehttp 46677 6161641472 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:25:57,251 basehttp 46677 6245773312 "GET /admin/account/note/ HTTP/1.1" 200 15792
+INFO 2026-03-15 14:25:57,341 basehttp 46677 6245773312 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:25:59,624 basehttp 46677 6245773312 "GET /admin/account/emailverificationtoken/ HTTP/1.1" 200 18604
+INFO 2026-03-15 14:25:59,639 basehttp 46677 6245773312 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:26:03,197 basehttp 46677 6245773312 "GET /admin/account/myuser/ HTTP/1.1" 200 19671
+INFO 2026-03-15 14:26:03,208 basehttp 46677 6245773312 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-03-15 14:26:05,456 basehttp 46677 6245773312 "GET /admin/account/myuser/76092ed3-a877-41e4-b384-77f9a82435d6/change/ HTTP/1.1" 200 28612
+INFO 2026-03-15 14:26:05,483 basehttp 46677 6245773312 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-03-15 14:35:53,165 log 46677 6195294208 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,184 basehttp 46677 6195294208 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,196 log 46677 6195294208 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,198 basehttp 46677 6195294208 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,203 log 46677 6212120576 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,206 basehttp 46677 6212120576 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,218 log 46677 6195294208 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,227 basehttp 46677 6195294208 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,237 log 46677 6212120576 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,288 basehttp 46677 6212120576 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,308 log 46677 6195294208 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,326 basehttp 46677 6195294208 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,347 log 46677 6212120576 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,358 basehttp 46677 6212120576 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,366 log 46677 6195294208 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,368 basehttp 46677 6195294208 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,372 log 46677 6212120576 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,379 basehttp 46677 6212120576 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,383 log 46677 6195294208 Unauthorized: /api/auth/check/
+INFO 2026-03-15 14:35:53,383 basehttp 46677 6178467840 "GET /api/categories/ HTTP/1.1" 200 525
+WARNING 2026-03-15 14:35:53,387 basehttp 46677 6195294208 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,391 log 46677 6178467840 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,406 basehttp 46677 6178467840 "GET /api/auth/check/ HTTP/1.1" 401 58
+WARNING 2026-03-15 14:35:53,408 log 46677 6195294208 Unauthorized: /api/auth/check/
+WARNING 2026-03-15 14:35:53,413 basehttp 46677 6195294208 "GET /api/auth/check/ HTTP/1.1" 401 58
+INFO 2026-03-15 14:35:53,552 basehttp 46677 6212120576 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:53,561 basehttp 46677 6161641472 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:53,708 basehttp 46677 6178467840 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:53,763 basehttp 46677 6161641472 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:53,933 basehttp 46677 6195294208 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:53,957 basehttp 46677 6161641472 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:53,998 basehttp 46677 6178467840 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:53,998 basehttp 46677 6212120576 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:54,181 basehttp 46677 6161641472 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:54,306 basehttp 46677 6195294208 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:54,389 basehttp 46677 6212120576 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:54,400 basehttp 46677 6178467840 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:54,534 basehttp 46677 6161641472 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:54,582 basehttp 46677 6212120576 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:54,671 basehttp 46677 6195294208 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:54,718 basehttp 46677 6161641472 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:54,723 basehttp 46677 6178467840 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:54,860 basehttp 46677 6212120576 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:54,984 basehttp 46677 6195294208 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:55,024 basehttp 46677 6178467840 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:55,412 basehttp 46677 6195294208 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:55,473 basehttp 46677 6178467840 "GET /api/algorithms/ HTTP/1.1" 200 6799030
+INFO 2026-03-15 14:35:55,490 basehttp 46677 6212120576 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:55,661 basehttp 46677 6178467840 "GET /api/categories/ HTTP/1.1" 200 525
+INFO 2026-03-15 14:35:55,802 basehttp 46677 6195294208 "GET /api/algorithms/ HTTP/1.1" 200 6799030

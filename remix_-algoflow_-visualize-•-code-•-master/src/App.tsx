@@ -51,6 +51,8 @@ import { cn } from './lib/utils';
 import { UserMenu } from './components/UserMenu';
 import { LoginPage } from './pages/auth/Login';
 import { RegisterPage } from './pages/auth/Register';
+import { VerifyEmailPage } from './pages/auth/VerifyEmail';
+import { ResetPasswordPage } from './pages/auth/ResetPassword';
 import { Button } from './components/ui/Button';
 import { Card } from './components/ui/Card';
 import { Input } from './components/ui/Input';
@@ -260,6 +262,8 @@ export default function App() {
             <Routes>
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
+              <Route path="/verify-email" element={<VerifyEmailPage />} />
+              <Route path="/reset-password" element={<ResetPasswordPage />} />
               <Route path="/" element={
                 <motion.div 
                   initial={{ opacity: 0 }}

@@ -355,15 +355,16 @@ class PasswordResetConfirmSerializer(serializers.Serializer):
         
         user.set_password(password)
         user.save(update_fields=['password'])
-        
-        token_obj.mark_as_used()
-        
+
+        # Mark this token as used
+        token_obj.make_as_used()
+
         # Invalidate all other reset tokens
         PasswordResetToken.objects.filter(
             user=user,
             is_used=False
         ).exclude(id=token_obj.id).update(is_used=True)
-        
+
         return user
 
 

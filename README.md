@@ -305,29 +305,4 @@ lsof -i :8000
 kill -9 <PID>
 ```
 
----
 
-## Contributing
-
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push and open Pull Request
-
----
-
-## License
-
-MIT License
-
----
-
-## Support
-
-- Documentation: See `README.md`
-- Quick Reference: See `QUICKSTART.md`
-- Issues: GitHub Issues
-
----
-
-**Made with ❤️ by the AlgoFlow Team**
